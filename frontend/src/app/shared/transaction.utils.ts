@@ -86,7 +86,7 @@ export function setSchnorrSighashFlags(flags: bigint, witness: string[]): bigint
 export function isDERSig(w: string): boolean {
   // heuristic to detect probable DER signatures
   return (w.length >= 18
-    && w.startsWith('30') // minimum DER signature length is 8 bytes + sighash flag (see https://mempool.space/testnet/tx/c6c232a36395fa338da458b86ff1327395a9afc28c5d2daa4273e410089fd433)
+    && w.startsWith('30') // minimum DER signature length is 8 bytes + sighash flag (see https://BitcoinGold/testnet/tx/c6c232a36395fa338da458b86ff1327395a9afc28c5d2daa4273e410089fd433)
     && ['01', '02', '03', '81', '82', '83'].includes(w.slice(-2)) // signature must end with a valid sighash flag
     && (w.length === (2 * parseInt(w.slice(2, 4), 16)) + 6) // second byte encodes the combined length of the R and S components
   );
@@ -96,7 +96,7 @@ export function isDERSig(w: string): boolean {
 // <0x30> <total len> <0x02> <len R> <R> <0x02> <len S> <S> <hashtype>
 // see https://github.com/bitcoin/bitcoin/blob/9a05b45da60d214cb1e5a50c3d2293b1defc9bb0/src/script/interpreter.cpp#L97-L106
 export function isCanonicalDERSig(w: string): boolean {
-  // minimum DER signature length is 8 bytes + sighash flag (see https://mempool.space/testnet/tx/c6c232a36395fa338da458b86ff1327395a9afc28c5d2daa4273e410089fd433)
+  // minimum DER signature length is 8 bytes + sighash flag (see https://BitcoinGold/testnet/tx/c6c232a36395fa338da458b86ff1327395a9afc28c5d2daa4273e410089fd433)
   if (w.length < 18) {
     return false;
   }
@@ -845,7 +845,7 @@ export function getTransactionFlags(tx: Transaction, cpfpInfo?: CpfpInfo, replac
         flags |= TransactionFlags.p2tr;
         // every valid taproot input has at least one witness item, however transactions
         // created before taproot activation don't need to have any witness data
-        // (see https://mempool.space/tx/b10c007c60e14f9d087e0291d4d0c7869697c6681d979c6639dbd960792b4d41)
+        // (see https://BitcoinGold/tx/b10c007c60e14f9d087e0291d4d0c7869697c6681d979c6639dbd960792b4d41)
         if (vin.witness?.length) {
           const taprootInfo = parseTaproot(vin.witness);
           if (taprootInfo.scriptPath) {
@@ -1055,7 +1055,7 @@ export function identifyPrioritizedTransactions(transactions: TransactionStrippe
   return { prioritized, deprioritized };
 }
 
-// Adapted from mempool backend https://github.com/mempool/mempool/blob/14e49126c3ca8416a8d7ad134a95c5e090324d69/backend/src/api/transaction-utils.ts#L254
+// Adapted from mempool backend https://github.com/BTGSCOINDEV/BTGS/blob/14e49126c3ca8416a8d7ad134a95c5e090324d69/backend/src/api/transaction-utils.ts#L254
 // Converts hex bitcoin script to ASM
 function convertScriptSigAsm(hex: string): string {
 
@@ -1122,7 +1122,7 @@ function convertScriptSigAsm(hex: string): string {
   return b.join(' ');
 }
 
-// Copied from mempool backend https://github.com/mempool/mempool/blob/14e49126c3ca8416a8d7ad134a95c5e090324d69/backend/src/api/transaction-utils.ts#L327
+// Copied from mempool backend https://github.com/BTGSCOINDEV/BTGS/blob/14e49126c3ca8416a8d7ad134a95c5e090324d69/backend/src/api/transaction-utils.ts#L327
 /**
  * This function must only be called when we know the witness we are parsing
  * is a taproot witness.
@@ -1147,7 +1147,7 @@ function witnessToP2TRScript(witness: string[]): string | null {
   return witness[positionOfScript];
 }
 
-// Copied from mempool backend https://github.com/mempool/mempool/blob/14e49126c3ca8416a8d7ad134a95c5e090324d69/backend/src/api/transaction-utils.ts#L227
+// Copied from mempool backend https://github.com/BTGSCOINDEV/BTGS/blob/14e49126c3ca8416a8d7ad134a95c5e090324d69/backend/src/api/transaction-utils.ts#L227
 // Fills inner_redeemscript_asm and inner_witnessscript_asm fields of fetched prevouts for decoded transactions
 export function addInnerScriptsToVin(vin: Vin): void {
   if (!vin.prevout) {
@@ -1869,7 +1869,7 @@ export function txid(tx: Transaction): string {
   return uint8ArrayToHexString(hash2.reverse());
 }
 
-// Copied from mempool backend https://github.com/mempool/mempool/blob/14e49126c3ca8416a8d7ad134a95c5e090324d69/backend/src/api/transaction-utils.ts#L177
+// Copied from mempool backend https://github.com/BTGSCOINDEV/BTGS/blob/14e49126c3ca8416a8d7ad134a95c5e090324d69/backend/src/api/transaction-utils.ts#L177
 export function countSigops(transaction: Transaction): number {
   let sigops = 0;
 
@@ -2492,7 +2492,7 @@ export function compactSize(n: number): Uint8Array {
   }
 }
 
-// Inversed the opcodes object from https://github.com/mempool/mempool/blob/14e49126c3ca8416a8d7ad134a95c5e090324d69/backend/src/utils/bitcoin-script.ts#L1
+// Inversed the opcodes object from https://github.com/BTGSCOINDEV/BTGS/blob/14e49126c3ca8416a8d7ad134a95c5e090324d69/backend/src/utils/bitcoin-script.ts#L1
 const opcodes = {
   0: 'OP_0',
   76: 'OP_PUSHDATA1',

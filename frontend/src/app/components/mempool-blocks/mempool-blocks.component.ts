@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, ChangeDetectorRef, HostListener, Input, OnChanges, SimpleChanges, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { Subscription, Observable, of, combineLatest } from 'rxjs';
-import { MempoolBlock } from '@interfaces/websocket.interface';
+import { BitcoinGoldBlock } from '@interfaces/websocket.interface';
 import { StateService } from '@app/services/state.service';
 import { EtaService } from '@app/services/eta.service';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { feeLevels } from '@app/app.constants';
 import { specialBlocks } from '@app/app.constants';
 import { RelativeUrlPipe } from '@app/shared/pipes/relative-url/relative-url.pipe';
 import { Location } from '@angular/common';
-import { DifficultyAdjustment, MempoolPosition } from '@interfaces/node-api.interface';
+import { DifficultyAdjustment, BitcoinGoldPosition } from '@interfaces/node-api.interface';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { ThemeService } from '@app/services/theme.service';
 
@@ -26,7 +26,7 @@ import { ThemeService } from '@app/services/theme.service';
   standalone: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
+export class BitcoinGoldBlocksComponent implements OnInit, OnChanges, OnDestroy {
   @Input() minimal: boolean = false;
   @Input() blockWidth: number = 125;
   @Input() containerWidth: number = null;
@@ -40,9 +40,9 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
   @Output() widthChange: EventEmitter<number> = new EventEmitter();
 
   specialBlocks = specialBlocks;
-  mempoolBlocks: MempoolBlock[] = [];
-  mempoolEmptyBlocks: MempoolBlock[] = this.mountEmptyBlocks();
-  mempoolBlocks$: Observable<MempoolBlock[]>;
+  mempoolBlocks: BitcoinGoldBlock[] = [];
+  mempoolEmptyBlocks: BitcoinGoldBlock[] = this.mountEmptyBlocks();
+  mempoolBlocks$: Observable<BitcoinGoldBlock[]>;
   difficultyAdjustments$: Observable<DifficultyAdjustment>;
   loadingBlocks$: Observable<boolean>;
   showMiningInfoSubscription: Subscription;
@@ -52,7 +52,7 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
   blocksSubscription: Subscription;
   themeStateSubscription: Subscription;
 
-  mempoolBlocksFull: MempoolBlock[] = [];
+  mempoolBlocksFull: BitcoinGoldBlock[] = [];
   mempoolBlockStyles = [];
   mempoolEmptyBlockStyles = [];
   markBlocksSubscription: Subscription;
@@ -84,7 +84,7 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
   acceleratingArrow: boolean = false;
 
   markIndex: number;
-  txPosition: MempoolPosition;
+  txPosition: BitcoinGoldPosition;
   txFeePerVSize: number;
 
   resetTransitionTimeout: number;
@@ -142,23 +142,23 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
       this.feeRounding = '1.0-1';
     }
     this.mempoolEmptyBlocks.forEach((b) => {
-      this.mempoolEmptyBlockStyles.push(this.getStyleForMempoolEmptyBlock(b.index));
+      this.mempoolEmptyBlockStyles.push(this.getStyleForBitcoinGoldEmptyBlock(b.index));
     });
     this.reduceEmptyBlocksToFitScreen(this.mempoolEmptyBlocks);
 
     this.isTabHiddenSubscription = this.stateService.isTabHidden$.subscribe((tabHidden) => this.tabHidden = tabHidden);
     this.themeStateSubscription = this.themeService.themeState$.subscribe((state) => {
       if (!state.loading) {
-        this.updateMempoolBlockStyles();
+        this.updateBitcoinGoldBlockStyles();
         this.cd.markForCheck();
       }
     });
     this.loadingBlocks$ = combineLatest([
       this.stateService.isLoadingWebSocket$,
-      this.stateService.isLoadingMempool$
+      this.stateService.isLoadingBitcoinGold$
     ]).pipe(
-      switchMap(([loadingBlocks, loadingMempool]) => {
-        return of(loadingBlocks || loadingMempool);
+      switchMap(([loadingBlocks, loadingBitcoinGold]) => {
+        return of(loadingBlocks || loadingBitcoinGold);
       })
     );
 
@@ -183,11 +183,11 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
 
         const stringifiedBlocks = JSON.stringify(mempoolBlocks);
         this.mempoolBlocksFull = JSON.parse(stringifiedBlocks);
-        this.mempoolBlocks = this.reduceMempoolBlocksToFitScreen(JSON.parse(stringifiedBlocks));
+        this.mempoolBlocks = this.reduceBitcoinGoldBlocksToFitScreen(JSON.parse(stringifiedBlocks));
 
         this.now = Date.now();
 
-        this.updateMempoolBlockStyles();
+        this.updateBitcoinGoldBlockStyles();
         this.calculateTransactionPosition();
 
         return this.mempoolBlocks;
@@ -321,11 +321,11 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
     this.cd.markForCheck();
   }
 
-  trackByFn(index: number, block: MempoolBlock) {
+  trackByFn(index: number, block: BitcoinGoldBlock) {
     return (block.isStack) ? `stack-${block.index}` : block.index;
   }
 
-  reduceEmptyBlocksToFitScreen(blocks: MempoolBlock[]): MempoolBlock[] {
+  reduceEmptyBlocksToFitScreen(blocks: BitcoinGoldBlock[]): BitcoinGoldBlock[] {
     const innerWidth = this.containerWidth || (this.stateService.env.BASE_MODULE !== 'liquid' && window.innerWidth <= 767.98 ? window.innerWidth : window.innerWidth / 2);
     let blocksAmount = this.stateService.env.MEMPOOL_BLOCKS_AMOUNT;
     if (!this.allBlocks) {
@@ -348,7 +348,7 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
     return blocks;
   }
 
-  reduceMempoolBlocksToFitScreen(blocks: MempoolBlock[]): MempoolBlock[] {
+  reduceBitcoinGoldBlocksToFitScreen(blocks: BitcoinGoldBlock[]): BitcoinGoldBlock[] {
     const innerWidth = this.containerWidth || (this.stateService.env.BASE_MODULE !== 'liquid' && window.innerWidth <= 767.98 ? window.innerWidth : window.innerWidth / 2);
     let blocksAmount = this.stateService.env.MEMPOOL_BLOCKS_AMOUNT;
     if (this.count) {
@@ -391,12 +391,12 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
     return medianNr;
   }
 
-  updateMempoolBlockStyles() {
+  updateBitcoinGoldBlockStyles() {
     this.mempoolBlockStyles = [];
-    this.mempoolBlocksFull.forEach((block, i) => this.mempoolBlockStyles.push(this.getStyleForMempoolBlock(block, i)));
+    this.mempoolBlocksFull.forEach((block, i) => this.mempoolBlockStyles.push(this.getStyleForBitcoinGoldBlock(block, i)));
   }
 
-  getStyleForMempoolBlock(mempoolBlock: MempoolBlock, index: number) {
+  getStyleForBitcoinGoldBlock(mempoolBlock: BitcoinGoldBlock, index: number) {
     const emptyBackgroundSpacePercentage = Math.max(100 - mempoolBlock.blockVSize / this.stateService.blockVSize * 100, 0);
     const usedBlockSpace = 100 - emptyBackgroundSpacePercentage;
     const backgroundGradients = [`repeating-linear-gradient(to right,  var(--mempool-block-loading), var(--mempool-block-loading) ${emptyBackgroundSpacePercentage}%`];
@@ -423,7 +423,7 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
     };
   }
 
-  getStyleForMempoolEmptyBlock(index: number) {
+  getStyleForBitcoinGoldEmptyBlock(index: number) {
     return {
       'right': this.containerOffset + index * this.blockOffset + 'px',
       'background': 'var(--mempool-block-loading)',

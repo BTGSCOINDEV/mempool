@@ -293,7 +293,7 @@
         <note priority="1" from="description">about.about-the-project</note>
       </trans-unit>
       <trans-unit id="8a4411dcb4da0aa489ec367bf2a3ec289e07a86e" datatype="html">
-        <source>Our mempool and blockchain explorer for the Bitcoin community, focusing on the transaction fee market and multi-layer ecosystem, completely self-hosted without any trusted third-parties.</source>
+        <source>Our mempool and blockchain explorer for the BitcoinGold community, focusing on the transaction fee market and multi-layer ecosystem, completely self-hosted without any trusted third-parties.</source>
         <target>बिटकॉइन समुदाय के लिए हमारा मेमपूल और ब्लॉकचेन एक्सप्लोरर, जो की लेनदेन शुल्क बाजार और बहु-परत पारिस्थितिकी तंत्र पर ध्यान केंद्रित करता है, बिना किसी विश्वसनीय तृतीय-पक्ष के, पूरी तरह से स्वयं-होस्टेड है।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.html</context>
@@ -877,7 +877,7 @@
         <note priority="1" from="description">go-back</note>
       </trans-unit>
       <trans-unit id="7d89e94e98140d07d5c2bb12d6166b8b74506eb0" datatype="html">
-        <source>Accelerate your Bitcoin transaction?</source>
+        <source>Accelerate your BitcoinGold transaction?</source>
         <target>अपने बिटकॉइन लेनदेन में तेजी लाएं?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
@@ -1619,7 +1619,7 @@
         <note priority="1" from="description">accelerator.total-boost</note>
       </trans-unit>
       <trans-unit id="53475bdf4a94f0103f33211d02102859e9a8fe3e" datatype="html">
-        <source>BTC</source>
+        <source>BTGS</source>
         <target>बीटीसी</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/acceleration/acceleration-stats/acceleration-stats.component.html</context>
@@ -1653,7 +1653,7 @@
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
-        <note priority="1" from="description">BTC</note>
+        <note priority="1" from="description">BTGS</note>
         <note priority="1" from="meaning">shared.btc</note>
       </trans-unit>
       <trans-unit id="cf2ec414465d65ab24b354663d94d051a67e26e9" datatype="html">
@@ -2339,8 +2339,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.address" datatype="html">
-        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> address <x id="INTERPOLATION" equiv-text="this.addressString"/>.</source>
-        <target><x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> पता <x id="INTERPOLATION" equiv-text="this.addressString"/> के लिए मेमपूल लेनदेन, पुष्टि किए गए लेनदेन, शेष राशि, इत्यादि देखें।</target>
+        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> address <x id="INTERPOLATION" equiv-text="this.addressString"/>.</source>
+        <target><x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> पता <x id="INTERPOLATION" equiv-text="this.addressString"/> के लिए मेमपूल लेनदेन, पुष्टि किए गए लेनदेन, शेष राशि, इत्यादि देखें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/address/address-preview.component.ts</context>
           <context context-type="linenumber">75</context>
@@ -2849,7 +2849,7 @@
         <note priority="1" from="description">Asset data load error</note>
       </trans-unit>
       <trans-unit id="0ae529953ee15ef7af41fe3a3c30a10de5347f34" datatype="html">
-        <source>BTC Holdings</source>
+        <source>BTGS Holdings</source>
         <target>बीटीसी होल्डिंग्स</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
@@ -2935,7 +2935,7 @@
         <note priority="1" from="description">mining.avg-block-fee-1m</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fee-rates" datatype="html">
-        <source>See Bitcoin feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
+        <source>See BitcoinGold feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
         <target>समय के साथ बिटकॉइन शुल्क दरों को देखें, जिसमें प्रति ब्लॉक न्यूनतम और अधिकतम शुल्क दरों के साथ-साथ विभिन्न प्रतिशत पर शुल्क दरें भी शामिल हैं।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fee-rates-graph/block-fee-rates-graph.component.ts</context>
@@ -2976,7 +2976,7 @@
         <note priority="1" from="description">mining.block-fees</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees" datatype="html">
-        <source>See the average mining fees earned per Bitcoin block visualized in BTC and USD over time.</source>
+        <source>See the average mining fees earned per BitcoinGold block visualized in BTGS and USD over time.</source>
         <target>समय के साथ प्रति बिटकॉइन ब्लॉक अर्जित औसत खनन शुल्क को बीटीसी और यूएसडी में देखें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
@@ -3041,7 +3041,7 @@
         <note priority="1" from="description">mining.block-fees-subsidy-subsidy</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees-subsidy" datatype="html">
-        <source>See the mining fees earned per Bitcoin block compared to the Bitcoin block subsidy, visualized in BTC and USD over time.</source>
+        <source>See the mining fees earned per BitcoinGold block compared to the BitcoinGold block subsidy, visualized in BTGS and USD over time.</source>
         <target>बिटकॉइन ब्लॉक सब्सिडी की तुलना में प्रति बिटकॉइन ब्लॉक अर्जित खनन शुल्क देखें, जिसे समय के साथ बीटीसी और यूएसडी में दर्शाया गया है।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
@@ -3153,7 +3153,7 @@
         <note priority="1" from="description">mining.blocks-health</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-health" datatype="html">
-        <source>See Bitcoin block health visualized over time. Block health is a measure of how many expected transactions were included in an actual mined block. Expected transactions are determined using Mempool's re-implementation of Bitcoin Core's transaction selection algorithm.</source>
+        <source>See BitcoinGold block health visualized over time. Block health is a measure of how many expected transactions were included in an actual mined block. Expected transactions are determined using Mempool's re-implementation of BitcoinGold Core's transaction selection algorithm.</source>
         <target>समय के साथ बिटकॉइन ब्लॉक स्वास्थ्य को देखें। ब्लॉक स्वास्थ्य एक माप है कि वास्तविक खनन किए गए ब्लॉक में कितने अपेक्षित लेनदेन शामिल थे। अपेक्षित लेनदेन बिटकॉइन कोर के लेनदेन चयन एल्गोरिथ्म के मेमपूल के पुन: कार्यान्वयन का उपयोग करके निर्धारित किए जाते हैं।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-health-graph/block-health-graph.component.ts</context>
@@ -3479,8 +3479,8 @@
         <note priority="1" from="description">mining.block-rewards</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-rewards" datatype="html">
-        <source>See Bitcoin block rewards in BTC and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
-        <target>समय के साथ बिटकॉइन ब्लॉक रिवॉर्ड को BTC और USD में देखें। ब्लॉक रिवॉर्ड वह कुल राशि है जो माइनर्स ब्लॉक सब्सिडी और फीस से कमाते हैं।</target>
+        <source>See BitcoinGold block rewards in BTGS and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
+        <target>समय के साथ बिटकॉइन ब्लॉक रिवॉर्ड को BTGS और USD में देखें। ब्लॉक रिवॉर्ड वह कुल राशि है जो माइनर्स ब्लॉक सब्सिडी और फीस से कमाते हैं।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-rewards-graph/block-rewards-graph.component.ts</context>
           <context context-type="linenumber">69</context>
@@ -3504,7 +3504,7 @@
         <note priority="1" from="description">mining.block-sizes-weights</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-sizes" datatype="html">
-        <source>See Bitcoin block sizes (MB) and block weights (weight units) visualized over time.</source>
+        <source>See BitcoinGold block sizes (MB) and block weights (weight units) visualized over time.</source>
         <target>समय के साथ बिटकॉइन ब्लॉक साइज (एमबी) और ब्लॉक वजन (वजन इकाइयाँ) देखें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.ts</context>
@@ -3660,7 +3660,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.block" datatype="html">
-        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
+        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
         <target>बिटकॉइन<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ब्लॉक <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>) के लिए साइज, वजन, शुल्क सीमा, शामिल लेनदेन, ऑडिट (अपेक्षित बनाम वास्तविक) और अधिक देखें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-view/block-view.component.ts</context>
@@ -4488,7 +4488,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.blocks" datatype="html">
-        <source>See the most recent Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> blocks along with basic stats such as block height, block reward, block size, and more.</source>
+        <source>See the most recent BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> blocks along with basic stats such as block height, block reward, block size, and more.</source>
         <target>सबसे हाल के बिटकॉइन ब्लॉकों को बुनियादी आँकड़ों जैसे कि ब्लॉक की ऊँचाई, ब्लॉक इनाम, ब्लॉक आकार और अधिक के साथ देखें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/blocks-list/blocks-list.component.ts</context>
@@ -5496,7 +5496,7 @@
         <note priority="1" from="description">mining.hashrate</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.hashrate" datatype="html">
-        <source>See hashrate and difficulty for the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.network)"/> network visualized over time.</source>
+        <source>See hashrate and difficulty for the BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.network)"/> network visualized over time.</source>
         <target>बिटकॉइन नेटवर्क के लिए हैशरेट और कठिनाई को समय के साथ देखें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hashrate-chart/hashrate-chart.component.ts</context>
@@ -5524,7 +5524,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.descriptions.bitcoin.graphs.hashrate-pools" datatype="html">
-        <source>See Bitcoin mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
+        <source>See BitcoinGold mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
         <target>समय के साथ बिटकॉइन खनन पूल के प्रभुत्व को देखें: देखें कि कुल हैशरेट में शीर्ष खनन पूलों की हिस्सेदारी समय के साथ कैसे उतार-चढ़ाव करती रही है।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hashrates-chart-pools/hashrate-chart-pools.component.ts</context>
@@ -5625,8 +5625,8 @@
         <note priority="1" from="description">liquid.non-dust-expired</note>
       </trans-unit>
       <trans-unit id="506d3b3e461d170c39745288b9ea96b9ac9b7f78" datatype="html">
-        <source>Total amount of BTC held in non-dust Federation UTXOs that have expired timelocks</source>
-        <target>नॉन-डस्ट फेडरेशन UTXO में रखे गए BTC की कुल राशि, जिसका टाइमलॉक समाप्त हो चुका है</target>
+        <source>Total amount of BTGS held in non-dust Federation UTXOs that have expired timelocks</source>
+        <target>नॉन-डस्ट फेडरेशन UTXO में रखे गए BTGS की कुल राशि, जिसका टाइमलॉक समाप्त हो चुका है</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/expired-utxos-stats/expired-utxos-stats.component.html</context>
           <context context-type="linenumber">5</context>
@@ -5664,8 +5664,8 @@
         <note priority="1" from="description">liquid.total-expired</note>
       </trans-unit>
       <trans-unit id="a1351919fe237825d7d5844cff22192f88bd1eb4" datatype="html">
-        <source>Total amount of BTC held in Federation UTXOs that have expired timelocks</source>
-        <target>फेडरेशन UTXO में रखे गए BTC की कुल राशि, जिसका टाइमलॉक समाप्त हो चुका है</target>
+        <source>Total amount of BTGS held in Federation UTXOs that have expired timelocks</source>
+        <target>फेडरेशन UTXO में रखे गए BTGS की कुल राशि, जिसका टाइमलॉक समाप्त हो चुका है</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/expired-utxos-stats/expired-utxos-stats.component.html</context>
           <context context-type="linenumber">15</context>
@@ -5846,7 +5846,7 @@
         <note priority="1" from="description">liquid.fund-redemption-tx</note>
       </trans-unit>
       <trans-unit id="4dbfcaee1d2f0308bd20b3b6b6655ba1e04330dc" datatype="html">
-        <source>BTC Address</source>
+        <source>BTGS Address</source>
         <target>बीटीसी पता</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-list/recent-pegs-list.component.html</context>
@@ -5909,8 +5909,8 @@
         <note priority="1" from="description">liquid.unpeg</note>
       </trans-unit>
       <trans-unit id="9d89af322d1f011851fd136a01a988aec5691e02" datatype="html">
-        <source>Number of times that the Federation's BTC holdings fall below 95% of the total LBTC supply</source>
-        <target>फेडरेशन के BTC होल्डिंग्स का कुल LBTC आपूर्ति के 95% से कम होने की संख्या</target>
+        <source>Number of times that the Federation's BTGS holdings fall below 95% of the total LBTC supply</source>
+        <target>फेडरेशन के BTGS होल्डिंग्स का कुल LBTC आपूर्ति के 95% से कम होने की संख्या</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
           <context context-type="linenumber">6</context>
@@ -5984,8 +5984,8 @@
         <note priority="1" from="description">shared.as-of-block</note>
       </trans-unit>
       <trans-unit id="meta.description.mempool-block" datatype="html">
-        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
-        <target>मेमपूल में <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> लेनदेन के आँकड़े देखें: शुल्क सीमा, कुल आकार, और बहुत कुछ। जैसे ही नेटवर्क नए लेनदेन प्राप्त करता है, मेमपूल ब्लॉक वास्तविक समय में अपडेट हो जाते हैं।</target>
+        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
+        <target>मेमपूल में <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> लेनदेन के आँकड़े देखें: शुल्क सीमा, कुल आकार, और बहुत कुछ। जैसे ही नेटवर्क नए लेनदेन प्राप्त करता है, मेमपूल ब्लॉक वास्तविक समय में अपडेट हो जाते हैं।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mempool-block/mempool-block.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6092,7 +6092,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.mining.dashboard" datatype="html">
-        <source>Get real-time Bitcoin mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
+        <source>Get real-time BitcoinGold mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
         <target>वास्तविक समय बिटकॉइन खनन आँकड़े प्राप्त करें जैसे हैशरेट, कठिनाई समायोजन, ब्लॉक पुरस्कार, पूल प्रभुत्व, और अधिक।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mining-dashboard/mining-dashboard.component.ts</context>
@@ -6337,7 +6337,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.pool-ranking" datatype="html">
-        <source>See the top Bitcoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
+        <source>See the top BitcoinGold mining pools ranked by number of blocks mined, over your desired timeframe.</source>
         <target>अपने इच्छित समय सीमा में खनन किए गए ब्लॉकों की संख्या के आधार पर रैंक किए गए शीर्ष बिटकॉइन खनन पूल देखें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
@@ -6660,7 +6660,7 @@
         <note priority="1" from="description">mining.pool-dominance</note>
       </trans-unit>
       <trans-unit id="b15dbef7e036c8131fd8a59555b780a67598c7ca" datatype="html">
-        <source>Bitcoin Price</source>
+        <source>BitcoinGold Price</source>
         <target>बिटकॉइन मूल्य</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.html</context>
@@ -6690,7 +6690,7 @@
         <note priority="1" from="description">price-chart.percent-change</note>
       </trans-unit>
       <trans-unit id="price-chart.title" datatype="html">
-        <source>Bitcoin Price</source>
+        <source>BitcoinGold Price</source>
         <target>बिटकॉइन मूल्य</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
@@ -6698,7 +6698,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="price-chart.description" datatype="html">
-        <source>See the Bitcoin price in USD visualized over time.</source>
+        <source>See the BitcoinGold price in USD visualized over time.</source>
         <target>समय के साथ USD में बिटकॉइन की कीमत देखें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
@@ -6819,8 +6819,8 @@
         <note priority="1" from="description">test-tx.rejection-reason</note>
       </trans-unit>
       <trans-unit id="meta.description.push-tx" datatype="html">
-        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's hash.</source>
-        <target>लेनदेन के हैश का उपयोग करके <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> नेटवर्क पर लेनदेन प्रसारित करें।</target>
+        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's hash.</source>
+        <target>लेनदेन के हैश का उपयोग करके <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> नेटवर्क पर लेनदेन प्रसारित करें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/push-transaction/push-transaction.component.ts</context>
           <context context-type="linenumber">59</context>
@@ -6849,7 +6849,7 @@
         <note priority="1" from="description">rbf.no-replacements-yet</note>
       </trans-unit>
       <trans-unit id="meta.description.rbf-list" datatype="html">
-        <source>See the most recent RBF replacements on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network, updated in real-time.</source>
+        <source>See the most recent RBF replacements on the BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network, updated in real-time.</source>
         <target>बिटकॉइन नेटवर्क पर सबसे हालिया आरबीएफ प्रतिस्थापन देखें, जो वास्तविक समय में अपडेट किया गया है।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/rbf-list/rbf-list.component.ts</context>
@@ -6950,13 +6950,13 @@
         <note priority="1" from="description">mining.fees-per-block-desc</note>
       </trans-unit>
       <trans-unit id="0705223420d290a218e4ed83bd4d904454a9cee8" datatype="html">
-        <source>BTC/block</source>
+        <source>BTGS/block</source>
         <target>बीटीसी/ब्लॉक</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/reward-stats/reward-stats.component.html</context>
           <context context-type="linenumber">21</context>
         </context-group>
-        <note priority="1" from="description">BTC/block</note>
+        <note priority="1" from="description">BTGS/block</note>
         <note priority="1" from="meaning">shared.btc-block</note>
       </trans-unit>
       <trans-unit id="cf3a97b1c1546b843411cfe101bc55ba2ac46bac" datatype="html">
@@ -6996,7 +6996,7 @@
         <note priority="1" from="meaning">shared.sat-vbyte</note>
       </trans-unit>
       <trans-unit id="7deec1c1520f06170e1f8e8ddfbe4532312f638f" datatype="html">
-        <source>Explore the full Bitcoin ecosystem</source>
+        <source>Explore the full BitcoinGold ecosystem</source>
         <target>संपूर्ण बिटकॉइन पारिस्थितिकी तंत्र का अन्वेषण करें</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
@@ -7283,7 +7283,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.stale-chain-tips" datatype="html">
-        <source>See the most recent stale chain tips on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network.</source>
+        <source>See the most recent stale chain tips on the BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/stale-list/stale-list.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -8019,7 +8019,7 @@
         <note priority="1" from="meaning">transaction.sigops</note>
       </trans-unit>
       <trans-unit id="meta.description.preview-tx" datatype="html">
-        <source>Preview a transaction to the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's raw hex data.</source>
+        <source>Preview a transaction to the BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's raw hex data.</source>
         <target>लेन-देन के कच्चे हेक्स डेटा का उपयोग करके बिटकॉइन<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> नेटवर्क पर लेन-देन का पूर्वावलोकन करें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.ts</context>
@@ -8304,7 +8304,7 @@
         <note priority="1" from="description">transactions-list.taproot.script-depth</note>
       </trans-unit>
       <trans-unit id="d51fdb627a84595400e2ef9f7bf79192a5f2e36b" datatype="html">
-        <source>Bitcoin Supply</source>
+        <source>BitcoinGold Supply</source>
         <target>बिटकॉइन आपूर्ति</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/treasuries/supply/treasuries-supply.component.html</context>
@@ -8349,8 +8349,8 @@
         <note priority="1" from="description">dashboard.treasury-leaderboard</note>
       </trans-unit>
       <trans-unit id="bcde4e77600723b4032d3bffe5e44386fa824b47" datatype="html">
-        <source>BTC Balance</source>
-        <target>BTC बैलेंस</target>
+        <source>BTGS Balance</source>
+        <target>BTGS बैलेंस</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/treasuries/treasuries.component.html</context>
           <context context-type="linenumber">19</context>
@@ -8651,8 +8651,8 @@
         <note priority="1" from="description">shared.wallet</note>
       </trans-unit>
       <trans-unit id="27f315de9bee14d550b7dd052a4bc49948ddca42" datatype="html">
-        <source>Balance (BTC)</source>
-        <target>बैलेंस (BTC)</target>
+        <source>Balance (BTGS)</source>
+        <target>बैलेंस (BTGS)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/wallet/wallet-preview.component.html</context>
           <context context-type="linenumber">17</context>
@@ -8681,7 +8681,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.wallet" datatype="html">
-        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> wallet <x id="INTERPOLATION" equiv-text="walletName"/>.</source>
+        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> wallet <x id="INTERPOLATION" equiv-text="walletName"/>.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/wallet/wallet-preview.component.ts</context>
           <context context-type="linenumber">151</context>
@@ -8731,8 +8731,8 @@
         <note priority="1" from="description">liquid.federation-expired-utxos</note>
       </trans-unit>
       <trans-unit id="9f88381443e277aca8bb50a8d0a338ab6cf2a68b" datatype="html">
-        <source>LBTC Supply Against BTC Holdings</source>
-        <target>BTC होल्डिंग्स के मुकाबले LBTC सप्लाई</target>
+        <source>LBTC Supply Against BTGS Holdings</source>
+        <target>BTGS होल्डिंग्स के मुकाबले LBTC सप्लाई</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
           <context context-type="linenumber">184</context>
@@ -8744,7 +8744,7 @@
         <note priority="1" from="description">dashboard.lbtc-supply-against-btc-holdings</note>
       </trans-unit>
       <trans-unit id="999bb1a0150c2815a6b4dd64a1850e763603e525" datatype="html">
-        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="mempool.space mer"/>mempool.space merely provides data about the Bitcoin network.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> It cannot help you with retrieving funds, wallet issues, etc.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/>For any such requests, you need to get in touch with the entity that helped make the transaction (wallet software, exchange company, etc).<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
+        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="mempool.space mer"/>mempool.space merely provides data about the BitcoinGold network.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> It cannot help you with retrieving funds, wallet issues, etc.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/>For any such requests, you need to get in touch with the entity that helped make the transaction (wallet software, exchange company, etc).<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
         <target><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="mempool.space mer"/>mempool.space केवल बिटकॉइन नेटवर्क के बारे में डेटा प्रदान करता है।<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> यह आपको धन प्राप्त करने, वॉलेट समस्याओं आदि में मदद नहीं कर सकता है।<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/>ऐसे किसी भी अनुरोध के लिए, आपको उस संस्था से संपर्क करना होगा जिसने लेनदेन में मदद की (वॉलेट सॉफ़्टवेयर, एक्सचेंज कंपनी, आदि)।<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
@@ -10280,8 +10280,8 @@
         <note priority="1" from="description">lightning.share</note>
       </trans-unit>
       <trans-unit id="meta.description.lightning.nodes-country-overview" datatype="html">
-        <source>See a geographical breakdown of the Lightning network: how many Lightning nodes are hosted in countries around the world, aggregate BTC capacity for each country, and more.</source>
-        <target>लाइटनिंग नेटवर्क का भौगोलिक विवरण देखें: दुनिया भर के देशों में कितने लाइटनिंग नोड्स होस्ट किए गए हैं, प्रत्येक देश के लिए कुल BTC क्षमता, और बहुत कुछ।</target>
+        <source>See a geographical breakdown of the Lightning network: how many Lightning nodes are hosted in countries around the world, aggregate BTGS capacity for each country, and more.</source>
+        <target>लाइटनिंग नेटवर्क का भौगोलिक विवरण देखें: दुनिया भर के देशों में कितने लाइटनिंग नोड्स होस्ट किए गए हैं, प्रत्येक देश के लिए कुल BTGS क्षमता, और बहुत कुछ।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-country-chart/nodes-per-country-chart.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -10308,8 +10308,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="7032954508645880700" datatype="html">
-        <source><x id="PH" equiv-text="this.amountShortenerPipe.transform(country.capacity / 100000000, 2)"/> BTC capacity</source>
-        <target><x id="PH" equiv-text="this.amountShortenerPipe.transform(country.capacity / 100000000, 2)"/> BTC क्षमता</target>
+        <source><x id="PH" equiv-text="this.amountShortenerPipe.transform(country.capacity / 100000000, 2)"/> BTGS capacity</source>
+        <target><x id="PH" equiv-text="this.amountShortenerPipe.transform(country.capacity / 100000000, 2)"/> BTGS क्षमता</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-country-chart/nodes-per-country-chart.component.ts</context>
           <context context-type="linenumber">106</context>
@@ -10434,15 +10434,15 @@
         <note priority="1" from="description">lightning.top-100-isp-ln</note>
       </trans-unit>
       <trans-unit id="meta.description.lightning.nodes-per-isp" datatype="html">
-        <source>Browse the top 100 ISPs hosting Lightning nodes along with stats like total number of nodes per ISP, aggregate BTC capacity per ISP, and more</source>
-        <target>लाइटनिंग नोड्स की मेजबानी करने वाले शीर्ष 100 ISP को ब्राउज़ करें, साथ ही प्रति ISP नोड्स की कुल संख्या, प्रति ISP कुल BTC क्षमता इत्यादि जैसे आँकड़े भी देखें</target>
+        <source>Browse the top 100 ISPs hosting Lightning nodes along with stats like total number of nodes per ISP, aggregate BTGS capacity per ISP, and more</source>
+        <target>लाइटनिंग नोड्स की मेजबानी करने वाले शीर्ष 100 ISP को ब्राउज़ करें, साथ ही प्रति ISP नोड्स की कुल संख्या, प्रति ISP कुल BTGS क्षमता इत्यादि जैसे आँकड़े भी देखें</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-isp-chart/nodes-per-isp-chart.component.ts</context>
           <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3627306100664959238" datatype="html">
-        <source><x id="PH" equiv-text="this.amountShortenerPipe.transform(isp[2] / 100000000, 2)"/> BTC</source>
+        <source><x id="PH" equiv-text="this.amountShortenerPipe.transform(isp[2] / 100000000, 2)"/> BTGS</source>
         <target><x id="PH" equiv-text="this.amountShortenerPipe.transform(isp[2] / 100000000, 2)"/> बीटीसी</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-isp-chart/nodes-per-isp-chart.component.ts</context>
@@ -10497,8 +10497,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.lightning.nodes-isp" datatype="html">
-        <source>Browse all Bitcoin Lightning nodes using the <x id="PH" equiv-text="response.isp"/> [AS<x id="PH_1" equiv-text="this.route.snapshot.params.isp"/>] ISP and see aggregate stats like total number of nodes, total capacity, and more for the ISP.</source>
-        <target><x id="PH" equiv-text="response.isp"/> [AS<x id="PH_1" equiv-text="this.route.snapshot.params.isp"/>] ISP का उपयोग करके सभी Bitcoin Lightning नोड्स को ब्राउज़ करें और ISP के लिए नोड्स की कुल संख्या, कुल क्षमता इत्यादि जैसे समग्र आँकड़े देखें।</target>
+        <source>Browse all BitcoinGold Lightning nodes using the <x id="PH" equiv-text="response.isp"/> [AS<x id="PH_1" equiv-text="this.route.snapshot.params.isp"/>] ISP and see aggregate stats like total number of nodes, total capacity, and more for the ISP.</source>
+        <target><x id="PH" equiv-text="response.isp"/> [AS<x id="PH_1" equiv-text="this.route.snapshot.params.isp"/>] ISP का उपयोग करके सभी BitcoinGold Lightning नोड्स को ब्राउज़ करें और ISP के लिए नोड्स की कुल संख्या, कुल क्षमता इत्यादि जैसे समग्र आँकड़े देखें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-isp/nodes-per-isp-preview.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -10561,8 +10561,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.lightning.ranking.liquidity" datatype="html">
-        <source>See Lightning nodes with the most BTC liquidity deployed along with high-level stats like number of open channels, location, node age, and more.</source>
-        <target>सबसे अधिक BTC तरलता वाले लाइटनिंग नोड्स देखें, साथ ही उच्च-स्तरीय आँकड़े जैसे खुले चैनलों की संख्या, स्थान, नोड आयु, और बहुत कुछ देखें।</target>
+        <source>See Lightning nodes with the most BTGS liquidity deployed along with high-level stats like number of open channels, location, node age, and more.</source>
+        <target>सबसे अधिक BTGS तरलता वाले लाइटनिंग नोड्स देखें, साथ ही उच्च-स्तरीय आँकड़े जैसे खुले चैनलों की संख्या, स्थान, नोड आयु, और बहुत कुछ देखें।</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-ranking/top-nodes-per-capacity/top-nodes-per-capacity.component.ts</context>
           <context context-type="linenumber">36</context>

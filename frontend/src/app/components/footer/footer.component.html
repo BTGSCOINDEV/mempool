@@ -21,7 +21,7 @@
         <div class="sub-text">{{ mempoolInfoData.memPoolInfo.size | number }}</div>
       </div>
       <div class="col">
-        <span class="mempoolSize"><ng-container i18n="dashboard.mempool-size|Mempool size">Mempool size</ng-container>:</span>
+        <span class="mempoolSize"><ng-container i18n="dashboard.mempool-size|BitcoinGold size">BitcoinGold size</ng-container>:</span>
         <div class="sub-text" *ngIf="(mempoolBlocksData$ | async) as mempoolBlocksData"><span [innerHtml]="mempoolBlocksData.size | bytes"></span> (<ng-container *ngTemplateOutlet="mempoolBlocksData.blocks === 1 ? blocksSingular : blocksPlural; context: {$implicit: mempoolBlocksData.blocks }"></ng-container>)</div>
         <ng-template #blocksPlural let-i i18n="shared.blocks">{{ i }} <span class="shared-block">blocks</span></ng-template>
         <ng-template #blocksSingular let-i i18n="shared.block">{{ i }} <span class="shared-block">block</span></ng-template>

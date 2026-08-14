@@ -14,7 +14,7 @@
         <th class="timestamp text-start" i18n="shared.date" [ngClass]="{'widget': widget}">Date</th>
         <th class="amount text-end" [ngClass]="{'widget': widget}" i18n="shared.amount">Amount</th>
         <th class="output text-start" *ngIf="!widget" i18n="liquid.fund-redemption-tx">Fund / Redemption Tx</th>
-        <th class="address text-start" *ngIf="!widget" i18n="liquid.bitcoin-address">BTC Address</th>
+        <th class="address text-start" *ngIf="!widget" i18n="liquid.bitcoin-address">BTGS Address</th>
       </thead>
       <tbody *ngIf="recentPegsList$ | async as pegs; else skeleton" [style]="isLoading ? 'opacity: 0.75' : ''">
         <ng-container *ngIf="widget; else regularRows">

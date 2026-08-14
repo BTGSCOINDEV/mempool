@@ -166,17 +166,17 @@ describe('Calculator', () => {
 
     describe('max supply (21M BTC)', () => {
       it('shows warning when entering 21M BTC', () => {
-        cy.get('input[formControlName="bitcoin"]').clear().type('21000000');
+        cy.get('input[formControlName="bitcoin"]').clear().type('26000000');
         cy.get('.alert.alert-warning').should('be.visible');
         cy.get('.alert.alert-warning').should('contain', 'Values were capped at the max supply of 21M BTC');
-        cy.get('input[formControlName="bitcoin"]').invoke('val').should('equal', '21000000');
-        cy.get('input[formControlName="satoshis"]').invoke('val').should('equal', '2100000000000000');
+        cy.get('input[formControlName="bitcoin"]').invoke('val').should('equal', '26000000');
+        cy.get('input[formControlName="satoshis"]').invoke('val').should('equal', '2600000000000000');
       });
 
       it('caps values at max supply', () => {
         cy.get('input[formControlName="bitcoin"]').clear().type('25000000');
         cy.get('.alert.alert-warning').should('be.visible');
-        cy.get('input[formControlName="bitcoin"]').invoke('val').should('equal', '21000000');
+        cy.get('input[formControlName="bitcoin"]').invoke('val').should('equal', '26000000');
       });
     });
 

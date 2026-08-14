@@ -102,7 +102,7 @@ export class AddressComponent implements OnInit, OnDestroy {
 
   isMobile: boolean;
   showQR: boolean = false;
-  officialMempoolSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
+  officialBitcoinGoldSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
 
   address: Address;
   addressString: string;

@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "RT-Pool",
+    "addresses": [
+      "GUtngW7CnkntKy9y8caSXgVnLdEWJTymPs"
+    ],
+    "tags": [
+      "RT-POOL\\.CC",
+      "RT-POOL",
+      "rt-pool"
+    ],
+    "link": "https://rt-pool.cc"
+  },
+  {
+    "id": 2,
+    "name": "bitofsin solo",
+    "addresses": [
+      "GLGCy86swQ7CsCRFgHw7pRQuLBZjFhALM3"
+    ],
+    "tags": [
+      "bitofsinsolo"
+    ],
+    "link": "https://pool.bitofsin.com"
+  },
+  {
+    "id": 3,
+    "name": "NitoPool",
+    "addresses": [
+      "Ge9ZNCq6YJTVk2fp1U9nfZzUXUswPhJzV8"
+    ],
+    "tags": [
+      "Mined @ nitopool.online"
+    ],
+    "link": "https://nitopool.online"
+  },
+  {
+    "id": 4,
+    "name": "gamikpool",
+    "addresses": [
+      "bcg1qs52qmpcce2g9l7hdmlr7ammgf6n35w5ux58uwy"
+    ],
+    "tags": [
+      "gamikpool"
+    ],
+    "link": "https://gamikpool.com"
+  },
+  {
+    "id": 5,
+    "name": "fewbit solo",
+    "addresses": [
+      "GRdFHYfB1zQN2M5zSFtmh8xCSJBRg8ndKF"
+    ],
+    "tags": [
+      "fewbitpool solo",
+      "FewBit solo"
+    ],
+    "link": "https://pool.fewbit.online"
+  },
+  {
+    "id": 6,
+    "name": "mcmpool",
+    "addresses": [
+      "GY11nzfemckniyp48Gn3K6eWp7htUnsVDf",
+      "GgMtGuPvKUzRSV4CcdYUkw8L4Ms3zS2L4U"
+    ],
+    "tags": [
+      "McMpool",
+      "MCMPOOL",
+      "mcmpool"
+    ],
+    "link": "https://mcmpool.eu"
+  },
+  {
+    "id": 7,
+    "name": "minorpool solo",
+    "addresses": [
+      "GVxY9rz6vXVpeKfChwRtqZAW7C2RxfHuou"
+    ],
+    "tags": [
+      "MinorPool Solo"
+    ],
+    "link": "https://minorpool.online"
+  },
+  {
+    "id": 8,
+    "name": "LuckyDogPool",
+    "addresses": [
+      "GZz8WcXa9GVgGMcUrJWbL2VQkLHYQp1HM2"
+    ],
+    "tags": [
+      "Luckydogpool",
+      "LuckyDogPool"
+    ],
+    "link": "https://luckydogpool.com"
+  },
+  {
+    "id": 9,
+    "name": "zpool",
+    "addresses": [
+      "GWhEkb6M4MxFVEn61N4xRN2uN9Wswb56ZN"
+    ],
+    "tags": [
+      "z & zpool.ca"
+    ],
+    "link": "https://zpool.ca"
+  },
+  {
+    "id": 10,
+    "name": "Luckypool",
+    "addresses": [
+      "GQqTp2dUydjVzozDo8ddUWYPRBjhtrjdd9"
+    ],
+    "tags": [
+      "luckypool",
+      "LUCKYPOOL"
+    ],
+    "link": "http://lucky-pool.co.uk"
+  },
+  {
+    "id": 11,
+    "name": "MiningCrypto",
+    "addresses": [
+      "bcg1qhns4gfe7uv6k5y0un9wnxv95v9qghhylxaner8"
+    ],
+    "tags": [
+      "mININGCryptoPool"
+    ],
+    "link": "https://btgs.miningcrypto.online/"
+  },
+  {
+    "id": 12,
+    "name": "Kyng",
+    "addresses": [
+      "GRZ741v2ACGWJxaBHtFmi8ezj9uA8wvPoA"
+    ],
+    "tags": [
+      "KriptoKyng"
+    ],
+    "link": "https://kriptokyng.com"
+  }
+]

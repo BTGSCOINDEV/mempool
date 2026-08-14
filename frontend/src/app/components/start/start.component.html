@@ -26,8 +26,8 @@
       [pages]="pages"
       [blocksPerPage]="blocksPerPage"
       [minScrollWidth]="minScrollWidth"
-      [scrollableMempool]="true"
-      (mempoolOffsetChange)="onMempoolOffsetChange($event)"
+      [scrollableBitcoinGold]="true"
+      (mempoolOffsetChange)="onBitcoinGoldOffsetChange($event)"
     ></app-blockchain>
   </div>
   <div class="reset-scroll" [class.hidden]="pageIndex === 0" (click)="resetScroll()">

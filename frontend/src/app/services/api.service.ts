@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
-import { CpfpInfo, OptimizedMempoolStats, AddressInformation, LiquidPegs, ITranslators, PoolStat, BlockExtended, TransactionStripped, RewardStats, AuditScore, BlockSizesAndWeights,
-  RbfTree, BlockAudit, CurrentPegs, AuditStatus, FederationAddress, FederationUtxo, RecentPeg, PegsVolume, AccelerationInfo, TestMempoolAcceptResult, WalletAddress, Treasury, SubmitPackageResult, ChainTip, StaleTip } from '@interfaces/node-api.interface';
+import { CpfpInfo, OptimizedBitcoinGoldStats, AddressInformation, LiquidPegs, ITranslators, PoolStat, BlockExtended, TransactionStripped, RewardStats, AuditScore, BlockSizesAndWeights,
+  RbfTree, BlockAudit, CurrentPegs, AuditStatus, FederationAddress, FederationUtxo, RecentPeg, PegsVolume, AccelerationInfo, TestBitcoinGoldAcceptResult, WalletAddress, Treasury, SubmitPackageResult, ChainTip, StaleTip } from '@interfaces/node-api.interface';
 import { BehaviorSubject, Observable, catchError, filter, map, of, shareReplay, switchMap, take, tap } from 'rxjs';
 import { StateService } from '@app/services/state.service';
 import { Transaction } from '@interfaces/electrs.interface';
@@ -78,48 +78,48 @@ export class ApiService {
     return this.requestCache.get(cacheKey).subject.asObservable().pipe(filter(val => val !== null), take(1));
   }
 
-  list2HStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/2h');
+  list2HStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/2h');
   }
 
-  list24HStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/24h');
+  list24HStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/24h');
   }
 
-  list1WStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/1w');
+  list1WStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/1w');
   }
 
-  list1MStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/1m');
+  list1MStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/1m');
   }
 
-  list3MStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/3m');
+  list3MStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/3m');
   }
 
-  list6MStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/6m');
+  list6MStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/6m');
   }
 
-  list1YStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/1y');
+  list1YStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/1y');
   }
 
-  list2YStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/2y');
+  list2YStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/2y');
   }
 
-  list3YStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/3y');
+  list3YStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/3y');
   }
 
-  list4YStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/4y');
+  list4YStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/4y');
   }
 
-  listAllTimeStatistics$(): Observable<OptimizedMempoolStats[]> {
-    return this.httpClient.get<OptimizedMempoolStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/all');
+  listAllTimeStatistics$(): Observable<OptimizedBitcoinGoldStats[]> {
+    return this.httpClient.get<OptimizedBitcoinGoldStats[]>(this.apiBaseUrl + this.apiBasePath + '/api/v1/statistics/all');
   }
 
   getTransactionTimes$(txIds: string[]): Observable<number[]> {
@@ -253,8 +253,8 @@ export class ApiService {
     return this.httpClient.post<any>(this.apiBaseUrl + this.apiBasePath + '/api/tx', hexPayload, { responseType: 'text' as 'json'});
   }
 
-  testTransactions$(rawTxs: string[], maxfeerate?: number): Observable<TestMempoolAcceptResult[]> {
-    return this.httpClient.post<TestMempoolAcceptResult[]>(this.apiBaseUrl + this.apiBasePath + `/api/txs/test${maxfeerate != null ? '?maxfeerate=' + maxfeerate.toFixed(8) : ''}`, rawTxs);
+  testTransactions$(rawTxs: string[], maxfeerate?: number): Observable<TestBitcoinGoldAcceptResult[]> {
+    return this.httpClient.post<TestBitcoinGoldAcceptResult[]>(this.apiBaseUrl + this.apiBasePath + `/api/txs/test${maxfeerate != null ? '?maxfeerate=' + maxfeerate.toFixed(8) : ''}`, rawTxs);
   }
 
   submitPackage$(rawTxs: string[], maxfeerate?: number, maxburnamount?: number): Observable<SubmitPackageResult> {
@@ -542,9 +542,11 @@ export class ApiService {
     if (currency) {
       queryParams.push(`currency=${currency}`);
     }
-    return this.httpClient.get<Conversion>(
-      `${this.apiBaseUrl}${this.apiBasePath}/api/v1/historical-price` +
-        (queryParams.length > 0 ? `?${queryParams.join('&')}` : '')
+    return this.httpClient.get<any>('https://api.coinpaprika.com/v1/tickers/btgs-bitcoingold').pipe(
+      map((data) => ({
+        prices: [{ time: Math.floor(Date.now() / 1000), USD: data.quotes.USD.price, EUR: 0, GBP: 0, CAD: 0, CHF: 0, AUD: 0, JPY: 0 }],
+        exchangeRates: { USDEUR: 0, USDGBP: 0, USDCAD: 0, USDCHF: 0, USDAUD: 0, USDJPY: 0 }
+      }))
     );
   }
 

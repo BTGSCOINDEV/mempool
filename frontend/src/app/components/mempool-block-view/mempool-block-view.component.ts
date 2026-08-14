@@ -24,7 +24,7 @@ function bestFitResolution(min, max, n): number {
   styleUrls: ['./mempool-block-view.component.scss'],
   standalone: false,
 })
-export class MempoolBlockViewComponent implements OnInit, OnDestroy {
+export class BitcoinGoldBlockViewComponent implements OnInit, OnDestroy {
   autofit: boolean = false;
   resolution: number = 80;
   index: number = 0;

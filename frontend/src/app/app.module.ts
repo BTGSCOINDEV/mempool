@@ -73,8 +73,8 @@ const providers = [
 export class AppModule { }
 
 @NgModule({})
-export class MempoolSharedModule{
-  static forRoot(): ModuleWithProviders<MempoolSharedModule> {
+export class BitcoinGoldSharedModule{
+  static forRoot(): ModuleWithProviders<BitcoinGoldSharedModule> {
     return {
       ngModule: AppModule,
       providers: providers

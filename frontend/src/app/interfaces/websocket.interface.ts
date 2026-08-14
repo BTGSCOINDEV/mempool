@@ -10,7 +10,7 @@ export interface WebsocketResponse {
   conversions?: Record<string, number>;
   txConfirmed?: string;
   historicalDate?: string;
-  mempoolInfo?: MempoolInfo;
+  mempoolInfo?: BitcoinGoldInfo;
   vBytesPerSecond?: number;
   previousRetarget?: number;
   action?: string;
@@ -57,7 +57,7 @@ export interface ReplacementInfo {
   newFee: number;
   newVsize: number;
 }
-export interface MempoolBlock {
+export interface BitcoinGoldBlock {
   blink?: boolean;
   height?: number;
   blockSize: number;
@@ -70,33 +70,33 @@ export interface MempoolBlock {
   isStack?: boolean;
 }
 
-export interface MempoolBlockWithTransactions extends MempoolBlock {
+export interface BitcoinGoldBlockWithTransactions extends BitcoinGoldBlock {
   transactionIds: string[];
   transactions: TransactionStripped[];
 }
 
-export interface MempoolBlockDelta {
+export interface BitcoinGoldBlockDelta {
   block: number;
   added: TransactionStripped[];
   removed: string[];
   changed: { txid: string, rate: number, flags: number, acc: boolean }[];
 }
-export interface MempoolBlockState {
+export interface BitcoinGoldBlockState {
   block: number;
   transactions: TransactionStripped[];
 }
-export type MempoolBlockUpdate = MempoolBlockDelta | MempoolBlockState;
-export function isMempoolState(update: MempoolBlockUpdate): update is MempoolBlockState {
+export type BitcoinGoldBlockUpdate = BitcoinGoldBlockDelta | BitcoinGoldBlockState;
+export function isBitcoinGoldState(update: BitcoinGoldBlockUpdate): update is BitcoinGoldBlockState {
   return update['transactions'] !== undefined;
 }
-export function isMempoolDelta(update: MempoolBlockUpdate): update is MempoolBlockDelta {
+export function isBitcoinGoldDelta(update: BitcoinGoldBlockUpdate): update is BitcoinGoldBlockDelta {
   return update['transactions'] === undefined;
 }
 
-export interface MempoolBlockDeltaCompressed {
+export interface BitcoinGoldBlockDeltaCompressed {
   added: TransactionCompressed[];
   removed: string[];
-  changed: MempoolDeltaChange[];
+  changed: BitcoinGoldDeltaChange[];
 }
 
 export interface AccelerationDelta {
@@ -105,7 +105,7 @@ export interface AccelerationDelta {
   reset?: boolean;
 }
 
-export interface MempoolInfo {
+export interface BitcoinGoldInfo {
   loaded: boolean;                 //  (boolean) True if the mempool is fully loaded
   size: number;                    //  (numeric) Current tx count
   bytes: number;                   //  (numeric) Sum of all virtual transaction sizes as defined in BIP 141.
@@ -118,7 +118,7 @@ export interface MempoolInfo {
 // [txid, fee, vsize, value, rate, flags, acceleration?]
 export type TransactionCompressed = [string, number, number, number, number, number, number, 1?];
 // [txid, rate, flags, acceleration?]
-export type MempoolDeltaChange = [string, number, number, (1|0)];
+export type BitcoinGoldDeltaChange = [string, number, number, (1|0)];
 
 export interface IBackendInfo {
   hostname?: string;

@@ -40,7 +40,7 @@
             <ng-container *ngFor="let type of ['hybrid', 'frontend', 'backend', 'electrs', 'ssr', 'core', 'os']">
               <td *ngIf="showHybridHash || type !== 'hybrid'" class="{{type}}" [class.hash]="type !== 'core' && type !== 'os'" [class.version]="type === 'core' || type === 'os'" [style.background-color]="colors[host.host][type]">
                 @if (type !== 'core' && type !== 'os' && host.hashes?.[type]) {
-                  <a [style.color]="'white'" href="https://github.com/mempool/{{repoMap[type]}}/commit/{{ host.hashes[type] }}" target="_blank">{{ host.hashes[type].slice(0, 8) || '?' }}</a>
+                  <a [style.color]="'white'" href="https://github.com/BTGSCOINDEV/BTGS/{{repoMap[type]}}/commit/{{ host.hashes[type] }}" target="_blank">{{ host.hashes[type].slice(0, 8) || '?' }}</a>
                 } @else if (host.hashes?.[type]) {
                   <span [style.color]="'white'" ngbTooltip="{{ host.hashes[type] }}" placement="top">{{ shortenVersion(host.hashes[type]) || '?' }}</span>
                 } @else {

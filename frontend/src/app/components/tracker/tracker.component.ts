@@ -23,7 +23,7 @@ import { ApiService } from '@app/services/api.service';
 import { SeoService } from '@app/services/seo.service';
 import { seoDescriptionNetwork } from '@app/shared/common.utils';
 import { Filter, TransactionFlags } from '@app/shared/filters.utils';
-import { BlockExtended, CpfpInfo, RbfTree, MempoolPosition, DifficultyAdjustment, Acceleration, AccelerationPosition } from '@interfaces/node-api.interface';
+import { BlockExtended, CpfpInfo, RbfTree, BitcoinGoldPosition, DifficultyAdjustment, Acceleration, AccelerationPosition } from '@interfaces/node-api.interface';
 import { PriceService } from '@app/services/price.service';
 import { ServicesApiServices } from '@app/services/services-api.service';
 import { EnterpriseService } from '@app/services/enterprise.service';
@@ -64,7 +64,7 @@ export class TrackerComponent implements OnInit, OnDestroy {
   tx: Transaction;
   txId: string;
   txInBlockIndex: number;
-  mempoolPosition: MempoolPosition;
+  mempoolPosition: BitcoinGoldPosition;
   accelerationPositions: AccelerationPosition[];
   isLoadingTx = true;
   loadingCachedTx = false;
@@ -131,7 +131,7 @@ export class TrackerComponent implements OnInit, OnDestroy {
 
   enterpriseInfo: any;
   enterpriseInfo$: Subscription;
-  officialMempoolSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
+  officialBitcoinGoldSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
 
   constructor(
     private route: ActivatedRoute,

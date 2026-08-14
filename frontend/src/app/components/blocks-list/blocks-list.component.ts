@@ -23,7 +23,7 @@ export class BlocksList implements OnInit {
 
   blocks$: Observable<BlockExtended[]> = undefined;
 
-  isMempoolModule = false;
+  isBitcoinGoldModule = false;
   indexingAvailable = false;
   auditAvailable = false;
   isLoading = true;
@@ -54,7 +54,7 @@ export class BlocksList implements OnInit {
     private relativeUrlPipe: RelativeUrlPipe,
     @Inject(LOCALE_ID) private locale: string,
   ) {
-    this.isMempoolModule = this.stateService.env.BASE_MODULE === 'mempool';
+    this.isBitcoinGoldModule = this.stateService.env.BASE_MODULE === 'mempool';
     if (this.locale.startsWith('ar') || this.locale.startsWith('fa') || this.locale.startsWith('he')) {
       this.dir = 'rtl';
     }
@@ -163,7 +163,7 @@ export class BlocksList implements OnInit {
           }
           if (blocks[1] && blocks[1].length) {
             this.blocksCount = Math.max(this.blocksCount, blocks[1][0].height) + 1;
-            if (this.isMempoolModule) {
+            if (this.isBitcoinGoldModule) {
               // @ts-ignore: Need to add an extra field for the template
               blocks[1][0].extras.pool.logo = `/resources/mining-pools/` +
                 blocks[1][0].extras.pool.slug + '.svg';
@@ -174,7 +174,7 @@ export class BlocksList implements OnInit {
           return acc;
         }, []),
         switchMap((blocks) => {
-          if (this.isMempoolModule && this.auditAvailable) {
+          if (this.isBitcoinGoldModule && this.auditAvailable) {
             blocks.forEach(block => {
               block.extras.feeDelta = block.extras.expectedFees ? (block.extras.totalFees - block.extras.expectedFees) / block.extras.expectedFees : 0;
             });

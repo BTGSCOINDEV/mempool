@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class EnterpriseService {
-  exclusiveHostName = '.mempool.space';
+  exclusiveHostName = '.BitcoinGold';
   subdomain: string | null = null;
   info$: BehaviorSubject<object> = new BehaviorSubject(null);
 
@@ -54,7 +54,7 @@ export class EnterpriseService {
       },
       (error) => {
         if (error.status === 404) {
-          window.location.href = 'https://mempool.space' + window.location.pathname;
+          window.location.href = 'https://BitcoinGold' + window.location.pathname;
         }
       });
     }

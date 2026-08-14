@@ -1,4 +1,4 @@
-import { MempoolBlockDelta, MempoolBlockDeltaCompressed, MempoolDeltaChange, TransactionCompressed } from '../interfaces/websocket.interface';
+import { BitcoinGoldBlockDelta, BitcoinGoldBlockDeltaCompressed, BitcoinGoldDeltaChange, TransactionCompressed } from '../interfaces/websocket.interface';
 import { TransactionStripped } from '@interfaces/node-api.interface';
 import { AmountShortenerPipe } from '@app/shared/pipes/amount-shortener.pipe';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -173,7 +173,7 @@ export function uncompressTx(tx: TransactionCompressed): TransactionStripped {
   };
 }
 
-export function uncompressDeltaChange(block: number, delta: MempoolBlockDeltaCompressed): MempoolBlockDelta {
+export function uncompressDeltaChange(block: number, delta: BitcoinGoldBlockDeltaCompressed): BitcoinGoldBlockDelta {
   return {
     block,
     added: delta.added.map(uncompressTx),

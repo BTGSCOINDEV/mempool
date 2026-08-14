@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppPreloadingStrategy } from '@app/app.preloading-strategy';
 import { BlockViewComponent } from '@components/block-view/block-view.component';
 import { EightBlocksComponent } from '@components/eight-blocks/eight-blocks.component';
-import { MempoolBlockViewComponent } from '@components/mempool-block-view/mempool-block-view.component';
+import { BitcoinGoldBlockViewComponent } from '@components/mempool-block-view/mempool-block-view.component';
 import { ClockComponent } from '@components/clock/clock.component';
 import { StatusViewComponent } from '@components/status-view/status-view.component';
 import { AddressGroupComponent } from '@components/address-group/address-group.component';
@@ -259,7 +259,7 @@ let routes: Routes = [
   },
   {
     path: 'view/mempool-block/:index',
-    component: MempoolBlockViewComponent,
+    component: BitcoinGoldBlockViewComponent,
   },
   {
     path: 'view/blocks',
@@ -366,7 +366,7 @@ if (browserWindowEnv && browserWindowEnv.BASE_MODULE === 'liquid') {
   ];
 }
 
-if (!window['isMempoolSpaceBuild']) {
+if (!window['isBitcoinGoldSpaceBuild']) {
   routes.push({
     path: '**',
     redirectTo: ''

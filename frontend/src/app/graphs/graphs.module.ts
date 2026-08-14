@@ -13,7 +13,7 @@ import { BlockGogglesGraphComponent } from '@components/block-goggles-graph/bloc
 import { BlockSizesWeightsGraphComponent } from '@components/block-sizes-weights-graph/block-sizes-weights-graph.component';
 import { FeeDistributionGraphComponent } from '@components/fee-distribution-graph/fee-distribution-graph.component';
 import { IncomingTransactionsGraphComponent } from '@components/incoming-transactions-graph/incoming-transactions-graph.component';
-import { MempoolGraphComponent } from '@components/mempool-graph/mempool-graph.component';
+import { BitcoinGoldGraphComponent } from '@components/mempool-graph/mempool-graph.component';
 import { LbtcPegsGraphComponent } from '@components/lbtc-pegs-graph/lbtc-pegs-graph.component';
 import { ReservesSupplyStatsComponent } from '@components/liquid-reserves-audit/reserves-supply-stats/reserves-supply-stats.component';
 import { ExpiredUtxosStatsComponent } from '@components/liquid-reserves-audit/expired-utxos-stats/expired-utxos-stats.component';
@@ -24,7 +24,7 @@ import { RecentPegsListComponent } from '@components/liquid-reserves-audit/recen
 import { FederationAddressesListComponent } from '@components/liquid-reserves-audit/federation-addresses-list/federation-addresses-list.component';
 import { GraphsComponent } from '@components/graphs/graphs.component';
 import { StatisticsComponent } from '@components/statistics/statistics.component';
-import { MempoolBlockComponent } from '@components/mempool-block/mempool-block.component';
+import { BitcoinGoldBlockComponent } from '@components/mempool-block/mempool-block.component';
 import { PoolRankingComponent } from '@components/pool-ranking/pool-ranking.component';
 import { PoolComponent } from '@components/pool/pool.component';
 import { DashboardComponent } from '@app/dashboard/dashboard.component';
@@ -53,7 +53,7 @@ import { CommonModule } from '@angular/common';
   declarations: [
     DashboardComponent,
     CustomDashboardComponent,
-    MempoolBlockComponent,
+    BitcoinGoldBlockComponent,
     AddressComponent,
     WalletComponent,
     WalletPreviewComponent,
@@ -75,7 +75,7 @@ import { CommonModule } from '@angular/common';
     BlockSizesWeightsGraphComponent,
     FeeDistributionGraphComponent,
     IncomingTransactionsGraphComponent,
-    MempoolGraphComponent,
+    BitcoinGoldGraphComponent,
     LbtcPegsGraphComponent,
     ReservesSupplyStatsComponent,
     ExpiredUtxosStatsComponent,

@@ -73,7 +73,7 @@ export class ClockchainComponent implements OnInit, OnChanges, OnDestroy {
     this.stateService.timeLtr.next(!this.timeLtr);
   }
 
-  getMempoolUrl(index): string {
+  getBitcoinGoldUrl(index): string {
     return `/clock/mempool/${index}`;
   }
 

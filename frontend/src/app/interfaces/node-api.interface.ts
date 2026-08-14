@@ -1,6 +1,6 @@
 import { AddressTxSummary, Block, ChainStats } from './electrs.interface';
 
-export interface OptimizedMempoolStats {
+export interface OptimizedBitcoinGoldStats {
   added: number;
   count: number;
   vbytes_per_second: number;
@@ -278,7 +278,7 @@ export interface RbfTransaction extends TransactionStripped {
   mined?: boolean,
   fullRbf?: boolean,
 }
-export interface MempoolPosition {
+export interface BitcoinGoldPosition {
   block: number,
   vsize: number,
   accelerated?: boolean,
@@ -287,7 +287,7 @@ export interface MempoolPosition {
   feeDelta?: number,
 }
 
-export interface AccelerationPosition extends MempoolPosition {
+export interface AccelerationPosition extends BitcoinGoldPosition {
   poolId: number;
   offset?: number;
 }
@@ -472,7 +472,7 @@ export interface AccelerationInfo {
   boost_cost: number,
 }
 
-export interface TestMempoolAcceptResult {
+export interface TestBitcoinGoldAcceptResult {
   txid: string,
   wtxid: string,
   allowed?: boolean,

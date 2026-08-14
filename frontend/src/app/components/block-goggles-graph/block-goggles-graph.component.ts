@@ -128,8 +128,8 @@ export class BlockGogglesGraphComponent implements OnInit {
     if (this.widget) {
       this.miningWindowPreference = '6m';
     } else {
-      this.seoService.setTitle($localize`Mempool Goggles`);
-      this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.goggles:See Bitcoin transactions matching Mempool Goggles filters visualized over time.`);
+      this.seoService.setTitle($localize`BitcoinGold Goggles`);
+      this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.goggles:See Bitcoin transactions matching BitcoinGold Goggles filters visualized over time.`);
       this.miningWindowPreference = this.miningService.getDefaultTimespan('24h');
     }
     if (!this.intervals.includes(this.miningWindowPreference)) {

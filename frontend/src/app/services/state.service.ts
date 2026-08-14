@@ -1,8 +1,8 @@
 import { Inject, Injectable, PLATFORM_ID, LOCALE_ID } from '@angular/core';
 import { ReplaySubject, BehaviorSubject, Subject, fromEvent, Observable } from 'rxjs';
 import { Transaction } from '@interfaces/electrs.interface';
-import { AccelerationDelta, HealthCheckHost, IBackendInfo, MempoolBlock, MempoolBlockUpdate, MempoolInfo, Recommendedfees, ReplacedTransaction, ReplacementInfo, StratumJob, isMempoolState } from '@interfaces/websocket.interface';
-import { Acceleration, AccelerationPosition, BlockExtended, CpfpInfo, DifficultyAdjustment, MempoolPosition, OptimizedMempoolStats, RbfTree, TransactionStripped } from '@interfaces/node-api.interface';
+import { AccelerationDelta, HealthCheckHost, IBackendInfo, BitcoinGoldBlock, BitcoinGoldBlockUpdate, BitcoinGoldInfo, Recommendedfees, ReplacedTransaction, ReplacementInfo, StratumJob, isBitcoinGoldState } from '@interfaces/websocket.interface';
+import { Acceleration, AccelerationPosition, BlockExtended, CpfpInfo, DifficultyAdjustment, BitcoinGoldPosition, OptimizedBitcoinGoldStats, RbfTree, TransactionStripped } from '@interfaces/node-api.interface';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { filter, map, scan, share, shareReplay } from 'rxjs/operators';
@@ -15,7 +15,7 @@ export interface MarkBlockState {
   txid?: string;
   mempoolBlockIndex?: number;
   txFeePerVSize?: number;
-  mempoolPosition?: MempoolPosition;
+  mempoolPosition?: BitcoinGoldPosition;
   accelerationPositions?: AccelerationPosition[];
 }
 
@@ -114,7 +114,7 @@ const defaultEnv: Env = {
   'MEMPOOL_BLOCKS_AMOUNT': 8,
   'GIT_COMMIT_HASH': '',
   'PACKAGE_JSON_VERSION': '',
-  'MEMPOOL_WEBSITE_URL': 'https://mempool.space',
+  'MEMPOOL_WEBSITE_URL': 'https://BitcoinGold',
   'LIQUID_WEBSITE_URL': 'https://liquid.network',
   'MINING_DASHBOARD': true,
   'LIGHTNING': false,
@@ -135,7 +135,7 @@ const defaultEnv: Env = {
   'PUBLIC_ACCELERATIONS': false,
   'ADDITIONAL_CURRENCIES': false,
   'STRATUM_ENABLED': false,
-  'SERVICES_API': 'https://mempool.space/api/v1/services',
+  'SERVICES_API': 'https://BitcoinGold/api/v1/services',
   'TWIDGET_API': 'https://mempool.ninja',
   'PROD_DOMAINS': [],
 };
@@ -146,7 +146,7 @@ const defaultEnv: Env = {
 export class StateService {
   referrer: string = '';
   isBrowser: boolean = isPlatformBrowser(this.platformId);
-  isMempoolSpaceBuild = window['isMempoolSpaceBuild'] ?? false;
+  isBitcoinGoldSpaceBuild = window['isBitcoinGoldSpaceBuild'] ?? false;
   isProdDomain: boolean;
   backend: 'esplora' | 'electrum' | 'none' = 'esplora';
   network = '';
@@ -168,10 +168,10 @@ export class StateService {
   transactions$ = new BehaviorSubject<TransactionStripped[]>(null);
   conversions$ = new ReplaySubject<Record<string, number>>(1);
   bsqPrice$ = new ReplaySubject<number>(1);
-  mempoolInfo$ = new ReplaySubject<MempoolInfo>(1);
-  mempoolBlocks$ = new ReplaySubject<MempoolBlock[]>(1);
-  mempoolBlockUpdate$ = new Subject<MempoolBlockUpdate>();
-  liveMempoolBlockTransactions$: Observable<{ block: number, transactions: { [txid: string]: TransactionStripped} }>;
+  mempoolInfo$ = new ReplaySubject<BitcoinGoldInfo>(1);
+  mempoolBlocks$ = new ReplaySubject<BitcoinGoldBlock[]>(1);
+  mempoolBlockUpdate$ = new Subject<BitcoinGoldBlockUpdate>();
+  liveBitcoinGoldBlockTransactions$: Observable<{ block: number, transactions: { [txid: string]: TransactionStripped} }>;
   accelerations$ = new Subject<AccelerationDelta>();
   liveAccelerations$: Observable<Acceleration[]>;
   stratumJobUpdate$ = new Subject<{ state: Record<string, StratumJob> } | { job: StratumJob }>();
@@ -184,13 +184,13 @@ export class StateService {
   utxoSpent$ = new Subject<object>();
   difficultyAdjustment$ = new ReplaySubject<DifficultyAdjustment>(1);
   mempoolTransactions$ = new Subject<Transaction>();
-  mempoolTxPosition$ = new BehaviorSubject<{ txid: string, position: MempoolPosition, cpfp: CpfpInfo | null, accelerationPositions?: AccelerationPosition[] }>(null);
+  mempoolTxPosition$ = new BehaviorSubject<{ txid: string, position: BitcoinGoldPosition, cpfp: CpfpInfo | null, accelerationPositions?: AccelerationPosition[] }>(null);
   mempoolRemovedTransactions$ = new Subject<Transaction>();
   multiAddressTransactions$ = new Subject<{ [address: string]: { mempool: Transaction[], confirmed: Transaction[], removed: Transaction[] }}>();
   blockTransactions$ = new Subject<Transaction>();
   walletTransactions$ = new Subject<Transaction[]>();
   isLoadingWebSocket$ = new ReplaySubject<boolean>(1);
-  isLoadingMempool$ = new BehaviorSubject<boolean>(true);
+  isLoadingBitcoinGold$ = new BehaviorSubject<boolean>(true);
   vbytesPerSecond$ = new ReplaySubject<number>(1);
   previousRetarget$ = new ReplaySubject<number>(1);
   backendInfo$ = new ReplaySubject<IBackendInfo>(1);
@@ -200,7 +200,7 @@ export class StateService {
   chainTip$ = new ReplaySubject<number>(-1);
   serverHealth$ = new Subject<HealthCheckHost[]>();
 
-  live2Chart$ = new Subject<OptimizedMempoolStats>();
+  live2Chart$ = new Subject<OptimizedBitcoinGoldStats>();
 
   viewAmountMode$: BehaviorSubject<'btc' | 'sats' | 'fiat'>;
   timezone$: BehaviorSubject<string>;
@@ -272,8 +272,8 @@ export class StateService {
       }
     });
 
-    this.liveMempoolBlockTransactions$ = this.mempoolBlockUpdate$.pipe(scan((acc: { block: number, transactions: { [txid: string]: TransactionStripped } }, change: MempoolBlockUpdate): { block: number, transactions: { [txid: string]: TransactionStripped } } => {
-      if (isMempoolState(change)) {
+    this.liveBitcoinGoldBlockTransactions$ = this.mempoolBlockUpdate$.pipe(scan((acc: { block: number, transactions: { [txid: string]: TransactionStripped } }, change: BitcoinGoldBlockUpdate): { block: number, transactions: { [txid: string]: TransactionStripped } } => {
+      if (isBitcoinGoldState(change)) {
         const txMap = {};
         change.transactions.forEach(tx => {
           txMap[tx.txid] = tx;
@@ -305,7 +305,7 @@ export class StateService {
     }, {}),
     share()
     );
-    this.liveMempoolBlockTransactions$.subscribe();
+    this.liveBitcoinGoldBlockTransactions$.subscribe();
 
     // Emits the full list of pending accelerations each time it changes
     this.liveAccelerations$ = this.accelerations$.pipe(

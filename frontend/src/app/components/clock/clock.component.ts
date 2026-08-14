@@ -3,7 +3,7 @@ import { Observable, Subscription, of, switchMap, tap } from 'rxjs';
 import { StateService } from '@app/services/state.service';
 import { BlockExtended } from '@interfaces/node-api.interface';
 import { WebsocketService } from '@app/services/websocket.service';
-import { MempoolInfo, Recommendedfees } from '@interfaces/websocket.interface';
+import { BitcoinGoldInfo, Recommendedfees } from '@interfaces/websocket.interface';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { RelativeUrlPipe } from '@app/shared/pipes/relative-url/relative-url.pipe';
 
@@ -21,7 +21,7 @@ export class ClockComponent implements OnInit {
   pageSubscription: Subscription;
   blocksSubscription: Subscription;
   recommendedFees$: Observable<Recommendedfees>;
-  mempoolInfo$: Observable<MempoolInfo>;
+  mempoolInfo$: Observable<BitcoinGoldInfo>;
   blocks: BlockExtended[] = [];
   clockSize: number = 300;
   chainWidth: number = 384;

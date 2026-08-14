@@ -46,7 +46,7 @@ import { BrowserOnlyDirective } from '@app/shared/directives/browser-only.direct
 import { ServerOnlyDirective } from '@app/shared/directives/server-only.directive';
 import { ColoredPriceDirective } from '@app/shared/directives/colored-price.directive';
 import { NoSanitizePipe } from '@app/shared/pipes/no-sanitize.pipe';
-import { MempoolBlocksComponent } from '@components/mempool-blocks/mempool-blocks.component';
+import { BitcoinGoldBlocksComponent } from '@components/mempool-blocks/mempool-blocks.component';
 import { BlockchainBlocksComponent } from '@components/blockchain-blocks/blockchain-blocks.component';
 import { AmountComponent } from '@components/amount/amount.component';
 import { RouterModule } from '@angular/router';
@@ -107,7 +107,7 @@ import { ToggleComponent } from '@app/shared/components/toggle/toggle.component'
 import { GeolocationComponent } from '@app/shared/components/geolocation/geolocation.component';
 import { TestnetAlertComponent } from '@app/shared/components/testnet-alert/testnet-alert.component';
 import { GlobalFooterComponent } from '@app/shared/components/global-footer/global-footer.component';
-import { MempoolErrorComponent } from '@app/shared/components/mempool-error/mempool-error.component';
+import { BitcoinGoldErrorComponent } from '@app/shared/components/mempool-error/mempool-error.component';
 import { MiningPoolComponent } from '@app/shared/components/mining-pool/mining-pool.component';
 import { AccelerationsListComponent } from '@components/acceleration/accelerations-list/accelerations-list.component';
 import { PendingStatsComponent } from '@components/acceleration/pending-stats/pending-stats.component';
@@ -117,8 +117,8 @@ import { OrdDataComponent } from '@components/ord-data/ord-data.component';
 
 import { BlockViewComponent } from '@components/block-view/block-view.component';
 import { EightBlocksComponent } from '@components/eight-blocks/eight-blocks.component';
-import { MempoolBlockViewComponent } from '@components/mempool-block-view/mempool-block-view.component';
-import { MempoolBlockOverviewComponent } from '@components/mempool-block-overview/mempool-block-overview.component';
+import { BitcoinGoldBlockViewComponent } from '@components/mempool-block-view/mempool-block-view.component';
+import { BitcoinGoldBlockOverviewComponent } from '@components/mempool-block-overview/mempool-block-overview.component';
 import { ClockchainComponent } from '@components/clockchain/clockchain.component';
 import { ClockFaceComponent } from '@components/clock-face/clock-face.component';
 import { ClockComponent } from '@components/clock/clock.component';
@@ -172,8 +172,8 @@ import { GithubLogin } from '@components/github-login.component/github-login.com
     BlockchainComponent,
     BlockViewComponent,
     EightBlocksComponent,
-    MempoolBlockViewComponent,
-    MempoolBlocksComponent,
+    BitcoinGoldBlockViewComponent,
+    BitcoinGoldBlocksComponent,
     BlockchainBlocksComponent,
     AmountComponent,
     MenuComponent,
@@ -239,14 +239,14 @@ import { GithubLogin } from '@components/github-login.component/github-login.com
     BitcoinsatoshisPipe,
     BlockViewComponent,
     EightBlocksComponent,
-    MempoolBlockViewComponent,
-    MempoolBlockOverviewComponent,
+    BitcoinGoldBlockViewComponent,
+    BitcoinGoldBlockOverviewComponent,
     ClockchainComponent,
     ClockComponent,
     ClockFaceComponent,
     OnlyVsizeDirective,
     OnlyWeightDirective,
-    MempoolErrorComponent,
+    BitcoinGoldErrorComponent,
     AccelerationsListComponent,
     AccelerationStatsComponent,
     PendingStatsComponent,
@@ -331,7 +331,7 @@ import { GithubLogin } from '@components/github-login.component/github-login.com
     ServerOnlyDirective,
     NoSanitizePipe,
     BlockchainComponent,
-    MempoolBlocksComponent,
+    BitcoinGoldBlocksComponent,
     BlockchainBlocksComponent,
     AmountComponent,
     StartComponent,
@@ -391,7 +391,7 @@ import { GithubLogin } from '@components/github-login.component/github-login.com
     MiningPoolComponent,
     PreviewTitleComponent,
     GlobalFooterComponent,
-    MempoolErrorComponent,
+    BitcoinGoldErrorComponent,
     AccelerationsListComponent,
     AccelerationStatsComponent,
     PendingStatsComponent,
@@ -406,7 +406,7 @@ import { GithubLogin } from '@components/github-login.component/github-login.com
     BitcoinInvoiceComponent,
     BitcoinsatoshisPipe,
 
-    MempoolBlockOverviewComponent,
+    BitcoinGoldBlockOverviewComponent,
     ClockchainComponent,
     ClockComponent,
     ClockFaceComponent,

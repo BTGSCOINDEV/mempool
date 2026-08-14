@@ -702,7 +702,7 @@ export const wsApiDocsData = [
     fragment: 'track-addresses',
     title: 'Track Addresses',
     description: {
-      default: 'Subscribe to multiple addresses to receive live updates on new transactions having these addresses in input or output. Limits on the maximum number of tracked addresses apply. For higher tracking limits, consider upgrading to an <a href=\'https://mempool.space/enterprise\'>enterprise sponsorship</a>.'
+      default: 'Subscribe to multiple addresses to receive live updates on new transactions having these addresses in input or output. Limits on the maximum number of tracked addresses apply. For higher tracking limits, consider upgrading to an <a href=\'https://BitcoinGold/enterprise\'>enterprise sponsorship</a>.'
     },
     payload: `{
   "track-addresses": [
@@ -1296,7 +1296,7 @@ export const wsApiDocsData = [
     fragment: 'track-txs',
     title: 'Track Transactions',
     description: {
-      default: 'Subscribe to multiple transactions to receive live updates on their status and position in the mempool. Limits on the maximum number of tracked addresses apply. For higher tracking limits, consider upgrading to an <a href=\'https://mempool.space/enterprise\'>enterprise sponsorship</a>.'
+      default: 'Subscribe to multiple transactions to receive live updates on their status and position in the mempool. Limits on the maximum number of tracked addresses apply. For higher tracking limits, consider upgrading to an <a href=\'https://BitcoinGold/enterprise\'>enterprise sponsorship</a>.'
     },
     payload: `{
       "track-txs": [
@@ -1480,16 +1480,16 @@ export const wsApiDocsData = [
     type: 'category',
     category: 'mempool',
     fragment: 'mempool',
-    title: 'Mempool',
+    title: 'BitcoinGold',
     showConditions: bitcoinNetworks.concat(liquidNetworks)
   },
   {
     type: 'endpoint',
     category: 'mempool',
     fragment: 'track-mempool',
-    title: 'Track Mempool',
+    title: 'Track BitcoinGold',
     description: {
-      default: 'Subscribe to new mempool events, such as new transactions entering the mempool. Available fields: <code>added</code>, <code>removed</code>, <code>mined</code>, <code>replaced</code>. <br> Because this is potentially a lot of data, consider using the <code>track-mempool-txids</code> endpoint described below instead, or upgrade to an <a href=\'https://mempool.space/enterprise\'>enterprise sponsorship</a>.'
+      default: 'Subscribe to new mempool events, such as new transactions entering the mempool. Available fields: <code>added</code>, <code>removed</code>, <code>mined</code>, <code>replaced</code>. <br> Because this is potentially a lot of data, consider using the <code>track-mempool-txids</code> endpoint described below instead, or upgrade to an <a href=\'https://BitcoinGold/enterprise\'>enterprise sponsorship</a>.'
     },
     payload: '{ "track-mempool": true }',
     showConditions: bitcoinNetworks.concat(liquidNetworks),
@@ -1821,7 +1821,7 @@ export const wsApiDocsData = [
     type: 'endpoint',
     category: 'mempool',
     fragment: 'track-mempool-txids',
-    title: 'Track Mempool Txids',
+    title: 'Track BitcoinGold Txids',
     description: {
       default: 'Low-bandwith substitute to the above command <code>track-mempool</code>: subscribe to new mempool events, such as new transactions entering the mempool, but only transaction IDs are returned to save bandwith. Available fields: <code>added</code>, <code>removed</code>, <code>mined</code>, <code>replaced</code>.'
     },
@@ -1927,7 +1927,7 @@ export const wsApiDocsData = [
     type: 'endpoint',
     category: 'mempool',
     fragment: 'track-mempool-block',
-    title: 'Track Mempool Block',
+    title: 'Track BitcoinGold Block',
     description: {
       default: 'Subscribe to live mempool projected block template, index 0 being the first mempool block. <br> A full set of stripped transactions in that block is returned when the subscription starts, and deltas (removed and added transactions) are then sent every time the mempool changes.'
     },
@@ -2065,7 +2065,7 @@ export const wsApiDocsData = [
     type: 'endpoint',
     category: 'mempool',
     fragment: 'track-rbf',
-    title: 'Track Mempool RBF Transactions',
+    title: 'Track BitcoinGold RBF Transactions',
     description: {
       default: 'Subscribe to new RBF events.'
     },
@@ -2258,7 +2258,7 @@ export const wsApiDocsData = [
     type: 'endpoint',
     category: 'mempool',
     fragment: 'track-full-rbf',
-    title: 'Track Mempool Full RBF Transactions',
+    title: 'Track BitcoinGold Full RBF Transactions',
     description: {
       default: 'Subscribe to new Full RBF events.'
     },
@@ -3104,7 +3104,7 @@ export const restApiDocsData = [
     category: 'addresses',
     httpRequestMethod: 'GET',
     fragment: 'get-address-transactions-mempool',
-    title: 'GET Address Transactions Mempool',
+    title: 'GET Address Transactions BitcoinGold',
     description: {
       default: 'Get unconfirmed transaction history for the specified address/scripthash. Returns up to 50 transactions (no paging).'
     },
@@ -3119,16 +3119,16 @@ export const restApiDocsData = [
         const { %{0}: { addresses } } = mempoolJS();
 
         const address = '%{1}';
-        const addressTxsMempool = await addresses.getAddressTxsMempool({ address });
+        const addressTxsBitcoinGold = await addresses.getAddressTxsBitcoinGold({ address });
 
-        document.getElementById("result").textContent = JSON.stringify(addressTxsMempool, undefined, 2);
+        document.getElementById("result").textContent = JSON.stringify(addressTxsBitcoinGold, undefined, 2);
         `,
           esModule: `
   const { %{0}: { addresses } } = mempoolJS();
 
   const address = '%{1}';
-  const addressTxsMempool = await addresses.getAddressTxsMempool({ address });
-  console.log(addressTxsMempool);
+  const addressTxsBitcoinGold = await addresses.getAddressTxsBitcoinGold({ address });
+  console.log(addressTxsBitcoinGold);
           `,
         },
         codeSampleMainnet: {
@@ -3881,7 +3881,7 @@ export const restApiDocsData = [
     fragment: 'get-block-v1',
     title: 'GET Block (v1)',
     description: {
-      default: 'Returns details about a block using Mempool\'s Node.js backend.',
+      default: 'Returns details about a block using BitcoinGold\'s Node.js backend.',
     },
     urlString: '/v1/block/:hash',
     showConditions: bitcoinNetworks.concat(liquidNetworks),
@@ -5087,7 +5087,7 @@ export const restApiDocsData = [
     fragment: 'get-blocks-v1',
     title: 'GET Blocks (v1)',
     description: {
-      default: 'Returns details on the past 15 blocks from Mempool\'s Node.js backend. Includes fee and mining details in an <code>extras</code> field. If <code>:startHeight</code> is specified, the past 15 blocks before (and including) <code>:startHeight</code> are returned.'
+      default: 'Returns details on the past 15 blocks from BitcoinGold\'s Node.js backend. Includes fee and mining details in an <code>extras</code> field. If <code>:startHeight</code> is specified, the past 15 blocks before (and including) <code>:startHeight</code> are returned.'
     },
     urlString: '/v1/blocks[/:startHeight]',
     showConditions: bitcoinNetworks,
@@ -5311,7 +5311,7 @@ export const restApiDocsData = [
     fragment: 'get-blocks-bulk',
     title: 'GET Blocks (Bulk)',
     description: {
-      default: '<p>Returns details on the range of blocks between <code>:minHeight</code> and <code>:maxHeight</code>, inclusive, up to 10 blocks. If <code>:maxHeight</code> is not specified, it defaults to the current tip.</p><p>To return data for more than 10 blocks, consider becoming an <a href=\'https://mempool.space/enterprise\'>enterprise sponsor</a>.</p>'
+      default: '<p>Returns details on the range of blocks between <code>:minHeight</code> and <code>:maxHeight</code>, inclusive, up to 10 blocks. If <code>:maxHeight</code> is not specified, it defaults to the current tip.</p><p>To return data for more than 10 blocks, consider becoming an <a href=\'https://BitcoinGold/enterprise\'>enterprise sponsor</a>.</p>'
     },
     urlString: '/v1/blocks-bulk/:minHeight[/:maxHeight]',
     showConditions: bitcoinNetworks,
@@ -5623,7 +5623,7 @@ export const restApiDocsData = [
     fragment: 'get-blocks-v1',
     title: 'GET Blocks (v1)',
     description: {
-      default: 'Returns details on the past 15 blocks from Mempool\'s Node.js backend. If <code>:startHeight</code> is specified, the past 15 blocks before (and including) <code>:startHeight</code> are returned.'
+      default: 'Returns details on the past 15 blocks from BitcoinGold\'s Node.js backend. If <code>:startHeight</code> is specified, the past 15 blocks before (and including) <code>:startHeight</code> are returned.'
     },
     urlString: '/v1/blocks[/:startHeight]',
     showConditions: liquidNetworks,
@@ -7489,7 +7489,7 @@ export const restApiDocsData = [
     category: 'fees',
     httpRequestMethod: 'GET',
     fragment: 'get-mempool-blocks-fees',
-    title: 'GET Mempool Blocks Fees',
+    title: 'GET BitcoinGold Blocks Fees',
     description: {
       default: 'Returns current mempool as projected blocks.'
     },
@@ -7503,15 +7503,15 @@ export const restApiDocsData = [
           commonJS: `
         const { %{0}: { fees } } = mempoolJS();
 
-        const feesMempoolBlocks = await fees.getFeesMempoolBlocks();
+        const feesBitcoinGoldBlocks = await fees.getFeesBitcoinGoldBlocks();
 
-        document.getElementById("result").textContent = JSON.stringify(feesMempoolBlocks, undefined, 2);
+        document.getElementById("result").textContent = JSON.stringify(feesBitcoinGoldBlocks, undefined, 2);
         `,
           esModule: `
   const { %{0}: { fees } } = mempoolJS();
 
-  const feesMempoolBlocks = await fees.getFeesMempoolBlocks();
-  console.log(feesMempoolBlocks);
+  const feesBitcoinGoldBlocks = await fees.getFeesBitcoinGoldBlocks();
+  console.log(feesBitcoinGoldBlocks);
           `,
         },
         codeSampleMainnet: {
@@ -7816,7 +7816,7 @@ export const restApiDocsData = [
     type: 'category',
     category: 'mempool',
     fragment: 'mempool',
-    title: 'Mempool',
+    title: 'BitcoinGold',
     showConditions: bitcoinNetworks.concat(liquidNetworks)
   },
   {
@@ -7824,7 +7824,7 @@ export const restApiDocsData = [
     category: 'mempool',
     httpRequestMethod: 'GET',
     fragment: 'get-mempool',
-    title: 'GET Mempool',
+    title: 'GET BitcoinGold',
     description: {
       default: 'Returns current mempool backlog statistics.'
     },
@@ -7838,15 +7838,15 @@ export const restApiDocsData = [
           commonJS: `
         const { %{0}: { mempool } } = mempoolJS();
 
-        const getMempool = await mempool.getMempool();
+        const getBitcoinGold = await mempool.getBitcoinGold();
 
-        document.getElementById("result").textContent = JSON.stringify(getMempool, undefined, 2);
+        document.getElementById("result").textContent = JSON.stringify(getBitcoinGold, undefined, 2);
         `,
           esModule: `
   const { %{0}: { mempool } } = mempoolJS();
 
-  const getMempool = await mempool.getMempool();
-  console.log(getMempool);
+  const getBitcoinGold = await mempool.getBitcoinGold();
+  console.log(getBitcoinGold);
           `,
         },
         codeSampleMainnet: {
@@ -7927,7 +7927,7 @@ export const restApiDocsData = [
     category: 'mempool',
     httpRequestMethod: 'GET',
     fragment: 'get-mempool-transaction-ids',
-    title: 'GET Mempool Transaction IDs',
+    title: 'GET BitcoinGold Transaction IDs',
     description: {
       default: 'Get the full list of txids in the mempool as an array. The order of the txids is arbitrary and does not match bitcoind.'
     },
@@ -7941,15 +7941,15 @@ export const restApiDocsData = [
           commonJS: `
         const { %{0}: { mempool } } = mempoolJS();
 
-        const getMempoolTxids = await mempool.getMempoolTxids();
+        const getBitcoinGoldTxids = await mempool.getBitcoinGoldTxids();
 
-        document.getElementById("result").textContent = JSON.stringify(getMempoolTxids, undefined, 2);
+        document.getElementById("result").textContent = JSON.stringify(getBitcoinGoldTxids, undefined, 2);
         `,
           esModule: `
   const { %{0}: { mempool } } = mempoolJS();
 
-  const getMempoolTxids = await mempool.getMempoolTxids();
-  console.log(getMempoolTxids);
+  const getBitcoinGoldTxids = await mempool.getBitcoinGoldTxids();
+  console.log(getBitcoinGoldTxids);
           `,
         },
         codeSampleMainnet: {
@@ -8013,7 +8013,7 @@ export const restApiDocsData = [
     category: 'mempool',
     httpRequestMethod: 'GET',
     fragment: 'get-mempool-recent',
-    title: 'GET Mempool Recent',
+    title: 'GET BitcoinGold Recent',
     description: {
       default: 'Get a list of the last 10 transactions to enter the mempool. Each transaction object contains simplified overview data, with the following fields: <code>txid</code>, <code>fee</code>, <code>vsize</code>, and <code>value</code>.'
     },
@@ -8027,15 +8027,15 @@ export const restApiDocsData = [
           commonJS: `
         const { %{0}: { mempool } } = mempoolJS();
 
-        const getMempoolRecent = await mempool.getMempoolRecent();
+        const getBitcoinGoldRecent = await mempool.getBitcoinGoldRecent();
 
-        document.getElementById("result").textContent = JSON.stringify(getMempoolRecent, undefined, 2);
+        document.getElementById("result").textContent = JSON.stringify(getBitcoinGoldRecent, undefined, 2);
         `,
           esModule: `
   const { %{0}: { mempool } } = mempoolJS();
 
-  const getMempoolRecent = await mempool.getMempoolRecent();
-  console.log(getMempoolRecent);
+  const getBitcoinGoldRecent = await mempool.getBitcoinGoldRecent();
+  console.log(getBitcoinGoldRecent);
           `,
         },
         codeSampleMainnet: {
@@ -8119,7 +8119,7 @@ export const restApiDocsData = [
     category: 'mempool',
     httpRequestMethod: 'GET',
     fragment: 'get-mempool-rbf',
-    title: 'GET Mempool RBF Transactions',
+    title: 'GET BitcoinGold RBF Transactions',
     description: {
       default: 'Returns the list of mempool transactions that are part of a RBF chain.'
     },
@@ -8249,7 +8249,7 @@ export const restApiDocsData = [
     category: 'mempool',
     httpRequestMethod: 'GET',
     fragment: 'get-mempool-fullrbf',
-    title: 'GET Mempool Full RBF Transactions',
+    title: 'GET BitcoinGold Full RBF Transactions',
     description: {
       default: 'Returns the list of mempool transactions that are part of a Full-RBF chain.'
     },
@@ -11967,7 +11967,7 @@ export const restApiDocsData = [
     fragment: 'accelerator-estimate',
     title: 'POST Calculate Estimated Costs',
     description: {
-      default: '<p>Returns estimated costs to accelerate a transaction. Optionally set the <code>X-Mempool-Auth</code> header to get customized estimation.</p>'
+      default: '<p>Returns estimated costs to accelerate a transaction. Optionally set the <code>X-BitcoinGold-Auth</code> header to get customized estimation.</p>'
     },
     urlString: '/v1/services/accelerator/estimate',
     showConditions: [''],
@@ -11983,7 +11983,7 @@ export const restApiDocsData = [
           esModule: [],
           commonJS: [],
           curl: ['txid=ee13ebb99632377c15c94980357f674d285ac413452050031ea6dcd3e9b2dc29'],
-          headers: 'X-Mempool-Auth: stacksats',
+          headers: 'X-BitcoinGold-Auth: stacksats',
           response: `{
   "txSummary": {
     "txid": "ee13ebb99632377c15c94980357f674d285ac413452050031ea6dcd3e9b2dc29",
@@ -12136,7 +12136,7 @@ export const restApiDocsData = [
       Filters can be applied:<ul>
       <li><code>status</code>: <code>all</code>, <code>requested</code>, <code>accelerating</code>, <code>mined</code>, <code>completed</code>, <code>failed</code></li>
       <li><code>timeframe</code>: <code>24h</code>, <code>3d</code>, <code>1w</code>, <code>1m</code>, <code>3m</code>, <code>6m</code>, <code>1y</code>, <code>2y</code>, <code>3y</code>, <code>4y</code>, <code>all</code></li>
-      <li><code>minedByPoolUniqueId</code>: any id from <a target="_blank" href="https://github.com/mempool/mining-pools/blob/master/pools-v2.json">pools-v2.json</a></li>
+      <li><code>minedByPoolUniqueId</code>: any id from <a target="_blank" href="https://github.com/BTGSCOINDEV/BTGS/mining-pools/blob/master/pools-v2.json">pools-v2.json</a></li>
       <li><code>blockHash</code>: a block hash</li>
       <li><code>blockHeight</code>: a block height</li>
       <li><code>page</code>: the requested page number if using pagination <i>(min: 1)</i></li>
@@ -12195,7 +12195,7 @@ export const restApiDocsData = [
       default: `<p>Aggregated statistics for transaction accelerations, with optional filtering by pool, block, or time range.
       Filters can be applied:<ul>
       <li><code>timeframe</code>: <code>24h</code>, <code>3d</code>, <code>1w</code>, <code>1m</code>, <code>3m</code>, <code>6m</code>, <code>1y</code>, <code>2y</code>, <code>3y</code>, <code>4y</code>, <code>all</code></li>
-      <li><code>poolUniqueId</code>: any id from <a target="_blank" href="https://github.com/mempool/mining-pools/blob/master/pools-v2.json">pools-v2.json</a></li>
+      <li><code>poolUniqueId</code>: any id from <a target="_blank" href="https://github.com/BTGSCOINDEV/BTGS/mining-pools/blob/master/pools-v2.json">pools-v2.json</a></li>
       <li><code>blockHash</code>: a block hash</li>
       <li><code>blockHeight</code>: a block height</li>
       <li><code>from</code>: unix timestamp (<i>overrides <code>timeframe</code></i>)</li>
@@ -12277,7 +12277,7 @@ export const restApiDocsData = [
           esModule: [],
           commonJS: [],
           curl: ['amount=1234567'],
-          headers: 'X-Mempool-Auth: stacksats',
+          headers: 'X-BitcoinGold-Auth: stacksats',
           response: `
 {
   "btcpayInvoiceId": "VMWgxjbxdL2VvUYmS7y4ga",
@@ -12317,7 +12317,7 @@ export const restApiDocsData = [
           esModule: [],
           commonJS: [],
           curl: [],
-          headers: 'X-Mempool-Auth: stacksats',
+          headers: 'X-BitcoinGold-Auth: stacksats',
           response: `[
   {
     "type": "Bitcoin",
@@ -12365,7 +12365,7 @@ export const restApiDocsData = [
           esModule: [],
           commonJS: [],
           curl: [],
-          headers: 'X-Mempool-Auth: stacksats',
+          headers: 'X-BitcoinGold-Auth: stacksats',
           response: `{
   "balance": 99900000,
   "hold": 101829,
@@ -12399,7 +12399,7 @@ export const restApiDocsData = [
           esModule: [],
           commonJS: [],
           curl: ['txid=ee13ebb99632377c15c94980357f674d285ac413452050031ea6dcd3e9b2dc29&maxBidBoost=21000000'],
-          headers: 'X-Mempool-Auth: stacksats',
+          headers: 'X-BitcoinGold-Auth: stacksats',
           response: `HTTP/1.1 200 OK`,
         },
       }
@@ -12429,7 +12429,7 @@ export const restApiDocsData = [
           esModule: [],
           commonJS: [],
           curl: ['id=42'],
-          headers: 'X-Mempool-Auth: stacksats',
+          headers: 'X-BitcoinGold-Auth: stacksats',
           response: `HTTP/1.1 200 OK`,
         },
       }
@@ -12472,7 +12472,7 @@ export const restApiDocsData = [
           esModule: [],
           commonJS: [],
           curl: ['txid=ee13ebb99632377c15c94980357f674d285ac413452050031ea6dcd3e9b2dc29&type=time_delay&value=0.5'],
-          headers: 'X-Mempool-Auth: stacksats',
+          headers: 'X-BitcoinGold-Auth: stacksats',
           response: `HTTP/1.1 200 OK`,
         },
       }
@@ -12506,7 +12506,7 @@ export const restApiDocsData = [
           esModule: [],
           commonJS: [],
           curl: [],
-          headers: 'X-Mempool-Auth: stacksats',
+          headers: 'X-BitcoinGold-Auth: stacksats',
           response: `[
   {
     "txid": "ee13ebb99632377c15c94980357f674d285ac413452050031ea6dcd3e9b2dc29",
@@ -12570,7 +12570,7 @@ export const restApiDocsData = [
           esModule: [],
           commonJS: [],
           curl: ['txid=178b5b9b310f0d667d7ea563a2cdcc17bc8cd15261b58b1653860a724ca83458&type=time_delay'],
-          headers: 'X-Mempool-Auth: stacksats',
+          headers: 'X-BitcoinGold-Auth: stacksats',
           response: `If a request has been canceled:\nHTTP/1.1 200 OK\n\nWhen no request matches the query parameters:\nHTTP/1.1 204 No Content`,
         },
       }
@@ -12600,7 +12600,7 @@ export const restApiDocsData = [
           esModule: [],
           commonJS: [],
           curl: [],
-          headers: 'X-Mempool-Auth: stacksats',
+          headers: 'X-BitcoinGold-Auth: stacksats',
           response: `[
   {
     "id": 89,
@@ -12849,7 +12849,7 @@ export const faqData = [
     category: 'advanced',
     showConditions: bitcoinNetworks,
     fragment: 'how-big-is-mempool-used-by-mempool-space',
-    title: 'How big is the mempool used by mempool.space?',
+    title: 'How big is the mempool used by BitcoinGold?',
     options: { officialOnly: true },
   },
   {
@@ -12901,7 +12901,7 @@ export const faqData = [
     category: 'advanced',
     showConditions: bitcoinNetworks,
     fragment: 'how-do-mempool-goggles-work',
-    title: 'How do Mempool Goggles® work?',
+    title: 'How do BitcoinGold Goggles® work?',
   },
   {
     type: 'endpoint',
@@ -12964,21 +12964,21 @@ export const faqData = [
     category: 'self-hosting',
     showConditions: bitcoinNetworks,
     fragment: 'host-my-own-instance-server',
-    title: 'How can I host a Mempool instance on my own server?',
+    title: 'How can I host a BitcoinGold instance on my own server?',
   },
   {
     type: 'endpoint',
     category: 'self-hosting',
     showConditions: bitcoinNetworks,
     fragment: 'install-mempool-with-docker',
-    title: 'Can I install Mempool using Docker?',
+    title: 'Can I install BitcoinGold using Docker?',
   },
   {
     type: 'endpoint',
     category: 'self-hosting',
     showConditions: bitcoinNetworks,
     fragment: 'address-lookup-issues',
-    title: 'Why do I get an error for certain address lookups on my Mempool instance?',
+    title: 'Why do I get an error for certain address lookups on my BitcoinGold instance?',
   }
 ];
 
@@ -13421,7 +13421,7 @@ export const electrumApiDocsData = [
     type: 'category',
     category: 'mempool',
     fragment: 'mempool-methods',
-    title: 'Mempool Methods',
+    title: 'BitcoinGold Methods',
     showConditions: bitcoinNetworks.concat(liquidNetworks)
   },
   {

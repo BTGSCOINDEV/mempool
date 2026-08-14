@@ -1,7 +1,7 @@
 import { Component, EmbeddedViewRef, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
-export const MempoolErrors = {
+export const BitcoinGoldErrors = {
   'bad_request': `Your request was not valid. Please try again.`,
   'internal_server_error': `Something went wrong, please try again later`,
   'temporarily_unavailable': `Acceleration temporarily unavailable`,
@@ -38,8 +38,8 @@ export const MempoolErrors = {
   'unable_to_generate_unique_partner_code': `Unable to generate new partner code`
 } as { [error: string]: string };
 
-export function isMempoolError(error: string) {
-  return Object.keys(MempoolErrors).includes(error);
+export function isBitcoinGoldError(error: string) {
+  return Object.keys(BitcoinGoldErrors).includes(error);
 }
 
 @Component({
@@ -47,7 +47,7 @@ export function isMempoolError(error: string) {
   templateUrl: './mempool-error.component.html',
   standalone: false,
 })
-export class MempoolErrorComponent implements OnInit {
+export class BitcoinGoldErrorComponent implements OnInit {
   @ViewChild('lowBalance', { static: true }) lowBalance!: TemplateRef<any>;
   @Input() error: string;
   @Input() alertClass = 'alert-danger';
@@ -70,9 +70,9 @@ export class MempoolErrorComponent implements OnInit {
       }
       return '';
     }).join('');
-     MempoolErrors['not_enough_balance'] = rawHtml;
-     if (Object.keys(MempoolErrors).includes(this.error)) {
-      this.errorContent = this.sanitizer.bypassSecurityTrustHtml(MempoolErrors[this.error]);
+     BitcoinGoldErrors['not_enough_balance'] = rawHtml;
+     if (Object.keys(BitcoinGoldErrors).includes(this.error)) {
+      this.errorContent = this.sanitizer.bypassSecurityTrustHtml(BitcoinGoldErrors[this.error]);
     } else {
       this.errorContent = this.error;
     }

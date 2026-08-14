@@ -16,7 +16,7 @@ export class LiquidMasterPageComponent implements OnInit, OnDestroy {
   connectionState$: Observable<number>;
   navCollapsed = false;
   isMobile = window.innerWidth <= 767.98;
-  officialMempoolSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
+  officialBitcoinGoldSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
   subdomain = '';
   network$: Observable<string>;
   urlLanguage: string;

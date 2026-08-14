@@ -3,11 +3,7 @@ import path from 'path';
 import config from '../config';
 import logger from '../logger';
 import PricesRepository, { ApiPrice, MAX_PRICES } from '../repositories/PricesRepository';
-import BitfinexApi from './price-feeds/bitfinex-api';
-import BitflyerApi from './price-feeds/bitflyer-api';
-import CoinbaseApi from './price-feeds/coinbase-api';
-import GeminiApi from './price-feeds/gemini-api';
-import KrakenApi from './price-feeds/kraken-api';
+import CoinPaprikaApi from './price-feeds/coinpaprika-api';
 import FreeCurrencyApi from './price-feeds/free-currency-api';
 
 export interface PriceFeed {
@@ -67,11 +63,8 @@ class PriceUpdater {
     this.latestPrices = this.getEmptyPricesObj();
     this.latestGoodPrices = this.getEmptyPricesObj();
 
-    this.feeds.push(new BitflyerApi()); // Does not have historical endpoint
-    this.feeds.push(new KrakenApi());
-    this.feeds.push(new CoinbaseApi());
-    this.feeds.push(new BitfinexApi());
-    this.feeds.push(new GeminiApi());
+    // BTGS price source
+    this.feeds.push(new CoinPaprikaApi());
 
     this.currencyConversionFeed = new FreeCurrencyApi();
     this.setCyclePosition();
@@ -212,7 +205,7 @@ class PriceUpdater {
   }
 
   /**
-   * Fetch last BTC price from exchanges, average them, and save it in the database once every hour
+   * Fetch latest BTGS price from CoinPaprika, and save it in the database once every hour
    * @asyncUnsafe
    */
   private async $updatePrice(): Promise<void> {
@@ -247,14 +240,14 @@ class PriceUpdater {
             if (price > -1 && price < MAX_PRICES[currency]) {
               prices.push(price);
             }
-            logger.debug(`${feed.name} BTC/${currency} price: ${price}`, logger.tags.mining);
+            logger.debug(`${feed.name} BTGS/${currency} price: ${price}`, logger.tags.mining);
           } catch (e) {
-            logger.debug(`Could not fetch BTC/${currency} price at ${feed.name}. Reason: ${(e instanceof Error ? e.message : e)}`, logger.tags.mining);
+            logger.debug(`Could not fetch BTGS/${currency} price at ${feed.name}. Reason: ${(e instanceof Error ? e.message : e)}`, logger.tags.mining);
           }
         }
       }
       if (prices.length === 1) {
-        logger.debug(`Only ${prices.length} feed available for BTC/${currency} price`, logger.tags.mining);
+        logger.debug(`Only ${prices.length} feed available for BTGS/${currency} price`, logger.tags.mining);
       }
 
       // Compute average price, non weighted
@@ -262,19 +255,19 @@ class PriceUpdater {
       if (prices.length === 0) {
         this.setLatestPrice(currency, -1);
       } else {
-        this.setLatestPrice(currency, Math.round(getMedian(prices)));
+        this.setLatestPrice(currency, getMedian(prices));
       }
     }
 
     if (config.FIAT_PRICE.API_KEY && this.latestPrices.USD > 0 && Object.keys(this.latestConversionsRatesFromFeed).length > 0) {
       for (const conversionCurrency of this.newCurrencies) {
         if (this.latestConversionsRatesFromFeed[conversionCurrency] > 0 && this.latestPrices.USD * this.latestConversionsRatesFromFeed[conversionCurrency] < MAX_PRICES[conversionCurrency]) {
-          this.setLatestPrice(conversionCurrency, Math.round(this.latestPrices.USD * this.latestConversionsRatesFromFeed[conversionCurrency]));
+          this.setLatestPrice(conversionCurrency, this.latestPrices.USD * this.latestConversionsRatesFromFeed[conversionCurrency]);
         }
       }
     }
 
-    if (config.DATABASE.ENABLED === true && this.cyclePosition === 0) {
+    if (config.DATABASE.ENABLED === true && (this.cyclePosition === 0 || forceUpdate)) {
       // Save everything in db
       try {
         const p = 60 * 60 * 1000; // milliseconds in an hour
@@ -292,9 +285,9 @@ class PriceUpdater {
     }
 
     if (this.latestPrices.USD === -1) {
-      logger.warn(`No BTC price available, falling back to latest known price: ${JSON.stringify(this.latestGoodPrices)}`);
+      logger.warn(`No BTGS price available, falling back to latest known price: ${JSON.stringify(this.latestGoodPrices)}`);
     } else {
-      logger.info(`Latest BTC fiat averaged price: ${JSON.stringify(this.latestGoodPrices)}`);
+      logger.info(`Latest BTGS fiat price: ${JSON.stringify(this.latestGoodPrices)}`);
     }
 
     if (this.ratesChangedCallback && this.latestGoodPrices.USD > 0) {
@@ -310,42 +303,15 @@ class PriceUpdater {
    *
    * @asyncUnsafe
    */
+  
+
+
   private async $insertHistoricalPrices(): Promise<void> {
-    const existingPriceTimes = await PricesRepository.$getPricesTimes();
-
-    // Insert MtGox weekly prices
-    const pricesJson: any[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'mtgox-weekly.json')).toString());
-    const prices = this.getEmptyPricesObj();
-    let insertedCount: number = 0;
-    for (const price of pricesJson) {
-      if (existingPriceTimes.includes(price['ct'])) {
-        continue;
-      }
-
-      // From 1380758400 we will use Kraken price as it follows closely MtGox, but was not affected as much
-      // by the MtGox exchange collapse a few months later
-      if (price['ct'] > 1380758400) {
-        break;
-      }
-      prices.USD = price['c'];
-      await PricesRepository.$savePrices(price['ct'], prices);
-      ++insertedCount;
-    }
-    if (insertedCount > 0) {
-      logger.notice(`Inserted ${insertedCount} MtGox USD weekly price history into db`, logger.tags.mining);
-    } else {
-      logger.debug(`Inserted ${insertedCount} MtGox USD weekly price history into db`, logger.tags.mining);
-    }
-
-    // Insert Kraken weekly prices
-    await new KrakenApi().$insertHistoricalPrice();
-
-    // Insert missing recent hourly prices
-    await this.$insertMissingRecentPrices('day');
-    await this.$insertMissingRecentPrices('hour');
-
-    this.historyInserted = true;
-    this.lastHistoricalRun = Math.round(new Date().getTime() / 1000);
+  // BTGS does not use BTC historical prices.
+  // Historical BTC data from MtGox/Kraken must not be inserted.
+  this.historyInserted = true;
+  this.lastHistoricalRun = Math.round(new Date().getTime() / 1000);
+  return;
   }
 
   /**

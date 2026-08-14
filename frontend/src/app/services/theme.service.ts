@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { defaultMempoolFeeColors, contrastMempoolFeeColors, lightMempoolFeeColors } from '@app/app.constants';
+import { defaultBitcoinGoldFeeColors, contrastBitcoinGoldFeeColors, lightBitcoinGoldFeeColors } from '@app/app.constants';
 import { StorageService } from '@app/services/storage.service';
 import { StateService } from '@app/services/state.service';
 
@@ -11,7 +11,7 @@ export class ThemeService {
   style: HTMLLinkElement | null = null;
   theme: string = 'default';
   themeState$: BehaviorSubject<{ theme: string; loading: boolean; }>;
-  mempoolFeeColors: string[] = defaultMempoolFeeColors;
+  mempoolFeeColors: string[] = defaultBitcoinGoldFeeColors;
   initialLoad: boolean = true;
 
   constructor(
@@ -75,7 +75,7 @@ export class ThemeService {
       if (!this.stateService.env.customize?.theme) {
         this.storageService.setValue('theme-preference', theme);
       }
-      this.mempoolFeeColors = defaultMempoolFeeColors;
+      this.mempoolFeeColors = defaultBitcoinGoldFeeColors;
       this.themeState$.next({ theme, loading: false });
       return;
     }
@@ -97,7 +97,7 @@ export class ThemeService {
           this.style.media = 'all';
           this.initialLoad = false;
         }
-        this.mempoolFeeColors = this.getMempoolFeeColors(theme);
+        this.mempoolFeeColors = this.getBitcoinGoldFeeColors(theme);
         this.themeState$.next({ theme, loading: false });
       };
       this.style.onerror = () => this.apply('default');
@@ -120,15 +120,15 @@ export class ThemeService {
     return `${theme}.css`;
   }
 
-  private getMempoolFeeColors(theme: string): string[] {
+  private getBitcoinGoldFeeColors(theme: string): string[] {
     switch (theme) {
       case 'contrast':
       case 'bukele':
-        return contrastMempoolFeeColors;
+        return contrastBitcoinGoldFeeColors;
       case 'nymkappa':
-        return lightMempoolFeeColors;
+        return lightBitcoinGoldFeeColors;
       default:
-        return defaultMempoolFeeColors;
+        return defaultBitcoinGoldFeeColors;
     }
   }
 

@@ -23,8 +23,8 @@ export class MasterPageComponent implements OnInit, OnDestroy {
   connectionState$: Observable<number>;
   navCollapsed = false;
   isMobile = window.innerWidth <= 767.98;
-  officialMempoolSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
-  officialMempoolSpaceBuild = this.stateService.isMempoolSpaceBuild;
+  officialBitcoinGoldSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
+  officialBitcoinGoldSpaceBuild = this.stateService.isBitcoinGoldSpaceBuild;
   urlLanguage: string;
   subdomain = '';
   networkPaths: { [network: string]: string };
@@ -72,7 +72,7 @@ export class MasterPageComponent implements OnInit, OnDestroy {
       this.enterpriseInfo = info;
     });
 
-    this.servicesEnabled = this.officialMempoolSpace && this.stateService.env.ACCELERATOR === true && this.stateService.network === '';
+    this.servicesEnabled = this.officialBitcoinGoldSpace && this.stateService.env.ACCELERATOR === true && this.stateService.network === '';
     this.refreshAuth();
 
     const isServicesPage = this.router.url.includes('/services/');

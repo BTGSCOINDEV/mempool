@@ -1279,7 +1279,7 @@ class Blocks {
       const blockchainInfo = await bitcoinClient.getBlockchainInfo();
       this.updateTimerProgress(timer, 'got blockchain info for initial difficulty adjustment');
       if (blockchainInfo.blocks === blockchainInfo.headers) {
-        const heightDiff = blockHeightTip % 2016;
+        const heightDiff = blockHeightTip % 1008;
         const blockHash = await bitcoinApi.$getBlockHash(blockHeightTip - heightDiff);
         this.updateTimerProgress(timer, 'got block hash for initial difficulty adjustment');
         const block: IEsploraApi.Block = await bitcoinApi.$getBlock(blockHash);
@@ -1287,8 +1287,8 @@ class Blocks {
         this.lastDifficultyAdjustmentTime = block.timestamp;
         this.currentBits = block.bits;
 
-        if (blockHeightTip >= 2016) {
-          const previousPeriodBlockHash = await bitcoinApi.$getBlockHash(blockHeightTip - heightDiff - 2016);
+        if (blockHeightTip >= 1008) {
+          const previousPeriodBlockHash = await bitcoinApi.$getBlockHash(blockHeightTip - heightDiff - 1008);
           this.updateTimerProgress(timer, 'got previous block hash for initial difficulty adjustment');
           const previousPeriodBlock: IEsploraApi.Block = await bitcoinApi.$getBlock(previousPeriodBlockHash);
           this.updateTimerProgress(timer, 'got previous block for initial difficulty adjustment');
@@ -1383,7 +1383,7 @@ class Blocks {
         }
       }
 
-      if (block.height % 2016 === 0) {
+      if (block.height % 1008 === 0) {
         if (Common.indexingEnabled()) {
           let adjustment;
           if (['liquid', 'liquidtestnet'].includes(config.MEMPOOL.NETWORK)) {

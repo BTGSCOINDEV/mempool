@@ -17,7 +17,7 @@ import { LightningApiService } from '@app/lightning/lightning-api.service';
 export class LightningDashboardComponent implements OnInit, AfterViewInit {
   statistics$: Observable<INodesStatistics>;
   nodesRanking$: Observable<INodesRanking>;
-  officialMempoolSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
+  officialBitcoinGoldSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
   graphHeight: number = 300;
 
   constructor(

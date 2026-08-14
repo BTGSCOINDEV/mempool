@@ -3,7 +3,7 @@
     <h5 class="card-title" i18n="liquid.reserve-deficit">Reserve Deficit</h5> 
     <div *ngIf="(unbackedMonths$ | async) as unbackedMonths; else loadingData" class="card-text">
       <ng-container *ngIf="unbackedMonths.historyComplete; else loadingData">
-        <div class="fee-text" i18n-ngbTooltip="liquid.unpeg-info" ngbTooltip="Number of times that the Federation's BTC holdings fall below 95% of the total LBTC supply">
+        <div class="fee-text" i18n-ngbTooltip="liquid.unpeg-info" ngbTooltip="Number of times that the Federation's BTGS holdings fall below 95% of the total LBTC supply">
           {{ unbackedMonths.total }}
           <span *ngIf="unbackedMonths.total === 1; else occurrencePlural" i18n="shared.occurrence">occurrence</span>
           <ng-template #occurrencePlural>
@@ -19,7 +19,7 @@
     <div *ngIf="(unbackedMonths$ | async) as unbackedMonths; else loadingData" class="card-text">
       <ng-container *ngIf="unbackedMonths.historyComplete; else loadingData">
         <div class="fee-text">
-          {{ unbackedMonths.delta1m > 0 ? '+' : ''}}{{ unbackedMonths.delta1m | number: '1.2-2' }} <span i18n="shared.btc|BTC">BTC</span>
+          {{ unbackedMonths.delta1m > 0 ? '+' : ''}}{{ unbackedMonths.delta1m | number: '1.2-2' }} <span i18n="shared.btc|BTGS">BTGS</span>
         </div>
       </ng-container>
     </div>

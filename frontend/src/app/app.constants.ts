@@ -1,4 +1,4 @@
-export const defaultMempoolFeeColors = [
+export const defaultBitcoinGoldFeeColors = [
   '007d3d',
   '557d00',
   '5d7d01',
@@ -40,7 +40,7 @@ export const defaultMempoolFeeColors = [
   'ae005b',
 ];
 
-export const contrastMempoolFeeColors = [
+export const contrastBitcoinGoldFeeColors = [
   '06adef',
   '0082e6',
   '0984df',
@@ -82,7 +82,7 @@ export const contrastMempoolFeeColors = [
   'ffb700',
  ];
 
- export const lightMempoolFeeColors = [
+ export const lightBitcoinGoldFeeColors = [
   '49c284',
   '99c246',
   'a0c343',

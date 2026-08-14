@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AccelerationPosition, CpfpInfo, DifficultyAdjustment, MempoolPosition, SinglePoolStats } from '@interfaces/node-api.interface';
+import { AccelerationPosition, CpfpInfo, DifficultyAdjustment, BitcoinGoldPosition, SinglePoolStats } from '@interfaces/node-api.interface';
 import { StateService } from '@app/services/state.service';
-import { MempoolBlock } from '@interfaces/websocket.interface';
+import { BitcoinGoldBlock } from '@interfaces/websocket.interface';
 import { Transaction } from '@interfaces/electrs.interface';
 import { MiningService, MiningStats } from '@app/services/mining.service';
 import { getUnacceleratedFeeRate } from '@app/shared/transaction.utils';
@@ -66,7 +66,7 @@ export class EtaService {
     );
   }
 
-  mempoolPositionFromFees(feerate: number, mempoolBlocks: MempoolBlock[]): MempoolPosition {
+  mempoolPositionFromFees(feerate: number, mempoolBlocks: BitcoinGoldBlock[]): BitcoinGoldPosition {
     for (let txInBlockIndex = 0; txInBlockIndex < mempoolBlocks.length; txInBlockIndex++) {
       const block = mempoolBlocks[txInBlockIndex];
       for (let i = 0; i < block.feeRange.length - 1; i++) {
@@ -107,8 +107,8 @@ export class EtaService {
   calculateETA(
     network: string,
     tx: Transaction,
-    mempoolBlocks: MempoolBlock[],
-    position: { txid: string, position: MempoolPosition, cpfp: CpfpInfo | null, accelerationPositions?: AccelerationPosition[] },
+    mempoolBlocks: BitcoinGoldBlock[],
+    position: { txid: string, position: BitcoinGoldPosition, cpfp: CpfpInfo | null, accelerationPositions?: AccelerationPosition[] },
     da: DifficultyAdjustment,
     miningStats: MiningStats,
     isAccelerated: boolean,
@@ -228,7 +228,7 @@ export class EtaService {
 
   calculateUnacceleratedETA(
     tx: Transaction,
-    mempoolBlocks: MempoolBlock[],
+    mempoolBlocks: BitcoinGoldBlock[],
     da: DifficultyAdjustment,
     cpfpInfo: CpfpInfo | null,
   ): ETA | null {

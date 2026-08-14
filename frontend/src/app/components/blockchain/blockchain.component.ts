@@ -15,7 +15,7 @@ export class BlockchainComponent implements OnInit, OnDestroy, OnChanges {
   @Input() pageIndex: number;
   @Input() blocksPerPage: number = 8;
   @Input() minScrollWidth: number = 0;
-  @Input() scrollableMempool: boolean = false;
+  @Input() scrollableBitcoinGold: boolean = false;
   @Input() containerWidth: number;
 
   @Output() mempoolOffsetChange: EventEmitter<number> = new EventEmitter();
@@ -97,7 +97,7 @@ export class BlockchainComponent implements OnInit, OnDestroy, OnChanges {
     this.stateService.blockDisplayMode$.next(this.blockDisplayMode);
   }
 
-  onMempoolWidthChange(width): void {
+  onBitcoinGoldWidthChange(width): void {
     if (this.flipping) {
       return;
     }

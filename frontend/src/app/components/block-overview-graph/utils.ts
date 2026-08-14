@@ -1,4 +1,4 @@
-import { feeLevels, defaultMempoolFeeColors, contrastMempoolFeeColors } from '@app/app.constants';
+import { feeLevels, defaultBitcoinGoldFeeColors, contrastBitcoinGoldFeeColors } from '@app/app.constants';
 import { Color } from '@components/block-overview-graph/sprite-types';
 import TxView from '@components/block-overview-graph/tx-view';
 
@@ -62,7 +62,7 @@ interface ColorPalette {
 // precomputed colors
 const defaultColors: { [key: string]: ColorPalette } = {
   fee: {
-    base: defaultMempoolFeeColors.map(hexToColor),
+    base: defaultBitcoinGoldFeeColors.map(hexToColor),
     audit: [],
     marginal: [],
     baseLevel: (tx: TxView, rate: number) => feeLevels.findIndex((feeLvl) => Math.max(0, rate) < feeLvl) - 1
@@ -93,7 +93,7 @@ export const defaultAuditColors = {
 
 const contrastColors: { [key: string]: ColorPalette } = {
   fee: {
-    base: contrastMempoolFeeColors.map(hexToColor),
+    base: contrastBitcoinGoldFeeColors.map(hexToColor),
     audit: [],
     marginal: [],
     baseLevel: (tx: TxView, rate: number) => feeLevels.findIndex((feeLvl) => Math.max(0, rate) < feeLvl) - 1
@@ -130,7 +130,7 @@ export function defaultColorFunction(
 ): Color {
   const rate = tx.fee / tx.vsize; // color by simple single-tx fee rate
   const levelIndex = colors.baseLevel(tx, rate, relativeTime || (Date.now() / 1000));
-  const levelColor = colors.base[levelIndex] || colors.base[defaultMempoolFeeColors.length - 1];
+  const levelColor = colors.base[levelIndex] || colors.base[defaultBitcoinGoldFeeColors.length - 1];
   // Normal mode
   if (!tx.scene?.highlightingEnabled) {
     if (tx.acc) {
@@ -147,7 +147,7 @@ export function defaultColorFunction(
     case 'missing':
     case 'sigop':
     case 'rbf':
-      return colors.marginal[levelIndex] || colors.marginal[defaultMempoolFeeColors.length - 1];
+      return colors.marginal[levelIndex] || colors.marginal[defaultBitcoinGoldFeeColors.length - 1];
     case 'fresh':
     case 'freshcpfp':
       return auditColors.missing;
@@ -162,12 +162,12 @@ export function defaultColorFunction(
     case 'deprioritized':
       return auditColors.prioritized;
     case 'selected':
-      return colors.marginal[levelIndex] || colors.marginal[defaultMempoolFeeColors.length - 1];
+      return colors.marginal[levelIndex] || colors.marginal[defaultBitcoinGoldFeeColors.length - 1];
     case 'accelerated':
       return auditColors.accelerated;
     case 'found':
       if (tx.context === 'projected') {
-        return colors.audit[levelIndex] || colors.audit[defaultMempoolFeeColors.length - 1];
+        return colors.audit[levelIndex] || colors.audit[defaultBitcoinGoldFeeColors.length - 1];
       } else {
         return levelColor;
       }

@@ -29,7 +29,7 @@ import { StorageService } from '@app/services/storage.service';
 import { seoDescriptionNetwork } from '@app/shared/common.utils';
 import { getTransactionFlags, getUnacceleratedFeeRate } from '@app/shared/transaction.utils';
 import { Filter, TransactionFlags, toFilters } from '@app/shared/filters.utils';
-import { BlockExtended, CpfpInfo, RbfTree, MempoolPosition, DifficultyAdjustment, Acceleration, AccelerationPosition } from '@interfaces/node-api.interface';
+import { BlockExtended, CpfpInfo, RbfTree, BitcoinGoldPosition, DifficultyAdjustment, Acceleration, AccelerationPosition } from '@interfaces/node-api.interface';
 import { LiquidUnblinding } from '@components/transaction/liquid-ublinding';
 import { RelativeUrlPipe } from '@app/shared/pipes/relative-url/relative-url.pipe';
 import { PriceService } from '@app/services/price.service';
@@ -78,7 +78,7 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
   tx: Transaction;
   txId: string;
   txInBlockIndex: number;
-  mempoolPosition: MempoolPosition;
+  mempoolPosition: BitcoinGoldPosition;
   gotInitialPosition = false;
   accelerationPositions: AccelerationPosition[];
   isLoadingTx = true;
@@ -170,7 +170,7 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
   showAccelerationDetails = false;
   hasAccelerationDetails = false;
   auditEnabled: boolean = this.stateService.env.AUDIT && this.stateService.env.BASE_MODULE === 'mempool' && this.stateService.env.MINING_DASHBOARD === true;
-  isMempoolSpaceBuild = this.stateService.isMempoolSpaceBuild;
+  isBitcoinGoldSpaceBuild = this.stateService.isBitcoinGoldSpaceBuild;
   partnerCode: string | undefined;
 
   graphContainer: ElementRef;
@@ -232,7 +232,7 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
     const urlParams = new URLSearchParams(window.location.search);
     this.forceAccelerationSummary = !!urlParams.get('cash_request_id');
 
-    this.hideAccelerationSummary = this.stateService.isMempoolSpaceBuild ? this.storageService.getValue('hide-accelerator-pref') == 'true' : true;
+    this.hideAccelerationSummary = this.stateService.isBitcoinGoldSpaceBuild ? this.storageService.getValue('hide-accelerator-pref') == 'true' : true;
 
     if (!this.stateService.isLiquid()) {
       this.miningService.getMiningStats('1m').subscribe(stats => {

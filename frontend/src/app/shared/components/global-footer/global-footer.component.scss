@@ -387,3 +387,17 @@ footer .nowrap {
     width: unset;
   }
 }
+
+/* BTGS logo - Footer */
+.btgs-footer-logo {
+  width: 58px;
+  height: 58px;
+  max-width: 58px;
+  max-height: 58px;
+  min-width: 58px;
+  min-height: 58px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+}

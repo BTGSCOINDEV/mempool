@@ -36,9 +36,9 @@ export class CodeTemplateComponent implements OnInit {
   }
 
   npmGithubLink(){
-    let npmLink = `https://github.com/mempool/mempool.js`;
+    let npmLink = `https://github.com/BTGSCOINDEV/BTGS.js`;
     if (this.network === 'liquid' || this.network === 'liquidtestnet') {
-      npmLink = `https://github.com/mempool/mempool.js/tree/main/npm-liquid-js`;
+      npmLink = `https://github.com/BTGSCOINDEV/BTGS.js/tree/main/npm-liquid-js`;
     }
     return npmLink;
   }
@@ -164,7 +164,7 @@ init();`;
         return codeText;
       }
 
-      let importText = `<script src="https://mempool.space/mempool.js"></script>`;
+      let importText = `<script src="https://BitcoinGold/mempool.js"></script>`;
       if (this.env.BASE_MODULE === 'liquid') {
         importText = `<script src="https://liquid.network/liquid.js"></script>`;
       }
@@ -172,9 +172,9 @@ init();`;
       let resultHtml = '<pre id="result"></pre>';
       if (this.method === 'websocket') {
         resultHtml = `<h2>Blocks</h2><pre id="result-blocks">Waiting for data</pre><br>
-    <h2>Mempool Info</h2><pre id="result-mempool-info">Waiting for data</pre><br>
+    <h2>BitcoinGold Info</h2><pre id="result-mempool-info">Waiting for data</pre><br>
     <h2>Transactions</h2><pre id="result-transactions">Waiting for data</pre><br>
-    <h2>Mempool Blocks</h2><pre id="result-mempool-blocks">Waiting for data</pre><br>`;
+    <h2>BitcoinGold Blocks</h2><pre id="result-mempool-blocks">Waiting for data</pre><br>`;
       }
 
       return `<!DOCTYPE html>
@@ -260,7 +260,7 @@ yarn add @mempool/liquid.js`;
   }
 
   wrapPythonTemplate(code: any) {
-    return ( ( this.network === 'testnet' || this.network === 'testnet4' || this.network === 'signet' ) ? ( code.codeTemplate.python.replace( 'wss://mempool.space/api/v1/ws', 'wss://mempool.space/' + this.network + '/api/v1/ws' ) ) : code.codeTemplate.python );
+    return ( ( this.network === 'testnet' || this.network === 'testnet4' || this.network === 'signet' ) ? ( code.codeTemplate.python.replace( 'wss://BitcoinGold/api/v1/ws', 'wss://BitcoinGold/' + this.network + '/api/v1/ws' ) ) : code.codeTemplate.python );
   }
 
   replaceJSPlaceholder(text: string, code: any) {

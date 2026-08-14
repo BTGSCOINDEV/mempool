@@ -20,8 +20,8 @@ export class ApiDocsNavComponent implements OnInit {
   env: Env;
   tabData: any[];
   auditEnabled: boolean;
-  officialMempoolInstance: boolean;
-  isMempoolSpaceBuild: boolean;
+  officialBitcoinGoldInstance: boolean;
+  isBitcoinGoldSpaceBuild: boolean;
   runningElectrs: boolean;
 
   constructor(
@@ -30,8 +30,8 @@ export class ApiDocsNavComponent implements OnInit {
 
   ngOnInit(): void {
     this.env = this.stateService.env;
-    this.officialMempoolInstance = this.env.OFFICIAL_MEMPOOL_SPACE;
-    this.isMempoolSpaceBuild = this.stateService.isMempoolSpaceBuild;
+    this.officialBitcoinGoldInstance = this.env.OFFICIAL_MEMPOOL_SPACE;
+    this.isBitcoinGoldSpaceBuild = this.stateService.isBitcoinGoldSpaceBuild;
     this.stateService.backend$.pipe(takeUntil(this.destroy$)).subscribe((backend) => {
       this.runningElectrs = !!(backend == 'esplora');
     });

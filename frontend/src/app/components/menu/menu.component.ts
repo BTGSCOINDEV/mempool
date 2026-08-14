@@ -5,7 +5,7 @@ import { StorageService } from '@app/services/storage.service';
 import { Router, NavigationStart } from '@angular/router';
 import { StateService } from '@app/services/state.service';
 import { IUser, ServicesApiServices } from '@app/services/services-api.service';
-import { AuthServiceMempool } from '@app/services/auth.service';
+import { AuthServiceBitcoinGold } from '@app/services/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -29,7 +29,7 @@ export class MenuComponent implements OnInit, OnDestroy {
     private storageService: StorageService,
     private router: Router,
     private stateService: StateService,
-    private authService: AuthServiceMempool
+    private authService: AuthServiceBitcoinGold
   ) {}
 
   ngOnInit(): void {

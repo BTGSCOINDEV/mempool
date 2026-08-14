@@ -294,7 +294,7 @@
         <note priority="1" from="description">about.about-the-project</note>
       </trans-unit>
       <trans-unit id="8a4411dcb4da0aa489ec367bf2a3ec289e07a86e" datatype="html">
-        <source>Our mempool and blockchain explorer for the Bitcoin community, focusing on the transaction fee market and multi-layer ecosystem, completely self-hosted without any trusted third-parties.</source>
+        <source>Our mempool and blockchain explorer for the BitcoinGold community, focusing on the transaction fee market and multi-layer ecosystem, completely self-hosted without any trusted third-parties.</source>
         <target>ビットコインコミュニティーのための、新興トランザクション手数料市場に中心するメモリープールとブロックチェーンエキスプローラです。 自宅サーバに管理できる上、信頼すべき第三者が不必要です。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.html</context>
@@ -878,7 +878,7 @@
         <note priority="1" from="description">go-back</note>
       </trans-unit>
       <trans-unit id="7d89e94e98140d07d5c2bb12d6166b8b74506eb0" datatype="html">
-        <source>Accelerate your Bitcoin transaction?</source>
+        <source>Accelerate your BitcoinGold transaction?</source>
         <target>ビットコイン取引を高速化しますか?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
@@ -1620,8 +1620,8 @@
         <note priority="1" from="description">accelerator.total-boost</note>
       </trans-unit>
       <trans-unit id="53475bdf4a94f0103f33211d02102859e9a8fe3e" datatype="html">
-        <source>BTC</source>
-        <target>BTC</target>
+        <source>BTGS</source>
+        <target>BTGS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/acceleration/acceleration-stats/acceleration-stats.component.html</context>
           <context context-type="linenumber">13</context>
@@ -1654,7 +1654,7 @@
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
-        <note priority="1" from="description">BTC</note>
+        <note priority="1" from="description">BTGS</note>
         <note priority="1" from="meaning">shared.btc</note>
       </trans-unit>
       <trans-unit id="cf2ec414465d65ab24b354663d94d051a67e26e9" datatype="html">
@@ -2340,8 +2340,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.address" datatype="html">
-        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> address <x id="INTERPOLATION" equiv-text="this.addressString"/>.</source>
-        <target><x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/>のアドレス<x id="INTERPOLATION" equiv-text="this.addressString"/>に関するmempoolの取引、承認済み取引、残高などを表示する。</target>
+        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> address <x id="INTERPOLATION" equiv-text="this.addressString"/>.</source>
+        <target><x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/>のアドレス<x id="INTERPOLATION" equiv-text="this.addressString"/>に関するmempoolの取引、承認済み取引、残高などを表示する。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/address/address-preview.component.ts</context>
           <context context-type="linenumber">75</context>
@@ -2850,8 +2850,8 @@
         <note priority="1" from="description">Asset data load error</note>
       </trans-unit>
       <trans-unit id="0ae529953ee15ef7af41fe3a3c30a10de5347f34" datatype="html">
-        <source>BTC Holdings</source>
-        <target>BTC保有量</target>
+        <source>BTGS Holdings</source>
+        <target>BTGS保有量</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
           <context context-type="linenumber">5</context>
@@ -2936,7 +2936,7 @@
         <note priority="1" from="description">mining.avg-block-fee-1m</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fee-rates" datatype="html">
-        <source>See Bitcoin feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
+        <source>See BitcoinGold feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
         <target>ブロックあたりの最小手数料と最大手数料、さまざまなパーセンタイルの手数料など、時間の経過に伴うビットコインの手数料を視覚化して表示します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fee-rates-graph/block-fee-rates-graph.component.ts</context>
@@ -2977,8 +2977,8 @@
         <note priority="1" from="description">mining.block-fees</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees" datatype="html">
-        <source>See the average mining fees earned per Bitcoin block visualized in BTC and USD over time.</source>
-        <target>時間の経過に伴う、BTC と USD で視覚化された、ビットコイン ブロックごとに獲得された平均マイニング手数料を確認します。</target>
+        <source>See the average mining fees earned per BitcoinGold block visualized in BTGS and USD over time.</source>
+        <target>時間の経過に伴う、BTGS と USD で視覚化された、ビットコイン ブロックごとに獲得された平均マイニング手数料を確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
           <context context-type="linenumber">71</context>
@@ -3042,8 +3042,8 @@
         <note priority="1" from="description">mining.block-fees-subsidy-subsidy</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees-subsidy" datatype="html">
-        <source>See the mining fees earned per Bitcoin block compared to the Bitcoin block subsidy, visualized in BTC and USD over time.</source>
-        <target>時間の経過に伴う、BTC と USD で視覚化された、ビットコイン ブロックごとに獲得されたマイニング手数料と新規発行枚数を確認します。</target>
+        <source>See the mining fees earned per BitcoinGold block compared to the BitcoinGold block subsidy, visualized in BTGS and USD over time.</source>
+        <target>時間の経過に伴う、BTGS と USD で視覚化された、ビットコイン ブロックごとに獲得されたマイニング手数料と新規発行枚数を確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
           <context context-type="linenumber">80</context>
@@ -3154,8 +3154,8 @@
         <note priority="1" from="description">mining.blocks-health</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-health" datatype="html">
-        <source>See Bitcoin block health visualized over time. Block health is a measure of how many expected transactions were included in an actual mined block. Expected transactions are determined using Mempool's re-implementation of Bitcoin Core's transaction selection algorithm.</source>
-        <target>時間の経過とともに視覚化されたビットコインブロックの健全性をご覧ください。ブロックの健全性は、実際にマイニングされたブロックに予想される取引の数が含まれているかを示す尺度です。予想される取引は、Mempool による Bitcoin Core の取引選択アルゴリズムの再実装を使用して決定されます。</target>
+        <source>See BitcoinGold block health visualized over time. Block health is a measure of how many expected transactions were included in an actual mined block. Expected transactions are determined using Mempool's re-implementation of BitcoinGold Core's transaction selection algorithm.</source>
+        <target>時間の経過とともに視覚化されたビットコインブロックの健全性をご覧ください。ブロックの健全性は、実際にマイニングされたブロックに予想される取引の数が含まれているかを示す尺度です。予想される取引は、Mempool による BitcoinGold Core の取引選択アルゴリズムの再実装を使用して決定されます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-health-graph/block-health-graph.component.ts</context>
           <context context-type="linenumber">65</context>
@@ -3480,8 +3480,8 @@
         <note priority="1" from="description">mining.block-rewards</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-rewards" datatype="html">
-        <source>See Bitcoin block rewards in BTC and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
-        <target>ビットコインのブロック報酬を BTC と USD で時系列で視覚化して表示します。ブロック報酬は、マイナーがブロック補助金と手数料から得る合計資金です。</target>
+        <source>See BitcoinGold block rewards in BTGS and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
+        <target>ビットコインのブロック報酬を BTGS と USD で時系列で視覚化して表示します。ブロック報酬は、マイナーがブロック補助金と手数料から得る合計資金です。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-rewards-graph/block-rewards-graph.component.ts</context>
           <context context-type="linenumber">69</context>
@@ -3505,7 +3505,7 @@
         <note priority="1" from="description">mining.block-sizes-weights</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-sizes" datatype="html">
-        <source>See Bitcoin block sizes (MB) and block weights (weight units) visualized over time.</source>
+        <source>See BitcoinGold block sizes (MB) and block weights (weight units) visualized over time.</source>
         <target>ビットコインのブロック サイズ (MB) とブロックのウェイト (WU) を時間の経過に沿って視覚化して表示します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.ts</context>
@@ -3661,7 +3661,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.block" datatype="html">
-        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
+        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
         <target>ビットコイン<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ブロック <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>) のサイズ、ウェイト、手数料範囲、含まれる取引、監査 (予想と実際) などを確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-view/block-view.component.ts</context>
@@ -4494,8 +4494,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.blocks" datatype="html">
-        <source>See the most recent Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> blocks along with basic stats such as block height, block reward, block size, and more.</source>
-        <target>最新の Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ブロックと、ブロックの高さ、ブロック報酬、ブロック サイズなどの基本情報を確認します。</target>
+        <source>See the most recent BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> blocks along with basic stats such as block height, block reward, block size, and more.</source>
+        <target>最新の BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ブロックと、ブロックの高さ、ブロック報酬、ブロック サイズなどの基本情報を確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/blocks-list/blocks-list.component.ts</context>
           <context context-type="linenumber">76</context>
@@ -5502,8 +5502,8 @@
         <note priority="1" from="description">mining.hashrate</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.hashrate" datatype="html">
-        <source>See hashrate and difficulty for the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.network)"/> network visualized over time.</source>
-        <target>Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.network)"/> ネットワークのハッシュレートと難易度を時間の経過に沿って視覚化して表示します。</target>
+        <source>See hashrate and difficulty for the BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.network)"/> network visualized over time.</source>
+        <target>BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.network)"/> ネットワークのハッシュレートと難易度を時間の経過に沿って視覚化して表示します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hashrate-chart/hashrate-chart.component.ts</context>
           <context context-type="linenumber">79</context>
@@ -5530,7 +5530,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.descriptions.bitcoin.graphs.hashrate-pools" datatype="html">
-        <source>See Bitcoin mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
+        <source>See BitcoinGold mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
         <target>ビットコイン マイニング プールの優位性を時間の経過とともに視覚化します。上位のマイニング プールの合計ハッシュレートのシェアが時間の経過とともにどのように変動したかを確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hashrates-chart-pools/hashrate-chart-pools.component.ts</context>
@@ -5631,8 +5631,8 @@
         <note priority="1" from="description">liquid.non-dust-expired</note>
       </trans-unit>
       <trans-unit id="506d3b3e461d170c39745288b9ea96b9ac9b7f78" datatype="html">
-        <source>Total amount of BTC held in non-dust Federation UTXOs that have expired timelocks</source>
-        <target>期限切れのタイムロックを持つ非ダストフェデレーションUTXOに保持されているBTCの合計量</target>
+        <source>Total amount of BTGS held in non-dust Federation UTXOs that have expired timelocks</source>
+        <target>期限切れのタイムロックを持つ非ダストフェデレーションUTXOに保持されているBTGSの合計量</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/expired-utxos-stats/expired-utxos-stats.component.html</context>
           <context context-type="linenumber">5</context>
@@ -5670,8 +5670,8 @@
         <note priority="1" from="description">liquid.total-expired</note>
       </trans-unit>
       <trans-unit id="a1351919fe237825d7d5844cff22192f88bd1eb4" datatype="html">
-        <source>Total amount of BTC held in Federation UTXOs that have expired timelocks</source>
-        <target>期限切れのタイムロックを持つフェデレーションUTXOに保持されているBTCの合計量</target>
+        <source>Total amount of BTGS held in Federation UTXOs that have expired timelocks</source>
+        <target>期限切れのタイムロックを持つフェデレーションUTXOに保持されているBTGSの合計量</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/expired-utxos-stats/expired-utxos-stats.component.html</context>
           <context context-type="linenumber">15</context>
@@ -5852,8 +5852,8 @@
         <note priority="1" from="description">liquid.fund-redemption-tx</note>
       </trans-unit>
       <trans-unit id="4dbfcaee1d2f0308bd20b3b6b6655ba1e04330dc" datatype="html">
-        <source>BTC Address</source>
-        <target>BTCアドレス</target>
+        <source>BTGS Address</source>
+        <target>BTGSアドレス</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-list/recent-pegs-list.component.html</context>
           <context context-type="linenumber">16</context>
@@ -5915,8 +5915,8 @@
         <note priority="1" from="description">liquid.unpeg</note>
       </trans-unit>
       <trans-unit id="9d89af322d1f011851fd136a01a988aec5691e02" datatype="html">
-        <source>Number of times that the Federation's BTC holdings fall below 95% of the total LBTC supply</source>
-        <target>フェデレーションのBTC保有量がLBTC総供給量の95%を下回った回数</target>
+        <source>Number of times that the Federation's BTGS holdings fall below 95% of the total LBTC supply</source>
+        <target>フェデレーションのBTGS保有量がLBTC総供給量の95%を下回った回数</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
           <context context-type="linenumber">6</context>
@@ -5990,8 +5990,8 @@
         <note priority="1" from="description">shared.as-of-block</note>
       </trans-unit>
       <trans-unit id="meta.description.mempool-block" datatype="html">
-        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
-        <target>mempool内の <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> 取引の情報：手数料の範囲、合計サイズなど。ネットワークが新しい取引を受信すると、mempool ブロックはリアルタイムで更新されます。</target>
+        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
+        <target>mempool内の <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> 取引の情報：手数料の範囲、合計サイズなど。ネットワークが新しい取引を受信すると、mempool ブロックはリアルタイムで更新されます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mempool-block/mempool-block.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6098,7 +6098,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.mining.dashboard" datatype="html">
-        <source>Get real-time Bitcoin mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
+        <source>Get real-time BitcoinGold mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
         <target>ハッシュレート、難易度調整、ブロック報酬、プールの優位性などのリアルタイムのビットコインマイニング統計を取得します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mining-dashboard/mining-dashboard.component.ts</context>
@@ -6345,7 +6345,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.pool-ranking" datatype="html">
-        <source>See the top Bitcoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
+        <source>See the top BitcoinGold mining pools ranked by number of blocks mined, over your desired timeframe.</source>
         <target>希望の期間にわたってマイニングされたブロック数でランク付けされた上位のビットコイン マイニング プールを表示します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
@@ -6668,7 +6668,7 @@
         <note priority="1" from="description">mining.pool-dominance</note>
       </trans-unit>
       <trans-unit id="b15dbef7e036c8131fd8a59555b780a67598c7ca" datatype="html">
-        <source>Bitcoin Price</source>
+        <source>BitcoinGold Price</source>
         <target>ビットコイン価格</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.html</context>
@@ -6698,7 +6698,7 @@
         <note priority="1" from="description">price-chart.percent-change</note>
       </trans-unit>
       <trans-unit id="price-chart.title" datatype="html">
-        <source>Bitcoin Price</source>
+        <source>BitcoinGold Price</source>
         <target>ビットコイン価格</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
@@ -6706,7 +6706,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="price-chart.description" datatype="html">
-        <source>See the Bitcoin price in USD visualized over time.</source>
+        <source>See the BitcoinGold price in USD visualized over time.</source>
         <target>USD建てのビットコイン価格を時系列で視覚化します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
@@ -6828,8 +6828,8 @@
         <note priority="1" from="description">test-tx.rejection-reason</note>
       </trans-unit>
       <trans-unit id="meta.description.push-tx" datatype="html">
-        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's hash.</source>
-        <target>取引のハッシュを使用して、取引を <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ネットワークにブロードキャストします。</target>
+        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's hash.</source>
+        <target>取引のハッシュを使用して、取引を <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ネットワークにブロードキャストします。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/push-transaction/push-transaction.component.ts</context>
           <context context-type="linenumber">59</context>
@@ -6858,7 +6858,7 @@
         <note priority="1" from="description">rbf.no-replacements-yet</note>
       </trans-unit>
       <trans-unit id="meta.description.rbf-list" datatype="html">
-        <source>See the most recent RBF replacements on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network, updated in real-time.</source>
+        <source>See the most recent RBF replacements on the BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network, updated in real-time.</source>
         <target>リアルタイムで更新される、ビットコイン<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ネットワーク上の最新の RBF 置換を確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/rbf-list/rbf-list.component.ts</context>
@@ -6959,13 +6959,13 @@
         <note priority="1" from="description">mining.fees-per-block-desc</note>
       </trans-unit>
       <trans-unit id="0705223420d290a218e4ed83bd4d904454a9cee8" datatype="html">
-        <source>BTC/block</source>
-        <target>BTC/ﾌﾞﾛｯｸ</target>
+        <source>BTGS/block</source>
+        <target>BTGS/ﾌﾞﾛｯｸ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/reward-stats/reward-stats.component.html</context>
           <context context-type="linenumber">21</context>
         </context-group>
-        <note priority="1" from="description">BTC/block</note>
+        <note priority="1" from="description">BTGS/block</note>
         <note priority="1" from="meaning">shared.btc-block</note>
       </trans-unit>
       <trans-unit id="cf3a97b1c1546b843411cfe101bc55ba2ac46bac" datatype="html">
@@ -7005,7 +7005,7 @@
         <note priority="1" from="meaning">shared.sat-vbyte</note>
       </trans-unit>
       <trans-unit id="7deec1c1520f06170e1f8e8ddfbe4532312f638f" datatype="html">
-        <source>Explore the full Bitcoin ecosystem</source>
+        <source>Explore the full BitcoinGold ecosystem</source>
         <target>ビットコインエコシステムを全て探検する</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search-form/search-form.component.html</context>
@@ -7298,8 +7298,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.stale-chain-tips" datatype="html">
-        <source>See the most recent stale chain tips on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network.</source>
-        <target>Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ネットワーク上の最新の陳腐化チェーンチップを確認します。</target>
+        <source>See the most recent stale chain tips on the BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network.</source>
+        <target>BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ネットワーク上の最新の陳腐化チェーンチップを確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/stale-list/stale-list.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -8037,8 +8037,8 @@
         <note priority="1" from="meaning">transaction.sigops</note>
       </trans-unit>
       <trans-unit id="meta.description.preview-tx" datatype="html">
-        <source>Preview a transaction to the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's raw hex data.</source>
-        <target>Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ネットワーク取引を生の16進で閲覧します。</target>
+        <source>Preview a transaction to the BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network using the transaction's raw hex data.</source>
+        <target>BitcoinGold<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ネットワーク取引を生の16進で閲覧します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.ts</context>
           <context context-type="linenumber">91</context>
@@ -8323,7 +8323,7 @@
         <note priority="1" from="description">transactions-list.taproot.script-depth</note>
       </trans-unit>
       <trans-unit id="d51fdb627a84595400e2ef9f7bf79192a5f2e36b" datatype="html">
-        <source>Bitcoin Supply</source>
+        <source>BitcoinGold Supply</source>
         <target>ビットコイン供給量</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/treasuries/supply/treasuries-supply.component.html</context>
@@ -8368,8 +8368,8 @@
         <note priority="1" from="description">dashboard.treasury-leaderboard</note>
       </trans-unit>
       <trans-unit id="bcde4e77600723b4032d3bffe5e44386fa824b47" datatype="html">
-        <source>BTC Balance</source>
-        <target>BTC残高</target>
+        <source>BTGS Balance</source>
+        <target>BTGS残高</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/treasuries/treasuries.component.html</context>
           <context context-type="linenumber">19</context>
@@ -8670,8 +8670,8 @@
         <note priority="1" from="description">shared.wallet</note>
       </trans-unit>
       <trans-unit id="27f315de9bee14d550b7dd052a4bc49948ddca42" datatype="html">
-        <source>Balance (BTC)</source>
-        <target>残高（BTC）</target>
+        <source>Balance (BTGS)</source>
+        <target>残高（BTGS）</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/wallet/wallet-preview.component.html</context>
           <context context-type="linenumber">17</context>
@@ -8700,8 +8700,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.wallet" datatype="html">
-        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> wallet <x id="INTERPOLATION" equiv-text="walletName"/>.</source>
-        <target><x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ウォレット <x id="INTERPOLATION" equiv-text="walletName"/> のmempoolの取引、承認済みの取引、残高などを確認します。</target>
+        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> wallet <x id="INTERPOLATION" equiv-text="walletName"/>.</source>
+        <target><x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'BitcoinGold'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> ウォレット <x id="INTERPOLATION" equiv-text="walletName"/> のmempoolの取引、承認済みの取引、残高などを確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/wallet/wallet-preview.component.ts</context>
           <context context-type="linenumber">151</context>
@@ -8751,8 +8751,8 @@
         <note priority="1" from="description">liquid.federation-expired-utxos</note>
       </trans-unit>
       <trans-unit id="9f88381443e277aca8bb50a8d0a338ab6cf2a68b" datatype="html">
-        <source>LBTC Supply Against BTC Holdings</source>
-        <target>BTC保有量に対するLBTC供給量</target>
+        <source>LBTC Supply Against BTGS Holdings</source>
+        <target>BTGS保有量に対するLBTC供給量</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
           <context context-type="linenumber">184</context>
@@ -8764,8 +8764,8 @@
         <note priority="1" from="description">dashboard.lbtc-supply-against-btc-holdings</note>
       </trans-unit>
       <trans-unit id="999bb1a0150c2815a6b4dd64a1850e763603e525" datatype="html">
-        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="mempool.space mer"/>mempool.space merely provides data about the Bitcoin network.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> It cannot help you with retrieving funds, wallet issues, etc.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/>For any such requests, you need to get in touch with the entity that helped make the transaction (wallet software, exchange company, etc).<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
-        <target><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="mempool.space mer"/>mempool.space は Bitcoin ネットワークに関するデータを提供するだけです。<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> 資金の回収やウォレットの問題などには対応できません。<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/>このようなリクエストについては、取引の実行を支援した組織 (ウォレット ソフトウェア、取引所など) に連絡する必要があります。<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
+        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="mempool.space mer"/>mempool.space merely provides data about the BitcoinGold network.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> It cannot help you with retrieving funds, wallet issues, etc.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/>For any such requests, you need to get in touch with the entity that helped make the transaction (wallet software, exchange company, etc).<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
+        <target><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="mempool.space mer"/>mempool.space は BitcoinGold ネットワークに関するデータを提供するだけです。<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> 資金の回収やウォレットの問題などには対応できません。<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="For any such requ"/>このようなリクエストについては、取引の実行を支援した組織 (ウォレット ソフトウェア、取引所など) に連絡する必要があります。<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
           <context context-type="linenumber">15,16</context>
@@ -10300,8 +10300,8 @@
         <note priority="1" from="description">lightning.share</note>
       </trans-unit>
       <trans-unit id="meta.description.lightning.nodes-country-overview" datatype="html">
-        <source>See a geographical breakdown of the Lightning network: how many Lightning nodes are hosted in countries around the world, aggregate BTC capacity for each country, and more.</source>
-        <target>Lightning ネットワークの地理的内訳、世界各国でホストされている Lightning ノードの数、各国の合計 BTC 容量などを確認します。</target>
+        <source>See a geographical breakdown of the Lightning network: how many Lightning nodes are hosted in countries around the world, aggregate BTGS capacity for each country, and more.</source>
+        <target>Lightning ネットワークの地理的内訳、世界各国でホストされている Lightning ノードの数、各国の合計 BTGS 容量などを確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-country-chart/nodes-per-country-chart.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -10328,8 +10328,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="7032954508645880700" datatype="html">
-        <source><x id="PH" equiv-text="this.amountShortenerPipe.transform(country.capacity / 100000000, 2)"/> BTC capacity</source>
-        <target><x id="PH" equiv-text="this.amountShortenerPipe.transform(country.capacity / 100000000, 2)"/> BTC 容量</target>
+        <source><x id="PH" equiv-text="this.amountShortenerPipe.transform(country.capacity / 100000000, 2)"/> BTGS capacity</source>
+        <target><x id="PH" equiv-text="this.amountShortenerPipe.transform(country.capacity / 100000000, 2)"/> BTGS 容量</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-country-chart/nodes-per-country-chart.component.ts</context>
           <context context-type="linenumber">106</context>
@@ -10454,16 +10454,16 @@
         <note priority="1" from="description">lightning.top-100-isp-ln</note>
       </trans-unit>
       <trans-unit id="meta.description.lightning.nodes-per-isp" datatype="html">
-        <source>Browse the top 100 ISPs hosting Lightning nodes along with stats like total number of nodes per ISP, aggregate BTC capacity per ISP, and more</source>
-        <target>Lightning ノードをホストしている上位 100 の ISP を、ISP ごとのノードの総数、ISP ごとの総 BTC 容量などの統計とともに閲覧します。</target>
+        <source>Browse the top 100 ISPs hosting Lightning nodes along with stats like total number of nodes per ISP, aggregate BTGS capacity per ISP, and more</source>
+        <target>Lightning ノードをホストしている上位 100 の ISP を、ISP ごとのノードの総数、ISP ごとの総 BTGS 容量などの統計とともに閲覧します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-isp-chart/nodes-per-isp-chart.component.ts</context>
           <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3627306100664959238" datatype="html">
-        <source><x id="PH" equiv-text="this.amountShortenerPipe.transform(isp[2] / 100000000, 2)"/> BTC</source>
-        <target><x id="PH" equiv-text="this.amountShortenerPipe.transform(isp[2] / 100000000, 2)"/> BTC</target>
+        <source><x id="PH" equiv-text="this.amountShortenerPipe.transform(isp[2] / 100000000, 2)"/> BTGS</source>
+        <target><x id="PH" equiv-text="this.amountShortenerPipe.transform(isp[2] / 100000000, 2)"/> BTGS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-isp-chart/nodes-per-isp-chart.component.ts</context>
           <context context-type="linenumber">165</context>
@@ -10517,8 +10517,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.lightning.nodes-isp" datatype="html">
-        <source>Browse all Bitcoin Lightning nodes using the <x id="PH" equiv-text="response.isp"/> [AS<x id="PH_1" equiv-text="this.route.snapshot.params.isp"/>] ISP and see aggregate stats like total number of nodes, total capacity, and more for the ISP.</source>
-        <target><x id="PH" equiv-text="response.isp"/> [AS<x id="PH_1" equiv-text="this.route.snapshot.params.isp"/>] ISP を使用しているすべての Bitcoin Lightning ノードを参照し、ISP の合計ノード数、合計容量などの集計統計情報を確認します。</target>
+        <source>Browse all BitcoinGold Lightning nodes using the <x id="PH" equiv-text="response.isp"/> [AS<x id="PH_1" equiv-text="this.route.snapshot.params.isp"/>] ISP and see aggregate stats like total number of nodes, total capacity, and more for the ISP.</source>
+        <target><x id="PH" equiv-text="response.isp"/> [AS<x id="PH_1" equiv-text="this.route.snapshot.params.isp"/>] ISP を使用しているすべての BitcoinGold Lightning ノードを参照し、ISP の合計ノード数、合計容量などの集計統計情報を確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-isp/nodes-per-isp-preview.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -10581,8 +10581,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.lightning.ranking.liquidity" datatype="html">
-        <source>See Lightning nodes with the most BTC liquidity deployed along with high-level stats like number of open channels, location, node age, and more.</source>
-        <target>オープンチャネルの数、場所、ノードの年齢などの高レベルの統計とともに、最も多くの BTC 流動性が導入されている Lightning ノードを確認します。</target>
+        <source>See Lightning nodes with the most BTGS liquidity deployed along with high-level stats like number of open channels, location, node age, and more.</source>
+        <target>オープンチャネルの数、場所、ノードの年齢などの高レベルの統計とともに、最も多くの BTGS 流動性が導入されている Lightning ノードを確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-ranking/top-nodes-per-capacity/top-nodes-per-capacity.component.ts</context>
           <context context-type="linenumber">36</context>

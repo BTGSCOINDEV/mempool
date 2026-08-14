@@ -14,7 +14,7 @@ export interface IAuth {
 @Injectable({
   providedIn: 'root'
 })
-export class AuthServiceMempool {
+export class AuthServiceBitcoinGold {
   private auth$: ReplaySubject<IAuth | null> = new ReplaySubject(1);
 
   constructor(

@@ -4,7 +4,7 @@ import { UntypedFormGroup, UntypedFormBuilder } from '@angular/forms';
 import { of, merge} from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
-import { OptimizedMempoolStats } from '@interfaces/node-api.interface';
+import { OptimizedBitcoinGoldStats } from '@interfaces/node-api.interface';
 import { WebsocketService } from '@app/services/websocket.service';
 import { ApiService } from '@app/services/api.service';
 
@@ -12,7 +12,7 @@ import { StateService } from '@app/services/state.service';
 import { SeoService } from '@app/services/seo.service';
 import { StorageService } from '@app/services/storage.service';
 import { feeLevels, chartColors } from '@app/app.constants';
-import { MempoolGraphComponent } from '@components/mempool-graph/mempool-graph.component';
+import { BitcoinGoldGraphComponent } from '@components/mempool-graph/mempool-graph.component';
 import { IncomingTransactionsGraphComponent } from '@components/incoming-transactions-graph/incoming-transactions-graph.component';
 
 @Component({
@@ -22,7 +22,7 @@ import { IncomingTransactionsGraphComponent } from '@components/incoming-transac
   standalone: false,
 })
 export class StatisticsComponent implements OnInit {
-  @ViewChild('mempoolgraph') mempoolGraph: MempoolGraphComponent;
+  @ViewChild('mempoolgraph') mempoolGraph: BitcoinGoldGraphComponent;
   @ViewChild('incominggraph') incomingGraph: IncomingTransactionsGraphComponent;
 
   network = '';
@@ -36,7 +36,7 @@ export class StatisticsComponent implements OnInit {
   maxFeeIndex: number;
   dropDownOpen = false;
   outlierCappingEnabled = false;
-  mempoolStats: OptimizedMempoolStats[] = [];
+  mempoolStats: OptimizedBitcoinGoldStats[] = [];
 
   mempoolVsizeFeesData: any;
   mempoolUnconfirmedTransactionsData: any;
@@ -130,7 +130,7 @@ export class StatisticsComponent implements OnInit {
     )
     .subscribe((mempoolStats: any) => {
       this.mempoolStats = mempoolStats;
-      this.handleNewMempoolData(this.mempoolStats.concat([]));
+      this.handleNewBitcoinGoldData(this.mempoolStats.concat([]));
       this.isLoading = false;
     });
 
@@ -138,11 +138,11 @@ export class StatisticsComponent implements OnInit {
       .subscribe((mempoolStats) => {
         this.mempoolStats.unshift(mempoolStats);
         this.mempoolStats = this.mempoolStats.slice(0, this.mempoolStats.length - 1);
-        this.handleNewMempoolData(this.mempoolStats.concat([]));
+        this.handleNewBitcoinGoldData(this.mempoolStats.concat([]));
       });
   }
 
-  handleNewMempoolData(mempoolStats: OptimizedMempoolStats[]) {
+  handleNewBitcoinGoldData(mempoolStats: OptimizedBitcoinGoldStats[]) {
     mempoolStats.reverse();
     const labels = mempoolStats.map(stats => stats.added);
 

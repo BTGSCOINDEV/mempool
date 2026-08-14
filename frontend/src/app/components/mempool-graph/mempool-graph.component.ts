@@ -3,7 +3,7 @@ import { VbytesPipe } from '@app/shared/pipes/bytes-pipe/vbytes.pipe';
 import { WuBytesPipe } from '@app/shared/pipes/bytes-pipe/wubytes.pipe';
 import { AmountShortenerPipe } from '@app/shared/pipes/amount-shortener.pipe';
 import { formatNumber } from '@angular/common';
-import { OptimizedMempoolStats } from '@interfaces/node-api.interface';
+import { OptimizedBitcoinGoldStats } from '@interfaces/node-api.interface';
 import { StateService } from '@app/services/state.service';
 import { StorageService } from '@app/services/storage.service';
 import { EChartsOption } from '@app/graphs/echarts';
@@ -24,7 +24,7 @@ import { download, formatterXAxis, formatterXAxisLabel } from '@app/shared/graph
   standalone: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MempoolGraphComponent implements OnInit, OnChanges {
+export class BitcoinGoldGraphComponent implements OnInit, OnChanges {
   @Input() data: any[];
   @Input() filterSize = 100000;
   @Input() limitFilterFee = 1;
@@ -78,7 +78,7 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
     this.isWidget = this.template === 'widget';
     this.showCount = !this.isWidget && !this.hideCount;
     this.windowPreference = (this.windowPreferenceOverride ? this.windowPreferenceOverride : this.storageService.getValue('graphWindowPreference')) || '2h';
-    this.mempoolVsizeFeesData = this.handleNewMempoolData(this.data.concat([]));
+    this.mempoolVsizeFeesData = this.handleNewBitcoinGoldData(this.data.concat([]));
     this.mountFeeChart();
   }
 
@@ -100,7 +100,7 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
     this.chartInstance = myChart;
   }
 
-  handleNewMempoolData(mempoolStats: OptimizedMempoolStats[]) {
+  handleNewBitcoinGoldData(mempoolStats: OptimizedBitcoinGoldStats[]) {
     mempoolStats.reverse();
     const labels = mempoolStats.map(stats => stats.added);
     const finalArrayVByte = this.generateArray(mempoolStats);
@@ -113,7 +113,7 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
     };
   }
 
-  generateArray(mempoolStats: OptimizedMempoolStats[]) {
+  generateArray(mempoolStats: OptimizedBitcoinGoldStats[]) {
     const finalArray: number[][][] = [];
     let feesArray: number[][] = [];
 
@@ -134,7 +134,7 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
     return finalArray;
   }
 
-  generateCountArray(mempoolStats: OptimizedMempoolStats[]) {
+  generateCountArray(mempoolStats: OptimizedBitcoinGoldStats[]) {
     return mempoolStats.filter(stats => stats.count > 0).map(stats => [stats.added * 1000, stats.count]);
   }
 

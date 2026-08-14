@@ -131,7 +131,7 @@ if (window['__env']?.OFFICIAL_MEMPOOL_SPACE) {
     data: { networks: ['bitcoin', 'liquid'] },
     component: ServerStatusComponent
   });
-  if (window['isMempoolSpaceBuild']) {
+  if (window['isBitcoinGoldSpaceBuild']) {
     routes[0].children.push({
       path: 'faucet',
       canActivate: [(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {

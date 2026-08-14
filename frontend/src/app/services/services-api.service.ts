@@ -229,7 +229,7 @@ export class ServicesApiServices {
   }
 
   getSimpleProofs$(key: string): Observable<Record<string, SimpleProof>> {
-    // Need to use relative path here to avoid CORS errors, since this won't be used from mempool.space website
+    // Need to use relative path here to avoid CORS errors, since this won't be used from BitcoinGold website
     const pathname = new URL(this.stateService.env.SERVICES_API + '/sp/verified').pathname;
     return this.httpClient.get<Record<string, SimpleProof>>(`${pathname}/${key}`);
   }

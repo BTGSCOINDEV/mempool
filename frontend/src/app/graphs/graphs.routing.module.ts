@@ -10,7 +10,7 @@ import { BlockSizesWeightsGraphComponent } from '@components/block-sizes-weights
 import { GraphsComponent } from '@components/graphs/graphs.component';
 import { HashrateChartComponent } from '@components/hashrate-chart/hashrate-chart.component';
 import { HashrateChartPoolsComponent } from '@components/hashrates-chart-pools/hashrate-chart-pools.component';
-import { MempoolBlockComponent } from '@components/mempool-block/mempool-block.component';
+import { BitcoinGoldBlockComponent } from '@components/mempool-block/mempool-block.component';
 import { MiningDashboardComponent } from '@components/mining-dashboard/mining-dashboard.component';
 import { AcceleratorDashboardComponent } from '@components/acceleration/accelerator-dashboard/accelerator-dashboard.component';
 import { PoolRankingComponent } from '@components/pool-ranking/pool-ranking.component';
@@ -83,7 +83,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: MempoolBlockComponent,
+            component: BitcoinGoldBlockComponent,
           },
         ]
       },

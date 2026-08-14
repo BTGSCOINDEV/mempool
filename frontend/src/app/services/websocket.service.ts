@@ -29,7 +29,7 @@ export class WebsocketService {
   private lastWant: string | null = null;
   private isTrackingTx = false;
   private trackingTxId: string;
-  private isTrackingMempoolBlock = false;
+  private isTrackingBitcoinGoldBlock = false;
   private isTrackingRbf: 'all' | 'fullRbf' | false = false;
   private isTrackingRbfSummary = false;
   private isTrackingAddress: string | false = false;
@@ -38,9 +38,9 @@ export class WebsocketService {
   private isTrackingWallet: boolean = false;
   private trackingWalletName: string;
   private isTrackingStratum: string | number | false = false;
-  private trackingMempoolBlock: number;
-  private trackingMempoolBlockNetwork: string;
-  private stoppingTrackMempoolBlock: any | null = null;
+  private trackingBitcoinGoldBlock: number;
+  private trackingBitcoinGoldBlockNetwork: string;
+  private stoppingTrackBitcoinGoldBlock: any | null = null;
   private latestGitCommit = '';
   private onlineCheckTimeout: number;
   private onlineCheckTimeoutTwo: number;
@@ -125,8 +125,8 @@ export class WebsocketService {
           if (this.isTrackingTx) {
             this.startMultiTrackTransaction(this.trackingTxId);
           }
-          if (this.isTrackingMempoolBlock) {
-            this.startTrackMempoolBlock(this.trackingMempoolBlock, true);
+          if (this.isTrackingBitcoinGoldBlock) {
+            this.startTrackBitcoinGoldBlock(this.trackingBitcoinGoldBlock, true);
           }
           if (this.isTrackingRbf) {
             this.startTrackRbf(this.isTrackingRbf);
@@ -228,30 +228,30 @@ export class WebsocketService {
     this.websocketSubject.next({ 'track-asset': 'stop' });
   }
 
-  startTrackMempoolBlock(block: number, force: boolean = false): boolean {
-    if (this.stoppingTrackMempoolBlock) {
-      clearTimeout(this.stoppingTrackMempoolBlock);
+  startTrackBitcoinGoldBlock(block: number, force: boolean = false): boolean {
+    if (this.stoppingTrackBitcoinGoldBlock) {
+      clearTimeout(this.stoppingTrackBitcoinGoldBlock);
     }
     // skip duplicate tracking requests
-    if (force || this.trackingMempoolBlock !== block || this.network !== this.trackingMempoolBlockNetwork) {
+    if (force || this.trackingBitcoinGoldBlock !== block || this.network !== this.trackingBitcoinGoldBlockNetwork) {
       this.websocketSubject.next({ 'track-mempool-block': block });
-      this.isTrackingMempoolBlock = true;
-      this.trackingMempoolBlock = block;
-      this.trackingMempoolBlockNetwork = this.network;
+      this.isTrackingBitcoinGoldBlock = true;
+      this.trackingBitcoinGoldBlock = block;
+      this.trackingBitcoinGoldBlockNetwork = this.network;
       return true;
     }
     return false;
   }
 
-  stopTrackMempoolBlock(): void {
-    if (this.stoppingTrackMempoolBlock) {
-      clearTimeout(this.stoppingTrackMempoolBlock);
+  stopTrackBitcoinGoldBlock(): void {
+    if (this.stoppingTrackBitcoinGoldBlock) {
+      clearTimeout(this.stoppingTrackBitcoinGoldBlock);
     }
-    this.isTrackingMempoolBlock = false;
-    this.stoppingTrackMempoolBlock = setTimeout(() => {
-      this.stoppingTrackMempoolBlock = null;
+    this.isTrackingBitcoinGoldBlock = false;
+    this.stoppingTrackBitcoinGoldBlock = setTimeout(() => {
+      this.stoppingTrackBitcoinGoldBlock = null;
       this.websocketSubject.next({ 'track-mempool-block': -1 });
-      this.trackingMempoolBlock = null;
+      this.trackingBitcoinGoldBlock = null;
       this.stateService.mempoolBlockState = null;
     }, 2000);
   }
@@ -482,20 +482,20 @@ export class WebsocketService {
     }
 
     if (response['projected-block-transactions']) {
-      if (response['projected-block-transactions'].index == this.trackingMempoolBlock) {
+      if (response['projected-block-transactions'].index == this.trackingBitcoinGoldBlock) {
         if (response['projected-block-transactions'].blockTransactions) {
           this.stateService.mempoolSequence = response['projected-block-transactions'].sequence;
           this.stateService.mempoolBlockUpdate$.next({
-            block: this.trackingMempoolBlock,
+            block: this.trackingBitcoinGoldBlock,
             transactions: response['projected-block-transactions'].blockTransactions.map(uncompressTx),
           });
         } else if (response['projected-block-transactions'].delta) {
           if (this.stateService.mempoolSequence && response['projected-block-transactions'].sequence !== this.stateService.mempoolSequence + 1) {
             this.stateService.mempoolSequence = 0;
-            this.startTrackMempoolBlock(this.trackingMempoolBlock, true);
+            this.startTrackBitcoinGoldBlock(this.trackingBitcoinGoldBlock, true);
           } else {
             this.stateService.mempoolSequence = response['projected-block-transactions'].sequence;
-            this.stateService.mempoolBlockUpdate$.next(uncompressDeltaChange(this.trackingMempoolBlock, response['projected-block-transactions'].delta));
+            this.stateService.mempoolBlockUpdate$.next(uncompressDeltaChange(this.trackingBitcoinGoldBlock, response['projected-block-transactions'].delta));
           }
         }
       }
@@ -524,9 +524,9 @@ export class WebsocketService {
     if (response.loadingIndicators) {
       this.stateService.loadingIndicators$.next(response.loadingIndicators);
       if (response.loadingIndicators.mempool != null && response.loadingIndicators.mempool < 100) {
-        this.stateService.isLoadingMempool$.next(true);
+        this.stateService.isLoadingBitcoinGold$.next(true);
       } else {
-        this.stateService.isLoadingMempool$.next(false);
+        this.stateService.isLoadingBitcoinGold$.next(false);
       }
     }
 

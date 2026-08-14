@@ -146,7 +146,7 @@ export interface Address {
   electrum?: boolean;
   address: string;
   chain_stats: ChainStats;
-  mempool_stats: MempoolStats;
+  mempool_stats: BitcoinGoldStats;
   is_pubkey?: boolean;
 }
 
@@ -154,7 +154,7 @@ export interface ScriptHash {
   electrum?: boolean;
   scripthash: string;
   chain_stats: ChainStats;
-  mempool_stats: MempoolStats;
+  mempool_stats: BitcoinGoldStats;
 }
 
 export interface AddressOrScriptHash {
@@ -162,7 +162,7 @@ export interface AddressOrScriptHash {
   address?: string;
   scripthash?: string;
   chain_stats: ChainStats;
-  mempool_stats: MempoolStats;
+  mempool_stats: BitcoinGoldStats;
 }
 
 export interface AddressTxSummary {
@@ -182,7 +182,7 @@ export interface ChainStats {
   tx_count: number;
 }
 
-export interface MempoolStats {
+export interface BitcoinGoldStats {
   funded_txo_count: number;
   funded_txo_sum: number;
   spent_txo_count: number;

@@ -186,7 +186,7 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
     }
   }
 
-  onMempoolOffsetChange(offset): void {
+  onBitcoinGoldOffsetChange(offset): void {
     if (offset !== this.mempoolOffset) {
       this.pendingOffset = offset;
     }

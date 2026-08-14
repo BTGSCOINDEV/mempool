@@ -8,15 +8,15 @@ import { Observable, Subscription, catchError, combineLatest, distinctUntilChang
 import { Color } from '@components/block-overview-graph/sprite-types';
 import { hexToColor } from '@components/block-overview-graph/utils';
 import TxView from '@components/block-overview-graph/tx-view';
-import { feeLevels, defaultMempoolFeeColors, contrastMempoolFeeColors } from '@app/app.constants';
+import { feeLevels, defaultBitcoinGoldFeeColors, contrastBitcoinGoldFeeColors } from '@app/app.constants';
 import { ServicesApiServices } from '@app/services/services-api.service';
 import { detectWebGL } from '@app/shared/graphs.utils';
 import { AudioService } from '@app/services/audio.service';
 import { ThemeService } from '@app/services/theme.service';
 
 const acceleratedColor: Color = hexToColor('8F5FF6');
-const normalColors = defaultMempoolFeeColors.map(hex => hexToColor(hex + '5F'));
-const contrastColors = contrastMempoolFeeColors.map(hex => hexToColor(hex.slice(0,6) + '5F'));
+const normalColors = defaultBitcoinGoldFeeColors.map(hex => hexToColor(hex + '5F'));
+const contrastColors = contrastBitcoinGoldFeeColors.map(hex => hexToColor(hex.slice(0,6) + '5F'));
 
 interface AccelerationBlock extends BlockExtended {
   accelerationCount: number,

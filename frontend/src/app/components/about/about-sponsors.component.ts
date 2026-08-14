@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
   standalone: false,
 })
 export class AboutSponsorsComponent {
-  @Input() host = 'https://mempool.space';
+  @Input() host = 'https://BitcoinGold';
   @Input() context = 'about';
 }

@@ -1,0 +1,1184 @@
+
+> mempool-backend@3.4-dev start
+> node --max-old-space-size=2048 dist/index.js
+
+Aug 14 15:07:49 [50507] NOTICE: Starting Mempool Server... (0d7a8a8)
+Aug 14 15:07:49 [50507] WARN: Stale PID file at /home/hp/mempool/backend/dist/mempool-mempool.pid, but no process running on that PID 49623
+Aug 14 15:07:49 [50507] INFO: Database connection established.
+Aug 14 15:07:49 [50507] DEBUG: MIGRATIONS: Running migrations
+Aug 14 15:07:49 [50507] DEBUG: MIGRATIONS: Database engine version '10.11.18-MariaDB-ubu2204'
+Aug 14 15:07:49 [50507] DEBUG: MIGRATIONS: Current state.schema_version 112
+Aug 14 15:07:49 [50507] DEBUG: MIGRATIONS: Latest DatabaseMigration.version is 112
+Aug 14 15:07:49 [50507] DEBUG: MIGRATIONS: Nothing to do.
+Aug 14 15:07:49 [50507] INFO: Connected to Electrum Server at electrum.bitcoingold.site:50002 (["Fulcrum 2.1.0","1.4"])
+Aug 14 15:07:49 [50507] DEBUG: [PoolsUpdater] pools-v2.json sha | Current: 049f24a32d8eff5469eba6d9d2e101a5c54f34e6 | Github: 049f24a32d8eff5469eba6d9d2e101a5c54f34e6
+Aug 14 15:07:49 [50507] INFO: Restoring mempool and blocks data from disk cache
+Aug 14 15:07:49 [50507] INFO: Loaded mempool from disk cache in 33 ms
+Aug 14 15:07:49 [50507] DEBUG: 0 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:07:49 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:07:49 [50507] DEBUG: RUST updateBlockTemplates returned 0 txs out of 0 in the mempool, 0 were unmineable
+Aug 14 15:07:49 [50507] DEBUG: RUST makeBlockTemplates completed in 0.002 seconds
+Aug 14 15:07:49 [50507] INFO: Restoring rbf data from disk cache
+Aug 14 15:07:49 [50507] DEBUG: loaded 0 txs, 0 trees into rbf cache, 0 due to expire, 0 were stale
+Aug 14 15:07:49 [50507] DEBUG: rbf cache contains 0 txs, 0 trees, 0 due to expire (0 newly expired)
+Aug 14 15:07:49 [50507] INFO: Starting statistics service
+Aug 14 15:07:50 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/latest?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:07:50 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/latest?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:07:50 [50507] DEBUG: Fetched currencies conversion rates from conversions API: {"AUD":-1,"BGN":-1,"BRL":-1,"CAD":-1,"CHF":-1,"CNY":-1,"CZK":-1,"DKK":-1,"EUR":-1,"GBP":-1,"HKD":-1,"HRK":-1,"HUF":-1,"IDR":-1,"ILS":-1,"INR":-1,"ISK":-1,"JPY":-1,"KRW":-1,"MXN":-1,"MYR":-1,"NOK":-1,"NZD":-1,"PHP":-1,"PLN":-1,"RON":-1,"RUB":-1,"SEK":-1,"SGD":-1,"THB":-1,"TRY":-1,"USD":-1,"ZAR":-1}
+Aug 14 15:07:50 [50507] DEBUG: [Mining] Bitflyer BTC/USD price: 63325
+Aug 14 15:07:50 [50507] DEBUG: Updated orphaned blocks cache. Fetched 3 new orphaned blocks. Total 3
+Aug 14 15:07:50 [50507] NOTICE: Mempool Server is running on port 8999
+Aug 14 15:07:51 [50507] DEBUG: [Mining] Kraken BTC/USD price: 62787
+Aug 14 15:07:51 [50507] DEBUG: 0 of 1 found in mempool. 1 fetched through backend service.
+Aug 14 15:07:51 [50507] DEBUG: [Mining] Coinbase BTC/USD price: 62782
+Aug 14 15:07:51 [50507] ERR: Could not read Core debug log file at /path/to/bitcoin/debug.log. Reason: ENOENT: no such file or directory, open '/path/to/bitcoin/debug.log'
+Aug 14 15:07:51 [50507] DEBUG: database query "INSERT INTO blocks(
+        height,             hash,                     blockTimestamp,    size,
+        weight,             tx_count,                 coinbas" failed!
+Aug 14 15:07:51 [50507] DEBUG: [Mining] $saveBlockInDatabase() - Block 9834 has already been indexed, ignoring
+Aug 14 15:07:51 [50507] DEBUG: [Mining] Bitfinex BTC/USD price: 62881
+Aug 14 15:07:52 [50507] DEBUG: Initial difficulty adjustment data set.
+Aug 14 15:07:52 [50507] DEBUG: New block found (#14009)!
+Aug 14 15:07:52 [50507] DEBUG: [Mining] Gemini BTC/USD price: 62793
+Aug 14 15:07:52 [50507] DEBUG: Indexing tx 1 of 6 in block #14009
+Aug 14 15:07:52 [50507] DEBUG: [Mining] Bitflyer BTC/EUR price: 54362
+Aug 14 15:07:52 [50507] DEBUG: Indexing tx 2 of 6 in block #14009
+Aug 14 15:07:52 [50507] DEBUG: [Mining] Kraken BTC/EUR price: 54287
+Aug 14 15:07:52 [50507] DEBUG: Indexing tx 3 of 6 in block #14009
+Aug 14 15:07:53 [50507] DEBUG: [Mining] Coinbase BTC/EUR price: 54282
+Aug 14 15:07:53 [50507] DEBUG: Indexing tx 4 of 6 in block #14009
+Aug 14 15:07:53 [50507] DEBUG: [Mining] Bitfinex BTC/EUR price: 54269
+Aug 14 15:07:53 [50507] DEBUG: Indexing tx 5 of 6 in block #14009
+Aug 14 15:07:53 [50507] DEBUG: [Mining] Gemini BTC/EUR price: 55945
+Aug 14 15:07:53 [50507] DEBUG: [Mining] Kraken BTC/GBP price: 46384
+Aug 14 15:07:53 [50507] DEBUG: Indexing tx 6 of 6 in block #14009
+Aug 14 15:07:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:07:53 [50507] DEBUG: 0 open TCP sockets
+Aug 14 15:07:53 [50507] DEBUG: 0 of 6 found in mempool. 6 fetched through backend service.
+Aug 14 15:07:53 [50507] DEBUG: [Mining] Coinbase BTC/GBP price: 46384
+Aug 14 15:07:53 [50507] DEBUG: [Mining] Bitfinex BTC/GBP price: 46640
+Aug 14 15:07:53 [50507] DEBUG: RUST updateBlockTemplates returned 0 txs out of 0 candidates, 0 were unmineable
+Aug 14 15:07:53 [50507] DEBUG: RUST updateBlockTemplates completed in 0 seconds
+Aug 14 15:07:53 [50507] DEBUG: 0 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:07:53 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:07:53 [50507] DEBUG: database query "INSERT INTO blocks(
+        height,             hash,                     blockTimestamp,    size,
+        weight,             tx_count,                 coinbas" failed!
+Aug 14 15:07:53 [50507] DEBUG: [Mining] $saveBlockInDatabase() - Block 14009 has already been indexed, setting as canonical
+Aug 14 15:07:53 [50507] DEBUG: [Mining] Cannot save block price for 14009 because the price updater hasnt completed yet. Trying again in 10 seconds.
+Aug 14 15:07:53 [50507] DEBUG: [Mining] Gemini BTC/GBP price: 48159
+Aug 14 15:07:53 [50507] DEBUG: [Mining] Kraken BTC/CAD price: 87151
+Aug 14 15:07:53 [50507] DEBUG: [Mining] Only 1 feed available for BTC/CAD price
+Aug 14 15:07:54 [50507] DEBUG: [Mining] Kraken BTC/CHF price: 50950
+Aug 14 15:07:54 [50507] DEBUG: [Mining] Only 1 feed available for BTC/CHF price
+Aug 14 15:07:54 [50507] DEBUG: [Mining] Kraken BTC/AUD price: 88700
+Aug 14 15:07:54 [50507] DEBUG: [Mining] Only 1 feed available for BTC/AUD price
+Aug 14 15:07:54 [50507] DEBUG: [Mining] Bitflyer BTC/JPY price: 10001336
+Aug 14 15:07:54 [50507] DEBUG: Updated orphaned blocks cache. Fetched 0 new orphaned blocks. Total 3
+Aug 14 15:07:54 [50507] DEBUG: [Mining] Kraken BTC/JPY price: 10024334
+Aug 14 15:07:54 [50507] INFO: Latest BTC fiat averaged price: {"time":1786709274,"USD":62793,"EUR":54287,"GBP":46512,"CAD":87151,"CHF":50950,"AUD":88700,"JPY":10012835,"BGN":-1,"BRL":-1,"CNY":-1,"CZK":-1,"DKK":-1,"HKD":-1,"HRK":-1,"HUF":-1,"IDR":-1,"ILS":-1,"INR":-1,"ISK":-1,"KRW":-1,"MXN":-1,"MYR":-1,"NOK":-1,"NZD":-1,"PHP":-1,"PLN":-1,"RON":-1,"RUB":-1,"SEK":-1,"SGD":-1,"THB":-1,"TRY":-1,"ZAR":-1}
+Aug 14 15:07:54 [50507] DEBUG: [Mining] Inserted 0 MtGox USD weekly price history into db
+Aug 14 15:07:54 [50507] DEBUG: Updating mempool...
+Aug 14 15:07:54 [50507] DEBUG: [Mining] Fetching daily price history from exchanges and saving missing ones into the database
+Aug 14 15:07:55 [50507] DEBUG: fetched 1 transactions
+Aug 14 15:07:55 [50507] DEBUG: 0 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:07:55 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:07:55 [50507] DEBUG: RUST updateBlockTemplates returned 1 txs out of 1 candidates, 0 were unmineable
+Aug 14 15:07:55 [50507] DEBUG: RUST updateBlockTemplates completed in 0.002 seconds
+Aug 14 15:07:55 [50507] NOTICE: The mempool is now in sync!
+Aug 14 15:07:55 [50507] DEBUG: Mempool updated in 0.29 seconds. New size: 1 (+1)
+Aug 14 15:07:55 [50507] DEBUG: Running mining indexer
+Aug 14 15:07:55 [50507] INFO: Core index 'txindex' is synced. Best block height is 14009
+Aug 14 15:07:55 [50507] INFO: Core index 'coinstatsindex' is synced. Best block height is 14009
+Aug 14 15:07:55 [50507] DEBUG: Indexing coinStatsIndex now
+Aug 14 15:07:55 [50507] INFO: Core index 'basic block filter index' is synced. Best block height is 14009
+Aug 14 15:07:55 [50507] DEBUG: [Mining] Indexing blocks from #14009 to #3010
+Aug 14 15:07:55 [50507] INFO: [Mining] Indexing 8569 blocks from #14009 to #4010
+Aug 14 15:07:55 [50507] INFO: [Mining] Indexing missing coinstatsindex data completed. Indexed 1
+Aug 14 15:07:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:07:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:07:56 [50507] NOTICE: [Mining] Inserted 1 daily historical prices into the db
+Aug 14 15:07:56 [50507] DEBUG: [Mining] Fetching hourly price history from exchanges and saving missing ones into the database
+Aug 14 15:07:57 [50507] DEBUG: 0 of 2 found in mempool. 2 fetched through backend service.
+Aug 14 15:07:57 [50507] DEBUG: database query "INSERT INTO blocks(
+        height,             hash,                     blockTimestamp,    size,
+        weight,             tx_count,                 coinbas" failed!
+Aug 14 15:07:57 [50507] DEBUG: [Mining] $saveBlockInDatabase() - Block 9806 has already been indexed, ignoring
+Aug 14 15:07:58 [50507] DEBUG: [Mining] Inserted 0 hourly historical prices into the db
+Aug 14 15:07:58 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:07:58 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:07:58 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:08:00 [50507] DEBUG: Running statistics
+Aug 14 15:08:00 [50507] DEBUG: 0 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:08:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:08:01 [50507] DEBUG: [Mining] Indexing block #5400 | ~0.99 blocks/sec | total: 1438/11000 (13.07%) | elapsed: 6.04 seconds
+Aug 14 15:08:03 [50507] DEBUG: [Mining] Blocks prices indexer will run now
+Aug 14 15:08:03 [50507] DEBUG: [Mining] Linking 1420 blocks to their closest price
+Aug 14 15:08:03 [50507] INFO: [Mining] Indexing blocks prices completed. Indexed 1420
+Aug 14 15:08:06 [50507] DEBUG: [Mining] Indexing block #5405 | ~1.00 blocks/sec | total: 1443/11000 (13.12%) | elapsed: 11.05 seconds
+Aug 14 15:08:11 [50507] DEBUG: [Mining] Indexing block #5410 | ~0.99 blocks/sec | total: 1448/11000 (13.16%) | elapsed: 16.10 seconds
+Aug 14 15:08:16 [50507] DEBUG: [Mining] Indexing block #5414 | ~0.80 blocks/sec | total: 1452/11000 (13.20%) | elapsed: 21.11 seconds
+Aug 14 15:08:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:08:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:08:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:08:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:08:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:08:21 [50507] DEBUG: [Mining] Indexing block #5419 | ~0.99 blocks/sec | total: 1457/11000 (13.25%) | elapsed: 26.17 seconds
+Aug 14 15:08:27 [50507] DEBUG: [Mining] Indexing block #5425 | ~1.00 blocks/sec | total: 1463/11000 (13.30%) | elapsed: 32.16 seconds
+Aug 14 15:08:32 [50507] DEBUG: [Mining] Indexing block #5429 | ~0.78 blocks/sec | total: 1467/11000 (13.34%) | elapsed: 37.26 seconds
+Aug 14 15:08:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:08:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:08:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:08:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:08:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:08:37 [50507] DEBUG: [Mining] Indexing block #5434 | ~0.99 blocks/sec | total: 1472/11000 (13.38%) | elapsed: 42.33 seconds
+Aug 14 15:08:42 [50507] DEBUG: [Mining] Indexing block #5439 | ~0.98 blocks/sec | total: 1477/11000 (13.43%) | elapsed: 47.42 seconds
+Aug 14 15:08:48 [50507] DEBUG: [Mining] Indexing block #5443 | ~0.79 blocks/sec | total: 1481/11000 (13.46%) | elapsed: 52.51 seconds
+Aug 14 15:08:53 [50507] DEBUG: [Mining] Indexing block #5448 | ~0.97 blocks/sec | total: 1486/11000 (13.51%) | elapsed: 57.65 seconds
+Aug 14 15:08:53 [50507] DEBUG: Memory usage: 0.04 GB / 2.05 GB
+Aug 14 15:08:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:08:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:08:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:08:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:08:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:08:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:08:58 [50507] DEBUG: [Mining] Indexing block #5453 | ~1.00 blocks/sec | total: 1491/11000 (13.55%) | elapsed: 62.66 seconds
+Aug 14 15:09:00 [50507] DEBUG: Running statistics
+Aug 14 15:09:00 [50507] DEBUG: 1 websocket clients | 1 connected | 0 disconnected | (+1) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:09:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:09:03 [50507] DEBUG: [Mining] Indexing block #5457 | ~0.80 blocks/sec | total: 1495/11000 (13.59%) | elapsed: 67.67 seconds
+Aug 14 15:09:08 [50507] DEBUG: [Mining] Indexing block #5462 | ~0.99 blocks/sec | total: 1500/11000 (13.64%) | elapsed: 72.71 seconds
+Aug 14 15:09:13 [50507] DEBUG: [Mining] Indexing block #5467 | ~0.88 blocks/sec | total: 1505/11000 (13.68%) | elapsed: 78.42 seconds
+Aug 14 15:09:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:09:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:09:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:09:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:09:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:09:19 [50507] DEBUG: [Mining] Indexing block #5471 | ~0.78 blocks/sec | total: 1509/11000 (13.72%) | elapsed: 83.56 seconds
+Aug 14 15:09:24 [50507] DEBUG: [Mining] Indexing block #5476 | ~0.92 blocks/sec | total: 1514/11000 (13.76%) | elapsed: 88.99 seconds
+Aug 14 15:09:29 [50507] DEBUG: [Mining] Indexing block #5481 | ~0.97 blocks/sec | total: 1519/11000 (13.81%) | elapsed: 94.15 seconds
+Aug 14 15:09:35 [50507] DEBUG: [Mining] Indexing block #5486 | ~0.81 blocks/sec | total: 1524/11000 (13.85%) | elapsed: 100.30 seconds
+Aug 14 15:09:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:09:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:09:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:09:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:09:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:09:41 [50507] DEBUG: [Mining] Indexing block #5491 | ~0.97 blocks/sec | total: 1529/11000 (13.90%) | elapsed: 105.48 seconds
+Aug 14 15:09:46 [50507] DEBUG: [Mining] Indexing block #5496 | ~0.99 blocks/sec | total: 1534/11000 (13.95%) | elapsed: 110.52 seconds
+Aug 14 15:09:51 [50507] DEBUG: [Mining] Indexing block #5499 | ~0.57 blocks/sec | total: 1537/11000 (13.97%) | elapsed: 115.77 seconds
+Aug 14 15:09:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:09:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:09:56 [50507] DEBUG: [Mining] Indexing block #5504 | ~0.95 blocks/sec | total: 1542/11000 (14.02%) | elapsed: 121.03 seconds
+Aug 14 15:09:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:09:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:09:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:09:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:09:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:10:00 [50507] DEBUG: Running statistics
+Aug 14 15:10:00 [50507] DEBUG: 1 websocket clients | 1 connected | 1 disconnected | (+0) | tracked txs: total=1, avg=1.00, max=1 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=1,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:10:00 [50507] DEBUG: websocket subscriptions: track-tx: 1, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:10:01 [50507] DEBUG: [Mining] Indexing block #5509 | ~0.95 blocks/sec | total: 1547/11000 (14.06%) | elapsed: 126.27 seconds
+Aug 14 15:10:07 [50507] DEBUG: [Mining] Indexing block #5514 | ~0.87 blocks/sec | total: 1552/11000 (14.11%) | elapsed: 132.00 seconds
+Aug 14 15:10:12 [50507] DEBUG: [Mining] Indexing block #5519 | ~0.99 blocks/sec | total: 1557/11000 (14.15%) | elapsed: 137.06 seconds
+Aug 14 15:10:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:10:16 [50507] DEBUG: Mempool updated in 0.001 seconds. New size: 1 (0)
+Aug 14 15:10:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:10:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:10:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:10:17 [50507] DEBUG: [Mining] Indexing block #5524 | ~0.97 blocks/sec | total: 1562/11000 (14.20%) | elapsed: 142.23 seconds
+Aug 14 15:10:24 [50507] DEBUG: [Mining] Indexing block #5528 | ~0.64 blocks/sec | total: 1566/11000 (14.24%) | elapsed: 148.52 seconds
+Aug 14 15:10:29 [50507] DEBUG: [Mining] Indexing block #5533 | ~0.99 blocks/sec | total: 1571/11000 (14.28%) | elapsed: 153.58 seconds
+Aug 14 15:10:34 [50507] DEBUG: [Mining] Indexing block #5538 | ~0.98 blocks/sec | total: 1576/11000 (14.33%) | elapsed: 158.70 seconds
+Aug 14 15:10:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:10:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:10:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:10:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:10:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:10:39 [50507] DEBUG: [Mining] Indexing block #5543 | ~0.98 blocks/sec | total: 1581/11000 (14.37%) | elapsed: 163.82 seconds
+Aug 14 15:10:44 [50507] DEBUG: [Mining] Indexing block #5548 | ~0.97 blocks/sec | total: 1586/11000 (14.42%) | elapsed: 168.98 seconds
+Aug 14 15:10:49 [50507] DEBUG: [Mining] Indexing block #5553 | ~0.98 blocks/sec | total: 1591/11000 (14.46%) | elapsed: 174.08 seconds
+Aug 14 15:10:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:10:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:10:54 [50507] DEBUG: [Mining] Indexing block #5558 | ~0.97 blocks/sec | total: 1596/11000 (14.51%) | elapsed: 179.21 seconds
+Aug 14 15:10:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:10:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:10:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:10:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:10:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:10:59 [50507] DEBUG: [Mining] Indexing block #5563 | ~0.98 blocks/sec | total: 1601/11000 (14.55%) | elapsed: 184.34 seconds
+Aug 14 15:11:00 [50507] DEBUG: Running statistics
+Aug 14 15:11:00 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:11:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:11:04 [50507] DEBUG: [Mining] Indexing block #5568 | ~0.98 blocks/sec | total: 1606/11000 (14.60%) | elapsed: 189.41 seconds
+Aug 14 15:11:10 [50507] DEBUG: [Mining] Indexing block #5573 | ~0.98 blocks/sec | total: 1611/11000 (14.65%) | elapsed: 194.50 seconds
+Aug 14 15:11:15 [50507] DEBUG: [Mining] Indexing block #5578 | ~0.99 blocks/sec | total: 1616/11000 (14.69%) | elapsed: 199.57 seconds
+Aug 14 15:11:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:11:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:11:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:11:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:11:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:11:20 [50507] DEBUG: [Mining] Indexing block #5583 | ~0.98 blocks/sec | total: 1621/11000 (14.74%) | elapsed: 204.65 seconds
+Aug 14 15:11:25 [50507] DEBUG: [Mining] Indexing block #5588 | ~0.98 blocks/sec | total: 1626/11000 (14.78%) | elapsed: 209.76 seconds
+Aug 14 15:11:30 [50507] DEBUG: [Mining] Indexing block #5593 | ~0.88 blocks/sec | total: 1631/11000 (14.83%) | elapsed: 215.42 seconds
+Aug 14 15:11:36 [50507] DEBUG: [Mining] Indexing block #5598 | ~0.97 blocks/sec | total: 1636/11000 (14.87%) | elapsed: 220.59 seconds
+Aug 14 15:11:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:11:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:11:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:11:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:11:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:11:41 [50507] DEBUG: [Mining] Indexing block #5603 | ~0.96 blocks/sec | total: 1641/11000 (14.92%) | elapsed: 225.79 seconds
+Aug 14 15:11:48 [50507] DEBUG: [Mining] Indexing block #5607 | ~0.53 blocks/sec | total: 1645/11000 (14.95%) | elapsed: 233.31 seconds
+Aug 14 15:11:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:11:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:11:53 [50507] DEBUG: [Mining] Indexing block #5612 | ~0.98 blocks/sec | total: 1650/11000 (15.00%) | elapsed: 238.39 seconds
+Aug 14 15:11:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:11:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:11:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:11:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:11:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:11:59 [50507] DEBUG: [Mining] Indexing block #5617 | ~0.99 blocks/sec | total: 1655/11000 (15.05%) | elapsed: 243.45 seconds
+Aug 14 15:12:00 [50507] DEBUG: Running statistics
+Aug 14 15:12:00 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:12:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:12:04 [50507] DEBUG: [Mining] Indexing block #5622 | ~0.99 blocks/sec | total: 1660/11000 (15.09%) | elapsed: 248.50 seconds
+Aug 14 15:12:09 [50507] DEBUG: [Mining] Indexing block #5627 | ~0.99 blocks/sec | total: 1665/11000 (15.14%) | elapsed: 253.53 seconds
+Aug 14 15:12:14 [50507] DEBUG: [Mining] Indexing block #5632 | ~0.98 blocks/sec | total: 1670/11000 (15.18%) | elapsed: 258.65 seconds
+Aug 14 15:12:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:12:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:12:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:12:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:12:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:12:19 [50507] DEBUG: [Mining] Indexing block #5637 | ~0.97 blocks/sec | total: 1675/11000 (15.23%) | elapsed: 263.83 seconds
+Aug 14 15:12:24 [50507] DEBUG: [Mining] Indexing block #5642 | ~0.99 blocks/sec | total: 1680/11000 (15.27%) | elapsed: 268.90 seconds
+Aug 14 15:12:29 [50507] DEBUG: [Mining] Indexing block #5647 | ~0.99 blocks/sec | total: 1685/11000 (15.32%) | elapsed: 273.94 seconds
+Aug 14 15:12:35 [50507] DEBUG: [Mining] Indexing block #5653 | ~1.01 blocks/sec | total: 1691/11000 (15.37%) | elapsed: 279.89 seconds
+Aug 14 15:12:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:12:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:12:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:12:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:12:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:12:40 [50507] DEBUG: [Mining] Indexing block #5658 | ~1.00 blocks/sec | total: 1696/11000 (15.42%) | elapsed: 284.91 seconds
+Aug 14 15:12:45 [50507] DEBUG: [Mining] Indexing block #5663 | ~0.96 blocks/sec | total: 1701/11000 (15.46%) | elapsed: 290.12 seconds
+Aug 14 15:12:50 [50507] DEBUG: [Mining] Indexing block #5668 | ~0.98 blocks/sec | total: 1706/11000 (15.51%) | elapsed: 295.21 seconds
+Aug 14 15:12:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:12:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:12:55 [50507] DEBUG: [Mining] Indexing block #5673 | ~0.98 blocks/sec | total: 1711/11000 (15.55%) | elapsed: 300.33 seconds
+Aug 14 15:12:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:12:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:12:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:12:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:12:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:13:00 [50507] DEBUG: Running statistics
+Aug 14 15:13:00 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:13:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:13:01 [50507] DEBUG: [Mining] Indexing block #5678 | ~0.95 blocks/sec | total: 1716/11000 (15.60%) | elapsed: 305.62 seconds
+Aug 14 15:13:06 [50507] DEBUG: [Mining] Indexing block #5683 | ~0.95 blocks/sec | total: 1721/11000 (15.65%) | elapsed: 310.88 seconds
+Aug 14 15:13:11 [50507] DEBUG: [Mining] Indexing block #5688 | ~0.98 blocks/sec | total: 1726/11000 (15.69%) | elapsed: 315.99 seconds
+Aug 14 15:13:16 [50507] DEBUG: [Mining] Indexing block #5693 | ~0.98 blocks/sec | total: 1731/11000 (15.74%) | elapsed: 321.11 seconds
+Aug 14 15:13:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:13:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:13:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:13:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:13:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:13:21 [50507] DEBUG: [Mining] Indexing block #5698 | ~0.98 blocks/sec | total: 1736/11000 (15.78%) | elapsed: 326.20 seconds
+Aug 14 15:13:26 [50507] DEBUG: [Mining] Indexing block #5703 | ~0.97 blocks/sec | total: 1741/11000 (15.83%) | elapsed: 331.33 seconds
+Aug 14 15:13:32 [50507] DEBUG: [Mining] Indexing block #5708 | ~0.98 blocks/sec | total: 1746/11000 (15.87%) | elapsed: 336.43 seconds
+Aug 14 15:13:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:13:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:13:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:13:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:13:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:13:37 [50507] DEBUG: [Mining] Indexing block #5713 | ~0.96 blocks/sec | total: 1751/11000 (15.92%) | elapsed: 341.63 seconds
+Aug 14 15:13:42 [50507] DEBUG: [Mining] Indexing block #5718 | ~0.99 blocks/sec | total: 1756/11000 (15.96%) | elapsed: 346.70 seconds
+Aug 14 15:13:47 [50507] DEBUG: [Mining] Indexing block #5723 | ~0.91 blocks/sec | total: 1761/11000 (16.01%) | elapsed: 352.18 seconds
+Aug 14 15:13:52 [50507] DEBUG: [Mining] Indexing block #5728 | ~0.98 blocks/sec | total: 1766/11000 (16.05%) | elapsed: 357.28 seconds
+Aug 14 15:13:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:13:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:13:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:13:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:13:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:13:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:13:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:13:58 [50507] DEBUG: [Mining] Indexing block #5733 | ~0.92 blocks/sec | total: 1771/11000 (16.10%) | elapsed: 362.74 seconds
+Aug 14 15:14:00 [50507] DEBUG: Running statistics
+Aug 14 15:14:00 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:14:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:14:03 [50507] DEBUG: [Mining] Indexing block #5738 | ~0.98 blocks/sec | total: 1776/11000 (16.15%) | elapsed: 367.85 seconds
+Aug 14 15:14:08 [50507] DEBUG: [Mining] Indexing block #5743 | ~0.99 blocks/sec | total: 1781/11000 (16.19%) | elapsed: 372.91 seconds
+Aug 14 15:14:13 [50507] DEBUG: [Mining] Indexing block #5747 | ~0.73 blocks/sec | total: 1785/11000 (16.23%) | elapsed: 378.42 seconds
+Aug 14 15:14:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:14:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:14:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:14:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:14:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:14:19 [50507] DEBUG: [Mining] Indexing block #5752 | ~1.00 blocks/sec | total: 1790/11000 (16.27%) | elapsed: 383.45 seconds
+Aug 14 15:14:24 [50507] DEBUG: [Mining] Indexing block #5758 | ~1.01 blocks/sec | total: 1796/11000 (16.33%) | elapsed: 389.41 seconds
+Aug 14 15:14:30 [50507] DEBUG: [Mining] Indexing block #5763 | ~0.98 blocks/sec | total: 1801/11000 (16.37%) | elapsed: 394.51 seconds
+Aug 14 15:14:35 [50507] DEBUG: [Mining] Indexing block #5768 | ~0.96 blocks/sec | total: 1806/11000 (16.42%) | elapsed: 399.73 seconds
+Aug 14 15:14:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:14:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:14:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:14:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:14:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:14:40 [50507] DEBUG: [Mining] Indexing block #5773 | ~0.99 blocks/sec | total: 1811/11000 (16.46%) | elapsed: 404.80 seconds
+Aug 14 15:14:45 [50507] DEBUG: [Mining] Indexing block #5778 | ~0.99 blocks/sec | total: 1816/11000 (16.51%) | elapsed: 409.87 seconds
+Aug 14 15:14:50 [50507] DEBUG: [Mining] Indexing block #5783 | ~0.98 blocks/sec | total: 1821/11000 (16.55%) | elapsed: 414.97 seconds
+Aug 14 15:14:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:14:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:14:55 [50507] DEBUG: [Mining] Indexing block #5788 | ~0.97 blocks/sec | total: 1826/11000 (16.60%) | elapsed: 420.13 seconds
+Aug 14 15:14:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:14:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:14:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:14:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:14:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:15:00 [50507] DEBUG: Running statistics
+Aug 14 15:15:00 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:15:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:15:00 [50507] DEBUG: [Mining] Indexing block #5793 | ~0.99 blocks/sec | total: 1831/11000 (16.65%) | elapsed: 425.18 seconds
+Aug 14 15:15:06 [50507] DEBUG: [Mining] Indexing block #5798 | ~0.88 blocks/sec | total: 1836/11000 (16.69%) | elapsed: 430.87 seconds
+Aug 14 15:15:11 [50507] DEBUG: [Mining] Indexing block #5803 | ~0.99 blocks/sec | total: 1841/11000 (16.74%) | elapsed: 435.94 seconds
+Aug 14 15:15:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:15:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:15:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:15:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:15:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:15:17 [50507] DEBUG: [Mining] Indexing block #5808 | ~0.88 blocks/sec | total: 1846/11000 (16.78%) | elapsed: 441.64 seconds
+Aug 14 15:15:22 [50507] DEBUG: [Mining] Indexing block #5813 | ~0.98 blocks/sec | total: 1851/11000 (16.83%) | elapsed: 446.75 seconds
+Aug 14 15:15:27 [50507] DEBUG: [Mining] Indexing block #5818 | ~0.98 blocks/sec | total: 1856/11000 (16.87%) | elapsed: 451.86 seconds
+Aug 14 15:15:32 [50507] DEBUG: [Mining] Indexing block #5823 | ~0.99 blocks/sec | total: 1861/11000 (16.92%) | elapsed: 456.90 seconds
+Aug 14 15:15:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:15:36 [50507] DEBUG: Mempool updated in 0.001 seconds. New size: 1 (0)
+Aug 14 15:15:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:15:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:15:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:15:37 [50507] DEBUG: [Mining] Indexing block #5828 | ~0.98 blocks/sec | total: 1866/11000 (16.96%) | elapsed: 462.03 seconds
+Aug 14 15:15:42 [50507] DEBUG: [Mining] Indexing block #5833 | ~0.99 blocks/sec | total: 1871/11000 (17.01%) | elapsed: 467.10 seconds
+Aug 14 15:15:47 [50507] DEBUG: [Mining] Indexing block #5838 | ~0.99 blocks/sec | total: 1876/11000 (17.05%) | elapsed: 472.14 seconds
+Aug 14 15:15:52 [50507] DEBUG: [Mining] Indexing block #5843 | ~0.97 blocks/sec | total: 1881/11000 (17.10%) | elapsed: 477.28 seconds
+Aug 14 15:15:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:15:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:15:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:15:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:15:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:15:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:15:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:15:57 [50507] DEBUG: [Mining] Indexing block #5848 | ~0.98 blocks/sec | total: 1886/11000 (17.15%) | elapsed: 482.37 seconds
+Aug 14 15:16:00 [50507] DEBUG: Running statistics
+Aug 14 15:16:00 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:16:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 0 track-rbf: 0
+Aug 14 15:16:03 [50507] DEBUG: [Mining] Indexing block #5853 | ~0.90 blocks/sec | total: 1891/11000 (17.19%) | elapsed: 487.95 seconds
+Aug 14 15:16:08 [50507] DEBUG: [Mining] Indexing block #5858 | ~0.98 blocks/sec | total: 1896/11000 (17.24%) | elapsed: 493.05 seconds
+Aug 14 15:16:13 [50507] DEBUG: [Mining] Indexing block #5863 | ~0.97 blocks/sec | total: 1901/11000 (17.28%) | elapsed: 498.23 seconds
+Aug 14 15:16:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:16:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:16:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:16:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:16:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:16:19 [50507] DEBUG: [Mining] Indexing block #5869 | ~1.00 blocks/sec | total: 1907/11000 (17.34%) | elapsed: 504.22 seconds
+Aug 14 15:16:25 [50507] DEBUG: [Mining] Indexing block #5874 | ~0.95 blocks/sec | total: 1912/11000 (17.38%) | elapsed: 509.48 seconds
+Aug 14 15:16:30 [50507] DEBUG: [Mining] Indexing block #5879 | ~0.96 blocks/sec | total: 1917/11000 (17.43%) | elapsed: 514.67 seconds
+Aug 14 15:16:35 [50507] DEBUG: [Mining] Indexing block #5884 | ~0.99 blocks/sec | total: 1922/11000 (17.47%) | elapsed: 519.75 seconds
+Aug 14 15:16:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:16:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:16:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:16:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:16:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:16:40 [50507] DEBUG: [Mining] Indexing block #5889 | ~0.97 blocks/sec | total: 1927/11000 (17.52%) | elapsed: 524.90 seconds
+Aug 14 15:16:45 [50507] DEBUG: [Mining] Indexing block #5894 | ~0.96 blocks/sec | total: 1932/11000 (17.56%) | elapsed: 530.12 seconds
+Aug 14 15:16:50 [50507] DEBUG: [Mining] Indexing block #5899 | ~0.98 blocks/sec | total: 1937/11000 (17.61%) | elapsed: 535.23 seconds
+Aug 14 15:16:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:16:53 [50507] DEBUG: 2 open TCP sockets
+Aug 14 15:16:55 [50507] DEBUG: [Mining] Indexing block #5904 | ~0.97 blocks/sec | total: 1942/11000 (17.65%) | elapsed: 540.40 seconds
+Aug 14 15:16:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:16:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:16:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:16:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:16:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:17:00 [50507] DEBUG: Running statistics
+Aug 14 15:17:00 [50507] DEBUG: 2 websocket clients | 4 connected | 3 disconnected | (+1) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:17:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 2 track-rbf: 0
+Aug 14 15:17:01 [50507] DEBUG: [Mining] Indexing block #5909 | ~0.95 blocks/sec | total: 1947/11000 (17.70%) | elapsed: 545.65 seconds
+Aug 14 15:17:06 [50507] DEBUG: [Mining] Indexing block #5914 | ~0.98 blocks/sec | total: 1952/11000 (17.75%) | elapsed: 550.75 seconds
+Aug 14 15:17:11 [50507] DEBUG: [Mining] Indexing block #5919 | ~0.98 blocks/sec | total: 1957/11000 (17.79%) | elapsed: 555.85 seconds
+Aug 14 15:17:16 [50507] DEBUG: [Mining] Indexing block #5924 | ~0.98 blocks/sec | total: 1962/11000 (17.84%) | elapsed: 560.94 seconds
+Aug 14 15:17:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:17:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:17:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:17:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:17:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:17:21 [50507] DEBUG: [Mining] Indexing block #5929 | ~0.98 blocks/sec | total: 1967/11000 (17.88%) | elapsed: 566.02 seconds
+Aug 14 15:17:26 [50507] DEBUG: [Mining] Indexing block #5934 | ~0.99 blocks/sec | total: 1972/11000 (17.93%) | elapsed: 571.09 seconds
+Aug 14 15:17:31 [50507] DEBUG: [Mining] Indexing block #5939 | ~0.99 blocks/sec | total: 1977/11000 (17.97%) | elapsed: 576.13 seconds
+Aug 14 15:17:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:17:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:17:36 [50507] DEBUG: [Mining] Indexing block #5944 | ~0.96 blocks/sec | total: 1982/11000 (18.02%) | elapsed: 581.32 seconds
+Aug 14 15:17:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:17:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:17:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:17:42 [50507] DEBUG: [Mining] Indexing block #5949 | ~0.98 blocks/sec | total: 1987/11000 (18.06%) | elapsed: 586.43 seconds
+Aug 14 15:17:47 [50507] DEBUG: [Mining] Indexing block #5954 | ~0.90 blocks/sec | total: 1992/11000 (18.11%) | elapsed: 591.98 seconds
+Aug 14 15:17:49 [50507] DEBUG: rbf cache contains 0 txs, 0 trees, 0 due to expire (0 newly expired)
+Aug 14 15:17:52 [50507] DEBUG: [Mining] Indexing block #5959 | ~0.98 blocks/sec | total: 1997/11000 (18.15%) | elapsed: 597.10 seconds
+Aug 14 15:17:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:17:53 [50507] DEBUG: 2 open TCP sockets
+Aug 14 15:17:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:17:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:17:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:17:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:17:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:17:57 [50507] DEBUG: [Mining] Indexing block #5964 | ~0.98 blocks/sec | total: 2002/11000 (18.20%) | elapsed: 602.20 seconds
+Aug 14 15:18:00 [50507] DEBUG: Running statistics
+Aug 14 15:18:00 [50507] DEBUG: 2 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:18:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 2 track-rbf: 0
+Aug 14 15:18:02 [50507] DEBUG: [Mining] Indexing block #5969 | ~0.98 blocks/sec | total: 2007/11000 (18.25%) | elapsed: 607.33 seconds
+Aug 14 15:18:08 [50507] DEBUG: [Mining] Indexing block #5974 | ~0.98 blocks/sec | total: 2012/11000 (18.29%) | elapsed: 612.44 seconds
+Aug 14 15:18:13 [50507] DEBUG: [Mining] Indexing block #5979 | ~0.98 blocks/sec | total: 2017/11000 (18.34%) | elapsed: 617.53 seconds
+Aug 14 15:18:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:18:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:18:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:18:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:18:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:18:19 [50507] DEBUG: [Mining] Indexing block #5984 | ~0.80 blocks/sec | total: 2022/11000 (18.38%) | elapsed: 623.76 seconds
+Aug 14 15:18:24 [50507] DEBUG: [Mining] Indexing block #5989 | ~0.98 blocks/sec | total: 2027/11000 (18.43%) | elapsed: 628.88 seconds
+Aug 14 15:18:29 [50507] DEBUG: [Mining] Indexing block #5993 | ~0.76 blocks/sec | total: 2031/11000 (18.46%) | elapsed: 634.12 seconds
+Aug 14 15:18:34 [50507] DEBUG: [Mining] Indexing block #5998 | ~0.98 blocks/sec | total: 2036/11000 (18.51%) | elapsed: 639.23 seconds
+Aug 14 15:18:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:18:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:18:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:18:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:18:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:18:39 [50507] DEBUG: [Mining] Indexing block #6003 | ~0.98 blocks/sec | total: 2041/11000 (18.55%) | elapsed: 644.34 seconds
+Aug 14 15:18:44 [50507] DEBUG: [Mining] Indexing block #6008 | ~0.98 blocks/sec | total: 2046/11000 (18.60%) | elapsed: 649.43 seconds
+Aug 14 15:18:50 [50507] DEBUG: [Mining] Indexing block #6013 | ~0.93 blocks/sec | total: 2051/11000 (18.65%) | elapsed: 654.81 seconds
+Aug 14 15:18:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:18:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:18:55 [50507] DEBUG: [Mining] Indexing block #6018 | ~0.98 blocks/sec | total: 2056/11000 (18.69%) | elapsed: 659.94 seconds
+Aug 14 15:18:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:18:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:18:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:18:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:18:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:19:00 [50507] DEBUG: Running statistics
+Aug 14 15:19:00 [50507] DEBUG: 1 websocket clients | 0 connected | 1 disconnected | (-1) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:19:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:19:00 [50507] DEBUG: [Mining] Indexing block #6023 | ~0.99 blocks/sec | total: 2061/11000 (18.74%) | elapsed: 664.98 seconds
+Aug 14 15:19:05 [50507] DEBUG: [Mining] Indexing block #6028 | ~0.98 blocks/sec | total: 2066/11000 (18.78%) | elapsed: 670.06 seconds
+Aug 14 15:19:10 [50507] DEBUG: [Mining] Indexing block #6033 | ~0.97 blocks/sec | total: 2071/11000 (18.83%) | elapsed: 675.21 seconds
+Aug 14 15:19:15 [50507] DEBUG: [Mining] Indexing block #6038 | ~0.97 blocks/sec | total: 2076/11000 (18.87%) | elapsed: 680.35 seconds
+Aug 14 15:19:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:19:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:19:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:19:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:19:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:19:21 [50507] DEBUG: [Mining] Indexing block #6043 | ~0.89 blocks/sec | total: 2081/11000 (18.92%) | elapsed: 685.95 seconds
+Aug 14 15:19:26 [50507] DEBUG: [Mining] Indexing block #6048 | ~0.99 blocks/sec | total: 2086/11000 (18.96%) | elapsed: 691.03 seconds
+Aug 14 15:19:31 [50507] DEBUG: [Mining] Indexing block #6053 | ~0.99 blocks/sec | total: 2091/11000 (19.01%) | elapsed: 696.08 seconds
+Aug 14 15:19:37 [50507] DEBUG: Updating mempool...
+Aug 14 15:19:37 [50507] DEBUG: Mempool updated in 0.001 seconds. New size: 1 (0)
+Aug 14 15:19:37 [50507] DEBUG: [Mining] Indexing block #6058 | ~0.87 blocks/sec | total: 2096/11000 (19.05%) | elapsed: 701.82 seconds
+Aug 14 15:19:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:19:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:19:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:19:42 [50507] DEBUG: [Mining] Indexing block #6063 | ~0.98 blocks/sec | total: 2101/11000 (19.10%) | elapsed: 706.90 seconds
+Aug 14 15:19:47 [50507] DEBUG: [Mining] Indexing block #6068 | ~0.98 blocks/sec | total: 2106/11000 (19.15%) | elapsed: 712.02 seconds
+Aug 14 15:19:52 [50507] DEBUG: [Mining] Indexing block #6073 | ~0.98 blocks/sec | total: 2111/11000 (19.19%) | elapsed: 717.14 seconds
+Aug 14 15:19:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:19:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:19:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:19:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:19:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:19:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:19:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:19:57 [50507] DEBUG: [Mining] Indexing block #6078 | ~0.98 blocks/sec | total: 2116/11000 (19.24%) | elapsed: 722.25 seconds
+Aug 14 15:20:00 [50507] DEBUG: Running statistics
+Aug 14 15:20:00 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:20:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:20:03 [50507] DEBUG: [Mining] Indexing block #6083 | ~0.83 blocks/sec | total: 2121/11000 (19.28%) | elapsed: 728.28 seconds
+Aug 14 15:20:09 [50507] DEBUG: [Mining] Indexing block #6088 | ~0.96 blocks/sec | total: 2126/11000 (19.33%) | elapsed: 733.48 seconds
+Aug 14 15:20:14 [50507] DEBUG: [Mining] Indexing block #6093 | ~0.93 blocks/sec | total: 2131/11000 (19.37%) | elapsed: 738.88 seconds
+Aug 14 15:20:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:20:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:20:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:20:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:20:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:20:19 [50507] DEBUG: [Mining] Indexing block #6098 | ~0.97 blocks/sec | total: 2136/11000 (19.42%) | elapsed: 744.03 seconds
+Aug 14 15:20:24 [50507] DEBUG: [Mining] Indexing block #6103 | ~0.98 blocks/sec | total: 2141/11000 (19.46%) | elapsed: 749.15 seconds
+Aug 14 15:20:29 [50507] DEBUG: [Mining] Indexing block #6108 | ~0.98 blocks/sec | total: 2146/11000 (19.51%) | elapsed: 754.25 seconds
+Aug 14 15:20:35 [50507] DEBUG: [Mining] Indexing block #6113 | ~0.86 blocks/sec | total: 2151/11000 (19.55%) | elapsed: 760.09 seconds
+Aug 14 15:20:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:20:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:20:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:20:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:20:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:20:40 [50507] DEBUG: [Mining] Indexing block #6118 | ~0.98 blocks/sec | total: 2156/11000 (19.60%) | elapsed: 765.19 seconds
+Aug 14 15:20:45 [50507] DEBUG: [Mining] Indexing block #6123 | ~0.98 blocks/sec | total: 2161/11000 (19.65%) | elapsed: 770.29 seconds
+Aug 14 15:20:50 [50507] DEBUG: [Mining] Indexing block #6128 | ~0.98 blocks/sec | total: 2166/11000 (19.69%) | elapsed: 775.39 seconds
+Aug 14 15:20:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:20:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:20:56 [50507] DEBUG: [Mining] Indexing block #6133 | ~0.98 blocks/sec | total: 2171/11000 (19.74%) | elapsed: 780.49 seconds
+Aug 14 15:20:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:20:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:20:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:20:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:20:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:21:00 [50507] DEBUG: Running statistics
+Aug 14 15:21:00 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:21:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:21:01 [50507] DEBUG: [Mining] Indexing block #6138 | ~0.98 blocks/sec | total: 2176/11000 (19.78%) | elapsed: 785.58 seconds
+Aug 14 15:21:07 [50507] DEBUG: [Mining] Indexing block #6143 | ~0.84 blocks/sec | total: 2181/11000 (19.83%) | elapsed: 791.51 seconds
+Aug 14 15:21:12 [50507] DEBUG: [Mining] Indexing block #6148 | ~0.98 blocks/sec | total: 2186/11000 (19.87%) | elapsed: 796.60 seconds
+Aug 14 15:21:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:21:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:21:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:21:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:21:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:21:17 [50507] DEBUG: [Mining] Indexing block #6153 | ~0.99 blocks/sec | total: 2191/11000 (19.92%) | elapsed: 801.65 seconds
+Aug 14 15:21:22 [50507] DEBUG: [Mining] Indexing block #6158 | ~0.98 blocks/sec | total: 2196/11000 (19.96%) | elapsed: 806.76 seconds
+Aug 14 15:21:27 [50507] DEBUG: [Mining] Indexing block #6163 | ~0.97 blocks/sec | total: 2201/11000 (20.01%) | elapsed: 811.91 seconds
+Aug 14 15:21:32 [50507] DEBUG: [Mining] Indexing block #6168 | ~0.98 blocks/sec | total: 2206/11000 (20.05%) | elapsed: 817.00 seconds
+Aug 14 15:21:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:21:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:21:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:21:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:21:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:21:37 [50507] DEBUG: [Mining] Indexing block #6173 | ~0.99 blocks/sec | total: 2211/11000 (20.10%) | elapsed: 822.07 seconds
+Aug 14 15:21:42 [50507] DEBUG: [Mining] Indexing block #6178 | ~0.98 blocks/sec | total: 2216/11000 (20.15%) | elapsed: 827.17 seconds
+Aug 14 15:21:47 [50507] DEBUG: [Mining] Indexing block #6183 | ~0.97 blocks/sec | total: 2221/11000 (20.19%) | elapsed: 832.31 seconds
+Aug 14 15:21:52 [50507] DEBUG: [Mining] Indexing block #6188 | ~0.98 blocks/sec | total: 2226/11000 (20.24%) | elapsed: 837.40 seconds
+Aug 14 15:21:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:21:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:21:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:21:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:21:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:21:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:21:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:21:58 [50507] DEBUG: [Mining] Indexing block #6193 | ~0.98 blocks/sec | total: 2231/11000 (20.28%) | elapsed: 842.49 seconds
+Aug 14 15:22:00 [50507] DEBUG: Running statistics
+Aug 14 15:22:00 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:22:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:22:03 [50507] DEBUG: [Mining] Indexing block #6198 | ~0.97 blocks/sec | total: 2236/11000 (20.33%) | elapsed: 847.62 seconds
+Aug 14 15:22:08 [50507] DEBUG: [Mining] Indexing block #6203 | ~0.97 blocks/sec | total: 2241/11000 (20.37%) | elapsed: 852.78 seconds
+Aug 14 15:22:13 [50507] DEBUG: [Mining] Indexing block #6208 | ~0.98 blocks/sec | total: 2246/11000 (20.42%) | elapsed: 857.85 seconds
+Aug 14 15:22:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:22:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:22:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:22:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:22:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:22:18 [50507] DEBUG: [Mining] Indexing block #6213 | ~0.97 blocks/sec | total: 2251/11000 (20.46%) | elapsed: 863.00 seconds
+Aug 14 15:22:23 [50507] DEBUG: [Mining] Indexing block #6218 | ~0.99 blocks/sec | total: 2256/11000 (20.51%) | elapsed: 868.07 seconds
+Aug 14 15:22:28 [50507] DEBUG: [Mining] Indexing block #6223 | ~0.98 blocks/sec | total: 2261/11000 (20.55%) | elapsed: 873.20 seconds
+Aug 14 15:22:33 [50507] DEBUG: [Mining] Indexing block #6228 | ~0.98 blocks/sec | total: 2266/11000 (20.60%) | elapsed: 878.32 seconds
+Aug 14 15:22:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:22:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:22:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:22:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:22:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:22:39 [50507] DEBUG: [Mining] Indexing block #6233 | ~0.97 blocks/sec | total: 2271/11000 (20.65%) | elapsed: 883.50 seconds
+Aug 14 15:22:44 [50507] DEBUG: [Mining] Indexing block #6238 | ~0.98 blocks/sec | total: 2276/11000 (20.69%) | elapsed: 888.60 seconds
+Aug 14 15:22:49 [50507] DEBUG: [Mining] Indexing block #6243 | ~0.98 blocks/sec | total: 2281/11000 (20.74%) | elapsed: 893.70 seconds
+Aug 14 15:22:53 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:22:53 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:22:54 [50507] DEBUG: [Mining] Indexing block #6248 | ~0.99 blocks/sec | total: 2286/11000 (20.78%) | elapsed: 898.74 seconds
+Aug 14 15:22:56 [50507] DEBUG: Updating mempool...
+Aug 14 15:22:56 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:22:57 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:22:57 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:22:57 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:22:59 [50507] DEBUG: [Mining] Indexing block #6253 | ~0.98 blocks/sec | total: 2291/11000 (20.83%) | elapsed: 903.83 seconds
+Aug 14 15:23:00 [50507] DEBUG: Running statistics
+Aug 14 15:23:00 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:23:00 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:23:04 [50507] DEBUG: [Mining] Indexing block #6258 | ~0.98 blocks/sec | total: 2296/11000 (20.87%) | elapsed: 908.93 seconds
+Aug 14 15:23:09 [50507] DEBUG: [Mining] Indexing block #6263 | ~0.98 blocks/sec | total: 2301/11000 (20.92%) | elapsed: 914.05 seconds
+Aug 14 15:23:14 [50507] DEBUG: [Mining] Indexing block #6268 | ~0.98 blocks/sec | total: 2306/11000 (20.96%) | elapsed: 919.18 seconds
+Aug 14 15:23:16 [50507] DEBUG: Updating mempool...
+Aug 14 15:23:16 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:23:17 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:23:17 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:23:17 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:23:19 [50507] DEBUG: [Mining] Indexing block #6273 | ~0.98 blocks/sec | total: 2311/11000 (21.01%) | elapsed: 924.30 seconds
+Aug 14 15:23:24 [50507] DEBUG: [Mining] Indexing block #6278 | ~0.98 blocks/sec | total: 2316/11000 (21.05%) | elapsed: 929.39 seconds
+Aug 14 15:23:30 [50507] DEBUG: [Mining] Indexing block #6283 | ~0.90 blocks/sec | total: 2321/11000 (21.10%) | elapsed: 934.94 seconds
+Aug 14 15:23:36 [50507] DEBUG: [Mining] Indexing block #6288 | ~0.89 blocks/sec | total: 2326/11000 (21.15%) | elapsed: 940.53 seconds
+Aug 14 15:23:36 [50507] DEBUG: Updating mempool...
+Aug 14 15:23:36 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:23:37 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:23:37 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:23:37 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:23:37 [50507] ERR: [Mining] Block indexing failed. Trying again in 10 seconds. Reason: read ECONNRESET
+Aug 14 15:23:37 [50507] ERR: Indexer failed, trying again in 10 seconds. Reason: read ECONNRESET
+Aug 14 15:23:37 [50507] DEBUG: Indexing did not complete, next run planned at Fri, 14 Aug 2026 12:23:47 GMT
+Aug 14 15:27:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:27:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:27:33 [50507] DEBUG: Updating mempool...
+Aug 14 15:27:33 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:27:33 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:27:33 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:27:33 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:27:33 [50507] DEBUG: Running mining indexer
+Aug 14 15:27:33 [50507] INFO: Core index 'txindex' is synced. Best block height is 14009
+Aug 14 15:27:33 [50507] INFO: Core index 'coinstatsindex' is synced. Best block height is 14009
+Aug 14 15:27:33 [50507] DEBUG: Indexing coinStatsIndex now
+Aug 14 15:27:33 [50507] INFO: Core index 'basic block filter index' is synced. Best block height is 14009
+Aug 14 15:27:33 [50507] DEBUG: [Mining] Indexing blocks from #14009 to #3010
+Aug 14 15:27:33 [50507] DEBUG: [Mining] Indexing missing coinstatsindex data completed. Indexed 0.
+Aug 14 15:27:33 [50507] INFO: [Mining] Indexing 7675 blocks from #14009 to #4010
+Aug 14 15:27:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:27:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:27:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:27:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:27:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:27:36 [50507] DEBUG: Running statistics
+Aug 14 15:27:36 [50507] DEBUG: 1 websocket clients | 1 connected | 1 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:27:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:27:38 [50507] DEBUG: [Mining] Indexing block #6294 | ~1.18 blocks/sec | total: 2332/11000 (21.20%) | elapsed: 5.10 seconds
+Aug 14 15:27:43 [50507] DEBUG: [Mining] Indexing block #6299 | ~0.98 blocks/sec | total: 2337/11000 (21.25%) | elapsed: 10.19 seconds
+Aug 14 15:27:49 [50507] DEBUG: [Mining] Indexing block #6304 | ~1.00 blocks/sec | total: 2342/11000 (21.29%) | elapsed: 15.21 seconds
+Aug 14 15:27:54 [50507] DEBUG: [Mining] Indexing block #6309 | ~0.99 blocks/sec | total: 2347/11000 (21.34%) | elapsed: 20.27 seconds
+Aug 14 15:27:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:27:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:27:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:27:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:27:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:27:59 [50507] DEBUG: [Mining] Indexing block #6314 | ~0.99 blocks/sec | total: 2352/11000 (21.38%) | elapsed: 25.30 seconds
+Aug 14 15:28:04 [50507] DEBUG: [Mining] Indexing block #6318 | ~0.80 blocks/sec | total: 2356/11000 (21.42%) | elapsed: 30.31 seconds
+Aug 14 15:28:09 [50507] DEBUG: [Mining] Indexing block #6323 | ~0.98 blocks/sec | total: 2361/11000 (21.46%) | elapsed: 35.43 seconds
+Aug 14 15:28:14 [50507] DEBUG: [Mining] Indexing block #6328 | ~0.95 blocks/sec | total: 2366/11000 (21.51%) | elapsed: 40.70 seconds
+Aug 14 15:28:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:28:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:28:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:28:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:28:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:28:19 [50507] DEBUG: [Mining] Indexing block #6333 | ~0.98 blocks/sec | total: 2371/11000 (21.55%) | elapsed: 45.79 seconds
+Aug 14 15:28:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:28:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:28:24 [50507] DEBUG: [Mining] Indexing block #6338 | ~0.97 blocks/sec | total: 2376/11000 (21.60%) | elapsed: 50.96 seconds
+Aug 14 15:28:29 [50507] DEBUG: [Mining] Indexing block #6343 | ~0.97 blocks/sec | total: 2381/11000 (21.65%) | elapsed: 56.10 seconds
+Aug 14 15:28:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:28:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:28:35 [50507] DEBUG: [Mining] Indexing block #6347 | ~0.77 blocks/sec | total: 2385/11000 (21.68%) | elapsed: 61.31 seconds
+Aug 14 15:28:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:28:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:28:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:28:36 [50507] DEBUG: Running statistics
+Aug 14 15:28:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:28:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:28:40 [50507] DEBUG: [Mining] Indexing block #6352 | ~0.94 blocks/sec | total: 2390/11000 (21.73%) | elapsed: 66.65 seconds
+Aug 14 15:28:45 [50507] DEBUG: [Mining] Indexing block #6356 | ~0.78 blocks/sec | total: 2394/11000 (21.76%) | elapsed: 71.80 seconds
+Aug 14 15:28:50 [50507] DEBUG: [Mining] Indexing block #6360 | ~0.78 blocks/sec | total: 2398/11000 (21.80%) | elapsed: 76.90 seconds
+Aug 14 15:28:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:28:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:28:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:28:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:28:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:28:55 [50507] DEBUG: [Mining] Indexing block #6365 | ~0.98 blocks/sec | total: 2403/11000 (21.85%) | elapsed: 82.02 seconds
+Aug 14 15:29:00 [50507] DEBUG: [Mining] Indexing block #6370 | ~0.98 blocks/sec | total: 2408/11000 (21.89%) | elapsed: 87.12 seconds
+Aug 14 15:29:06 [50507] DEBUG: [Mining] Indexing block #6374 | ~0.79 blocks/sec | total: 2412/11000 (21.93%) | elapsed: 92.21 seconds
+Aug 14 15:29:11 [50507] DEBUG: [Mining] Indexing block #6379 | ~0.99 blocks/sec | total: 2417/11000 (21.97%) | elapsed: 97.27 seconds
+Aug 14 15:29:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:29:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:29:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:29:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:29:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:29:16 [50507] DEBUG: [Mining] Indexing block #6384 | ~0.99 blocks/sec | total: 2422/11000 (22.02%) | elapsed: 102.32 seconds
+Aug 14 15:29:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:29:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:29:21 [50507] DEBUG: [Mining] Indexing block #6388 | ~0.79 blocks/sec | total: 2426/11000 (22.05%) | elapsed: 107.40 seconds
+Aug 14 15:29:26 [50507] DEBUG: [Mining] Indexing block #6393 | ~0.97 blocks/sec | total: 2431/11000 (22.10%) | elapsed: 112.56 seconds
+Aug 14 15:29:31 [50507] DEBUG: [Mining] Indexing block #6398 | ~0.98 blocks/sec | total: 2436/11000 (22.15%) | elapsed: 117.69 seconds
+Aug 14 15:29:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:29:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:29:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:29:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:29:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:29:36 [50507] DEBUG: Running statistics
+Aug 14 15:29:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:29:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:29:36 [50507] DEBUG: [Mining] Indexing block #6403 | ~0.97 blocks/sec | total: 2441/11000 (22.19%) | elapsed: 122.85 seconds
+Aug 14 15:29:41 [50507] DEBUG: [Mining] Indexing block #6408 | ~0.98 blocks/sec | total: 2446/11000 (22.24%) | elapsed: 127.94 seconds
+Aug 14 15:29:46 [50507] DEBUG: [Mining] Indexing block #6413 | ~0.99 blocks/sec | total: 2451/11000 (22.28%) | elapsed: 132.99 seconds
+Aug 14 15:29:51 [50507] DEBUG: [Mining] Indexing block #6418 | ~0.99 blocks/sec | total: 2456/11000 (22.33%) | elapsed: 138.06 seconds
+Aug 14 15:29:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:29:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:29:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:29:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:29:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:29:56 [50507] DEBUG: [Mining] Indexing block #6423 | ~0.98 blocks/sec | total: 2461/11000 (22.37%) | elapsed: 143.17 seconds
+Aug 14 15:30:03 [50507] DEBUG: [Mining] Indexing block #6428 | ~0.78 blocks/sec | total: 2466/11000 (22.42%) | elapsed: 149.62 seconds
+Aug 14 15:30:08 [50507] DEBUG: [Mining] Indexing block #6433 | ~0.91 blocks/sec | total: 2471/11000 (22.46%) | elapsed: 155.11 seconds
+Aug 14 15:30:14 [50507] DEBUG: [Mining] Indexing block #6438 | ~0.98 blocks/sec | total: 2476/11000 (22.51%) | elapsed: 160.23 seconds
+Aug 14 15:30:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:30:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:30:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:30:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:30:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:30:19 [50507] DEBUG: [Mining] Indexing block #6443 | ~0.99 blocks/sec | total: 2481/11000 (22.55%) | elapsed: 165.30 seconds
+Aug 14 15:30:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:30:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:30:24 [50507] DEBUG: [Mining] Indexing block #6448 | ~0.97 blocks/sec | total: 2486/11000 (22.60%) | elapsed: 170.47 seconds
+Aug 14 15:30:29 [50507] DEBUG: [Mining] Indexing block #6449 | ~0.20 blocks/sec | total: 2487/11000 (22.61%) | elapsed: 175.59 seconds
+Aug 14 15:30:34 [50507] DEBUG: [Mining] Indexing block #6454 | ~0.98 blocks/sec | total: 2492/11000 (22.65%) | elapsed: 180.67 seconds
+Aug 14 15:30:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:30:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:30:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:30:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:30:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:30:36 [50507] DEBUG: Running statistics
+Aug 14 15:30:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:30:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:30:39 [50507] DEBUG: [Mining] Indexing block #6458 | ~0.78 blocks/sec | total: 2496/11000 (22.69%) | elapsed: 185.82 seconds
+Aug 14 15:30:44 [50507] DEBUG: [Mining] Indexing block #6463 | ~0.98 blocks/sec | total: 2501/11000 (22.74%) | elapsed: 190.94 seconds
+Aug 14 15:30:49 [50507] DEBUG: [Mining] Indexing block #6468 | ~0.98 blocks/sec | total: 2506/11000 (22.78%) | elapsed: 196.03 seconds
+Aug 14 15:30:54 [50507] DEBUG: [Mining] Indexing block #6473 | ~0.98 blocks/sec | total: 2511/11000 (22.83%) | elapsed: 201.15 seconds
+Aug 14 15:30:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:30:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:30:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:30:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:30:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:31:00 [50507] DEBUG: [Mining] Indexing block #6478 | ~0.84 blocks/sec | total: 2516/11000 (22.87%) | elapsed: 207.09 seconds
+Aug 14 15:31:06 [50507] DEBUG: [Mining] Indexing block #6483 | ~0.86 blocks/sec | total: 2521/11000 (22.92%) | elapsed: 212.88 seconds
+Aug 14 15:31:11 [50507] DEBUG: [Mining] Indexing block #6488 | ~0.97 blocks/sec | total: 2526/11000 (22.96%) | elapsed: 218.03 seconds
+Aug 14 15:31:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:31:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:31:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:31:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:31:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:31:16 [50507] DEBUG: [Mining] Indexing block #6493 | ~0.98 blocks/sec | total: 2531/11000 (23.01%) | elapsed: 223.15 seconds
+Aug 14 15:31:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:31:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:31:22 [50507] DEBUG: [Mining] Indexing block #6498 | ~0.98 blocks/sec | total: 2536/11000 (23.05%) | elapsed: 228.25 seconds
+Aug 14 15:31:25 [50507] DEBUG: rbf cache contains 0 txs, 0 trees, 0 due to expire (0 newly expired)
+Aug 14 15:31:27 [50507] DEBUG: [Mining] Indexing block #6503 | ~0.97 blocks/sec | total: 2541/11000 (23.10%) | elapsed: 233.40 seconds
+Aug 14 15:31:32 [50507] DEBUG: [Mining] Indexing block #6508 | ~0.96 blocks/sec | total: 2546/11000 (23.15%) | elapsed: 238.58 seconds
+Aug 14 15:31:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:31:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:31:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:31:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:31:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:31:36 [50507] DEBUG: Running statistics
+Aug 14 15:31:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:31:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:31:37 [50507] DEBUG: [Mining] Indexing block #6513 | ~0.98 blocks/sec | total: 2551/11000 (23.19%) | elapsed: 243.66 seconds
+Aug 14 15:31:42 [50507] DEBUG: [Mining] Indexing block #6518 | ~0.98 blocks/sec | total: 2556/11000 (23.24%) | elapsed: 248.79 seconds
+Aug 14 15:31:47 [50507] DEBUG: [Mining] Indexing block #6523 | ~0.98 blocks/sec | total: 2561/11000 (23.28%) | elapsed: 253.90 seconds
+Aug 14 15:31:52 [50507] DEBUG: [Mining] Indexing block #6528 | ~0.97 blocks/sec | total: 2566/11000 (23.33%) | elapsed: 259.07 seconds
+Aug 14 15:31:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:31:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:31:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:31:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:31:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:31:57 [50507] DEBUG: [Mining] Indexing block #6533 | ~0.99 blocks/sec | total: 2571/11000 (23.37%) | elapsed: 264.13 seconds
+Aug 14 15:32:03 [50507] DEBUG: [Mining] Indexing block #6537 | ~0.77 blocks/sec | total: 2575/11000 (23.41%) | elapsed: 269.35 seconds
+Aug 14 15:32:08 [50507] DEBUG: [Mining] Indexing block #6542 | ~0.99 blocks/sec | total: 2580/11000 (23.45%) | elapsed: 274.40 seconds
+Aug 14 15:32:13 [50507] DEBUG: [Mining] Indexing block #6547 | ~0.98 blocks/sec | total: 2585/11000 (23.50%) | elapsed: 279.50 seconds
+Aug 14 15:32:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:32:15 [50507] DEBUG: Mempool updated in 0.001 seconds. New size: 1 (0)
+Aug 14 15:32:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:32:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:32:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:32:18 [50507] DEBUG: [Mining] Indexing block #6552 | ~0.92 blocks/sec | total: 2590/11000 (23.55%) | elapsed: 284.92 seconds
+Aug 14 15:32:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:32:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:32:23 [50507] DEBUG: [Mining] Indexing block #6557 | ~0.97 blocks/sec | total: 2595/11000 (23.59%) | elapsed: 290.07 seconds
+Aug 14 15:32:28 [50507] DEBUG: [Mining] Indexing block #6562 | ~0.98 blocks/sec | total: 2600/11000 (23.64%) | elapsed: 295.17 seconds
+Aug 14 15:32:34 [50507] DEBUG: [Mining] Indexing block #6566 | ~0.78 blocks/sec | total: 2604/11000 (23.67%) | elapsed: 300.31 seconds
+Aug 14 15:32:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:32:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:32:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:32:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:32:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:32:36 [50507] DEBUG: Running statistics
+Aug 14 15:32:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:32:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:32:39 [50507] DEBUG: [Mining] Indexing block #6571 | ~0.98 blocks/sec | total: 2609/11000 (23.72%) | elapsed: 305.40 seconds
+Aug 14 15:32:44 [50507] DEBUG: [Mining] Indexing block #6576 | ~0.99 blocks/sec | total: 2614/11000 (23.76%) | elapsed: 310.43 seconds
+Aug 14 15:32:49 [50507] DEBUG: [Mining] Indexing block #6581 | ~0.98 blocks/sec | total: 2619/11000 (23.81%) | elapsed: 315.52 seconds
+Aug 14 15:32:54 [50507] DEBUG: [Mining] Indexing block #6586 | ~0.99 blocks/sec | total: 2624/11000 (23.85%) | elapsed: 320.59 seconds
+Aug 14 15:32:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:32:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:32:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:32:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:32:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:32:59 [50507] DEBUG: [Mining] Indexing block #6591 | ~0.98 blocks/sec | total: 2629/11000 (23.90%) | elapsed: 325.67 seconds
+Aug 14 15:33:04 [50507] DEBUG: [Mining] Indexing block #6596 | ~0.91 blocks/sec | total: 2634/11000 (23.95%) | elapsed: 331.17 seconds
+Aug 14 15:33:10 [50507] DEBUG: [Mining] Indexing block #6601 | ~0.98 blocks/sec | total: 2639/11000 (23.99%) | elapsed: 336.30 seconds
+Aug 14 15:33:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:33:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:33:15 [50507] DEBUG: [Mining] Indexing block #6606 | ~0.98 blocks/sec | total: 2644/11000 (24.04%) | elapsed: 341.41 seconds
+Aug 14 15:33:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:33:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:33:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:33:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:33:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:33:20 [50507] DEBUG: [Mining] Indexing block #6611 | ~0.97 blocks/sec | total: 2649/11000 (24.08%) | elapsed: 346.56 seconds
+Aug 14 15:33:25 [50507] DEBUG: [Mining] Indexing block #6616 | ~0.98 blocks/sec | total: 2654/11000 (24.13%) | elapsed: 351.64 seconds
+Aug 14 15:33:30 [50507] DEBUG: [Mining] Indexing block #6621 | ~0.99 blocks/sec | total: 2659/11000 (24.17%) | elapsed: 356.67 seconds
+Aug 14 15:33:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:33:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:33:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:33:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:33:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:33:35 [50507] DEBUG: [Mining] Indexing block #6626 | ~0.99 blocks/sec | total: 2664/11000 (24.22%) | elapsed: 361.71 seconds
+Aug 14 15:33:36 [50507] DEBUG: Running statistics
+Aug 14 15:33:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:33:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:33:40 [50507] DEBUG: [Mining] Indexing block #6631 | ~0.98 blocks/sec | total: 2669/11000 (24.26%) | elapsed: 366.83 seconds
+Aug 14 15:33:45 [50507] DEBUG: [Mining] Indexing block #6636 | ~0.95 blocks/sec | total: 2674/11000 (24.31%) | elapsed: 372.07 seconds
+Aug 14 15:33:50 [50507] DEBUG: [Mining] Indexing block #6641 | ~0.98 blocks/sec | total: 2679/11000 (24.35%) | elapsed: 377.19 seconds
+Aug 14 15:33:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:33:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:33:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:33:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:33:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:33:56 [50507] DEBUG: [Mining] Indexing block #6646 | ~0.98 blocks/sec | total: 2684/11000 (24.40%) | elapsed: 382.30 seconds
+Aug 14 15:34:01 [50507] DEBUG: [Mining] Indexing block #6651 | ~0.87 blocks/sec | total: 2689/11000 (24.45%) | elapsed: 388.03 seconds
+Aug 14 15:34:07 [50507] DEBUG: [Mining] Indexing block #6656 | ~0.90 blocks/sec | total: 2694/11000 (24.49%) | elapsed: 393.57 seconds
+Aug 14 15:34:12 [50507] DEBUG: [Mining] Indexing block #6661 | ~0.98 blocks/sec | total: 2699/11000 (24.54%) | elapsed: 398.66 seconds
+Aug 14 15:34:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:34:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:34:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:34:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:34:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:34:19 [50507] DEBUG: [Mining] Indexing block #6666 | ~0.76 blocks/sec | total: 2704/11000 (24.58%) | elapsed: 405.22 seconds
+Aug 14 15:34:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:34:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:34:24 [50507] DEBUG: [Mining] Indexing block #6671 | ~0.98 blocks/sec | total: 2709/11000 (24.63%) | elapsed: 410.34 seconds
+Aug 14 15:34:29 [50507] DEBUG: [Mining] Indexing block #6676 | ~0.98 blocks/sec | total: 2714/11000 (24.67%) | elapsed: 415.47 seconds
+Aug 14 15:34:34 [50507] DEBUG: [Mining] Indexing block #6681 | ~0.99 blocks/sec | total: 2719/11000 (24.72%) | elapsed: 420.54 seconds
+Aug 14 15:34:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:34:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:34:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:34:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:34:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:34:36 [50507] DEBUG: Running statistics
+Aug 14 15:34:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:34:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:34:39 [50507] DEBUG: [Mining] Indexing block #6686 | ~0.99 blocks/sec | total: 2724/11000 (24.76%) | elapsed: 425.60 seconds
+Aug 14 15:34:44 [50507] DEBUG: [Mining] Indexing block #6691 | ~0.98 blocks/sec | total: 2729/11000 (24.81%) | elapsed: 430.68 seconds
+Aug 14 15:34:49 [50507] DEBUG: [Mining] Indexing block #6696 | ~0.98 blocks/sec | total: 2734/11000 (24.85%) | elapsed: 435.81 seconds
+Aug 14 15:34:54 [50507] DEBUG: [Mining] Indexing block #6701 | ~0.98 blocks/sec | total: 2739/11000 (24.90%) | elapsed: 440.93 seconds
+Aug 14 15:34:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:34:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:34:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:34:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:34:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:34:59 [50507] DEBUG: [Mining] Indexing block #6706 | ~1.00 blocks/sec | total: 2744/11000 (24.95%) | elapsed: 445.93 seconds
+Aug 14 15:35:05 [50507] DEBUG: [Mining] Indexing block #6711 | ~0.93 blocks/sec | total: 2749/11000 (24.99%) | elapsed: 451.28 seconds
+Aug 14 15:35:10 [50507] DEBUG: [Mining] Indexing block #6716 | ~0.99 blocks/sec | total: 2754/11000 (25.04%) | elapsed: 456.34 seconds
+Aug 14 15:35:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:35:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:35:15 [50507] DEBUG: [Mining] Indexing block #6721 | ~0.98 blocks/sec | total: 2759/11000 (25.08%) | elapsed: 461.46 seconds
+Aug 14 15:35:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:35:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:35:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:35:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:35:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:35:20 [50507] DEBUG: [Mining] Indexing block #6726 | ~0.96 blocks/sec | total: 2764/11000 (25.13%) | elapsed: 466.69 seconds
+Aug 14 15:35:25 [50507] DEBUG: [Mining] Indexing block #6731 | ~0.97 blocks/sec | total: 2769/11000 (25.17%) | elapsed: 471.86 seconds
+Aug 14 15:35:30 [50507] DEBUG: [Mining] Indexing block #6736 | ~0.98 blocks/sec | total: 2774/11000 (25.22%) | elapsed: 476.94 seconds
+Aug 14 15:35:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:35:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:35:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:35:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:35:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:35:35 [50507] DEBUG: [Mining] Indexing block #6741 | ~0.96 blocks/sec | total: 2779/11000 (25.26%) | elapsed: 482.18 seconds
+Aug 14 15:35:36 [50507] DEBUG: Running statistics
+Aug 14 15:35:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:35:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:35:41 [50507] DEBUG: [Mining] Indexing block #6746 | ~0.97 blocks/sec | total: 2784/11000 (25.31%) | elapsed: 487.33 seconds
+Aug 14 15:35:46 [50507] DEBUG: [Mining] Indexing block #6751 | ~0.98 blocks/sec | total: 2789/11000 (25.35%) | elapsed: 492.44 seconds
+Aug 14 15:35:51 [50507] DEBUG: [Mining] Indexing block #6756 | ~0.96 blocks/sec | total: 2794/11000 (25.40%) | elapsed: 497.63 seconds
+Aug 14 15:35:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:35:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:35:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:35:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:35:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:35:56 [50507] DEBUG: [Mining] Indexing block #6761 | ~0.98 blocks/sec | total: 2799/11000 (25.45%) | elapsed: 502.71 seconds
+Aug 14 15:36:01 [50507] DEBUG: [Mining] Indexing block #6766 | ~0.98 blocks/sec | total: 2804/11000 (25.49%) | elapsed: 507.83 seconds
+Aug 14 15:36:07 [50507] DEBUG: [Mining] Indexing block #6770 | ~0.74 blocks/sec | total: 2808/11000 (25.53%) | elapsed: 513.21 seconds
+Aug 14 15:36:12 [50507] DEBUG: [Mining] Indexing block #6775 | ~0.98 blocks/sec | total: 2813/11000 (25.57%) | elapsed: 518.30 seconds
+Aug 14 15:36:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:36:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:36:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:36:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:36:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:36:17 [50507] DEBUG: [Mining] Indexing block #6780 | ~0.99 blocks/sec | total: 2818/11000 (25.62%) | elapsed: 523.37 seconds
+Aug 14 15:36:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:36:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:36:22 [50507] DEBUG: [Mining] Indexing block #6785 | ~0.99 blocks/sec | total: 2823/11000 (25.66%) | elapsed: 528.44 seconds
+Aug 14 15:36:27 [50507] DEBUG: [Mining] Indexing block #6790 | ~0.97 blocks/sec | total: 2828/11000 (25.71%) | elapsed: 533.57 seconds
+Aug 14 15:36:32 [50507] DEBUG: [Mining] Indexing block #6795 | ~0.98 blocks/sec | total: 2833/11000 (25.75%) | elapsed: 538.68 seconds
+Aug 14 15:36:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:36:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:36:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:36:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:36:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:36:36 [50507] DEBUG: Running statistics
+Aug 14 15:36:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:36:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:36:37 [50507] DEBUG: [Mining] Indexing block #6800 | ~0.99 blocks/sec | total: 2838/11000 (25.80%) | elapsed: 543.72 seconds
+Aug 14 15:36:42 [50507] DEBUG: [Mining] Indexing block #6805 | ~0.99 blocks/sec | total: 2843/11000 (25.85%) | elapsed: 548.75 seconds
+Aug 14 15:36:47 [50507] DEBUG: [Mining] Indexing block #6810 | ~0.98 blocks/sec | total: 2848/11000 (25.89%) | elapsed: 553.87 seconds
+Aug 14 15:36:53 [50507] DEBUG: [Mining] Indexing block #6815 | ~0.91 blocks/sec | total: 2853/11000 (25.94%) | elapsed: 559.36 seconds
+Aug 14 15:36:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:36:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:36:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:36:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:36:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:36:58 [50507] DEBUG: [Mining] Indexing block #6820 | ~0.98 blocks/sec | total: 2858/11000 (25.98%) | elapsed: 564.44 seconds
+Aug 14 15:37:03 [50507] DEBUG: [Mining] Indexing block #6825 | ~0.99 blocks/sec | total: 2863/11000 (26.03%) | elapsed: 569.52 seconds
+Aug 14 15:37:08 [50507] DEBUG: [Mining] Indexing block #6830 | ~0.98 blocks/sec | total: 2868/11000 (26.07%) | elapsed: 574.62 seconds
+Aug 14 15:37:13 [50507] DEBUG: [Mining] Indexing block #6835 | ~0.96 blocks/sec | total: 2873/11000 (26.12%) | elapsed: 579.80 seconds
+Aug 14 15:37:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:37:15 [50507] DEBUG: Mempool updated in 0.001 seconds. New size: 1 (0)
+Aug 14 15:37:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:37:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:37:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:37:18 [50507] DEBUG: [Mining] Indexing block #6840 | ~0.94 blocks/sec | total: 2878/11000 (26.16%) | elapsed: 585.12 seconds
+Aug 14 15:37:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:37:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:37:23 [50507] DEBUG: [Mining] Indexing block #6844 | ~0.79 blocks/sec | total: 2882/11000 (26.20%) | elapsed: 590.16 seconds
+Aug 14 15:37:29 [50507] DEBUG: [Mining] Indexing block #6849 | ~0.97 blocks/sec | total: 2887/11000 (26.25%) | elapsed: 595.33 seconds
+Aug 14 15:37:34 [50507] DEBUG: [Mining] Indexing block #6854 | ~0.97 blocks/sec | total: 2892/11000 (26.29%) | elapsed: 600.49 seconds
+Aug 14 15:37:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:37:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:37:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:37:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:37:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:37:36 [50507] DEBUG: Running statistics
+Aug 14 15:37:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:37:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:37:39 [50507] DEBUG: [Mining] Indexing block #6859 | ~0.97 blocks/sec | total: 2897/11000 (26.34%) | elapsed: 605.64 seconds
+Aug 14 15:37:44 [50507] DEBUG: [Mining] Indexing block #6864 | ~0.97 blocks/sec | total: 2902/11000 (26.38%) | elapsed: 610.81 seconds
+Aug 14 15:37:49 [50507] DEBUG: [Mining] Indexing block #6869 | ~0.99 blocks/sec | total: 2907/11000 (26.43%) | elapsed: 615.87 seconds
+Aug 14 15:37:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:37:55 [50507] DEBUG: Mempool updated in 0.004 seconds. New size: 1 (0)
+Aug 14 15:37:55 [50507] DEBUG: [Mining] Indexing block #6874 | ~0.92 blocks/sec | total: 2912/11000 (26.47%) | elapsed: 621.30 seconds
+Aug 14 15:37:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:37:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:37:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:38:00 [50507] DEBUG: [Mining] Indexing block #6879 | ~0.98 blocks/sec | total: 2917/11000 (26.52%) | elapsed: 626.40 seconds
+Aug 14 15:38:05 [50507] DEBUG: [Mining] Indexing block #6884 | ~0.87 blocks/sec | total: 2922/11000 (26.56%) | elapsed: 632.16 seconds
+Aug 14 15:38:11 [50507] DEBUG: [Mining] Indexing block #6889 | ~0.94 blocks/sec | total: 2927/11000 (26.61%) | elapsed: 637.49 seconds
+Aug 14 15:38:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:38:15 [50507] DEBUG: Mempool updated in 0.001 seconds. New size: 1 (0)
+Aug 14 15:38:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:38:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:38:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:38:16 [50507] DEBUG: [Mining] Indexing block #6894 | ~0.98 blocks/sec | total: 2932/11000 (26.65%) | elapsed: 642.59 seconds
+Aug 14 15:38:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:38:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:38:21 [50507] DEBUG: [Mining] Indexing block #6899 | ~0.98 blocks/sec | total: 2937/11000 (26.70%) | elapsed: 647.68 seconds
+Aug 14 15:38:26 [50507] DEBUG: [Mining] Indexing block #6904 | ~0.98 blocks/sec | total: 2942/11000 (26.75%) | elapsed: 652.77 seconds
+Aug 14 15:38:31 [50507] DEBUG: [Mining] Indexing block #6909 | ~0.97 blocks/sec | total: 2947/11000 (26.79%) | elapsed: 657.94 seconds
+Aug 14 15:38:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:38:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:38:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:38:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:38:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:38:36 [50507] DEBUG: Running statistics
+Aug 14 15:38:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:38:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:38:36 [50507] DEBUG: [Mining] Indexing block #6914 | ~0.99 blocks/sec | total: 2952/11000 (26.84%) | elapsed: 663.01 seconds
+Aug 14 15:38:41 [50507] DEBUG: [Mining] Indexing block #6919 | ~0.98 blocks/sec | total: 2957/11000 (26.88%) | elapsed: 668.13 seconds
+Aug 14 15:38:47 [50507] DEBUG: [Mining] Indexing block #6921 | ~0.36 blocks/sec | total: 2959/11000 (26.90%) | elapsed: 673.70 seconds
+Aug 14 15:38:52 [50507] DEBUG: [Mining] Indexing block #6926 | ~0.97 blocks/sec | total: 2964/11000 (26.95%) | elapsed: 678.85 seconds
+Aug 14 15:38:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:38:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:38:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:38:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:38:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:38:57 [50507] DEBUG: [Mining] Indexing block #6931 | ~0.98 blocks/sec | total: 2969/11000 (26.99%) | elapsed: 683.97 seconds
+Aug 14 15:39:04 [50507] DEBUG: [Mining] Indexing block #6936 | ~0.77 blocks/sec | total: 2974/11000 (27.04%) | elapsed: 690.42 seconds
+Aug 14 15:39:09 [50507] DEBUG: [Mining] Indexing block #6941 | ~0.97 blocks/sec | total: 2979/11000 (27.08%) | elapsed: 695.60 seconds
+Aug 14 15:39:14 [50507] DEBUG: [Mining] Indexing block #6946 | ~0.97 blocks/sec | total: 2984/11000 (27.13%) | elapsed: 700.74 seconds
+Aug 14 15:39:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:39:15 [50507] DEBUG: Mempool updated in 0.001 seconds. New size: 1 (0)
+Aug 14 15:39:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:39:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:39:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:39:19 [50507] DEBUG: [Mining] Indexing block #6951 | ~0.97 blocks/sec | total: 2989/11000 (27.17%) | elapsed: 705.89 seconds
+Aug 14 15:39:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:39:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:39:24 [50507] DEBUG: [Mining] Indexing block #6956 | ~0.98 blocks/sec | total: 2994/11000 (27.22%) | elapsed: 710.99 seconds
+Aug 14 15:39:29 [50507] DEBUG: [Mining] Indexing block #6961 | ~0.99 blocks/sec | total: 2999/11000 (27.26%) | elapsed: 716.07 seconds
+Aug 14 15:39:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:39:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:39:35 [50507] DEBUG: [Mining] Indexing block #6966 | ~0.96 blocks/sec | total: 3004/11000 (27.31%) | elapsed: 721.29 seconds
+Aug 14 15:39:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:39:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:39:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:39:36 [50507] DEBUG: Running statistics
+Aug 14 15:39:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:39:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:39:40 [50507] DEBUG: [Mining] Indexing block #6971 | ~0.99 blocks/sec | total: 3009/11000 (27.35%) | elapsed: 726.33 seconds
+Aug 14 15:39:45 [50507] DEBUG: [Mining] Indexing block #6976 | ~0.97 blocks/sec | total: 3014/11000 (27.40%) | elapsed: 731.47 seconds
+Aug 14 15:39:50 [50507] DEBUG: [Mining] Indexing block #6981 | ~0.97 blocks/sec | total: 3019/11000 (27.45%) | elapsed: 736.61 seconds
+Aug 14 15:39:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:39:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:39:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:39:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:39:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:39:55 [50507] DEBUG: [Mining] Indexing block #6986 | ~0.97 blocks/sec | total: 3024/11000 (27.49%) | elapsed: 741.75 seconds
+Aug 14 15:40:00 [50507] DEBUG: [Mining] Indexing block #6991 | ~0.98 blocks/sec | total: 3029/11000 (27.54%) | elapsed: 746.87 seconds
+Aug 14 15:40:06 [50507] DEBUG: [Mining] Indexing block #6994 | ~0.53 blocks/sec | total: 3032/11000 (27.56%) | elapsed: 752.57 seconds
+Aug 14 15:40:11 [50507] DEBUG: [Mining] Indexing block #6998 | ~0.78 blocks/sec | total: 3036/11000 (27.60%) | elapsed: 757.68 seconds
+Aug 14 15:40:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:40:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:40:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:40:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:40:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:40:16 [50507] DEBUG: [Mining] Indexing block #7003 | ~0.99 blocks/sec | total: 3041/11000 (27.65%) | elapsed: 762.73 seconds
+Aug 14 15:40:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:40:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:40:21 [50507] DEBUG: [Mining] Indexing block #7008 | ~0.93 blocks/sec | total: 3046/11000 (27.69%) | elapsed: 768.13 seconds
+Aug 14 15:40:27 [50507] DEBUG: [Mining] Indexing block #7013 | ~0.97 blocks/sec | total: 3051/11000 (27.74%) | elapsed: 773.26 seconds
+Aug 14 15:40:32 [50507] DEBUG: [Mining] Indexing block #7018 | ~0.98 blocks/sec | total: 3056/11000 (27.78%) | elapsed: 778.38 seconds
+Aug 14 15:40:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:40:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:40:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:40:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:40:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:40:36 [50507] DEBUG: Running statistics
+Aug 14 15:40:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:40:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:40:37 [50507] DEBUG: [Mining] Indexing block #7023 | ~0.98 blocks/sec | total: 3061/11000 (27.83%) | elapsed: 783.47 seconds
+Aug 14 15:40:42 [50507] DEBUG: [Mining] Indexing block #7028 | ~0.97 blocks/sec | total: 3066/11000 (27.87%) | elapsed: 788.64 seconds
+Aug 14 15:40:47 [50507] DEBUG: [Mining] Indexing block #7033 | ~0.96 blocks/sec | total: 3071/11000 (27.92%) | elapsed: 793.83 seconds
+Aug 14 15:40:53 [50507] DEBUG: [Mining] Indexing block #7038 | ~0.86 blocks/sec | total: 3076/11000 (27.96%) | elapsed: 799.63 seconds
+Aug 14 15:40:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:40:55 [50507] DEBUG: Mempool updated in 0.001 seconds. New size: 1 (0)
+Aug 14 15:40:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:40:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:40:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:40:58 [50507] DEBUG: [Mining] Indexing block #7043 | ~0.98 blocks/sec | total: 3081/11000 (28.01%) | elapsed: 804.76 seconds
+Aug 14 15:41:03 [50507] DEBUG: [Mining] Indexing block #7048 | ~0.98 blocks/sec | total: 3086/11000 (28.05%) | elapsed: 809.85 seconds
+Aug 14 15:41:08 [50507] DEBUG: [Mining] Indexing block #7053 | ~0.97 blocks/sec | total: 3091/11000 (28.10%) | elapsed: 814.98 seconds
+Aug 14 15:41:13 [50507] DEBUG: [Mining] Indexing block #7058 | ~0.98 blocks/sec | total: 3096/11000 (28.15%) | elapsed: 820.10 seconds
+Aug 14 15:41:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:41:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:41:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:41:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:41:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:41:18 [50507] DEBUG: [Mining] Indexing block #7063 | ~0.98 blocks/sec | total: 3101/11000 (28.19%) | elapsed: 825.19 seconds
+Aug 14 15:41:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:41:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:41:24 [50507] DEBUG: [Mining] Indexing block #7068 | ~0.95 blocks/sec | total: 3106/11000 (28.24%) | elapsed: 830.46 seconds
+Aug 14 15:41:25 [50507] DEBUG: rbf cache contains 0 txs, 0 trees, 0 due to expire (0 newly expired)
+Aug 14 15:41:29 [50507] DEBUG: [Mining] Indexing block #7073 | ~0.98 blocks/sec | total: 3111/11000 (28.28%) | elapsed: 835.58 seconds
+Aug 14 15:41:34 [50507] DEBUG: [Mining] Indexing block #7078 | ~0.99 blocks/sec | total: 3116/11000 (28.33%) | elapsed: 840.64 seconds
+Aug 14 15:41:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:41:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:41:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:41:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:41:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:41:36 [50507] DEBUG: Running statistics
+Aug 14 15:41:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:41:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:41:40 [50507] DEBUG: [Mining] Indexing block #7083 | ~0.86 blocks/sec | total: 3121/11000 (28.37%) | elapsed: 846.47 seconds
+Aug 14 15:41:45 [50507] DEBUG: [Mining] Indexing block #7088 | ~0.98 blocks/sec | total: 3126/11000 (28.42%) | elapsed: 851.59 seconds
+Aug 14 15:41:50 [50507] DEBUG: [Mining] Indexing block #7093 | ~0.98 blocks/sec | total: 3131/11000 (28.46%) | elapsed: 856.70 seconds
+Aug 14 15:41:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:41:55 [50507] DEBUG: Mempool updated in 0.001 seconds. New size: 1 (0)
+Aug 14 15:41:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:41:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:41:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:41:55 [50507] DEBUG: [Mining] Indexing block #7098 | ~0.99 blocks/sec | total: 3136/11000 (28.51%) | elapsed: 861.75 seconds
+Aug 14 15:42:01 [50507] DEBUG: [Mining] Indexing block #7103 | ~0.86 blocks/sec | total: 3141/11000 (28.55%) | elapsed: 867.55 seconds
+Aug 14 15:42:06 [50507] DEBUG: [Mining] Indexing block #7108 | ~0.97 blocks/sec | total: 3146/11000 (28.60%) | elapsed: 872.71 seconds
+Aug 14 15:42:11 [50507] DEBUG: [Mining] Indexing block #7113 | ~1.00 blocks/sec | total: 3151/11000 (28.65%) | elapsed: 877.73 seconds
+Aug 14 15:42:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:42:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:42:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:42:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:42:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:42:17 [50507] DEBUG: [Mining] Indexing block #7118 | ~0.84 blocks/sec | total: 3156/11000 (28.69%) | elapsed: 883.72 seconds
+Aug 14 15:42:19 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:42:19 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:42:23 [50507] DEBUG: [Mining] Indexing block #7124 | ~1.00 blocks/sec | total: 3162/11000 (28.75%) | elapsed: 889.71 seconds
+Aug 14 15:42:28 [50507] DEBUG: [Mining] Indexing block #7129 | ~0.99 blocks/sec | total: 3167/11000 (28.79%) | elapsed: 894.78 seconds
+Aug 14 15:42:34 [50507] DEBUG: [Mining] Indexing block #7134 | ~0.90 blocks/sec | total: 3172/11000 (28.84%) | elapsed: 900.34 seconds
+Aug 14 15:42:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:42:35 [50507] DEBUG: Mempool updated in 0.001 seconds. New size: 1 (0)
+Aug 14 15:42:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:42:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:42:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:42:36 [50507] DEBUG: Running statistics
+Aug 14 15:42:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:42:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:42:39 [50507] DEBUG: [Mining] Indexing block #7139 | ~0.87 blocks/sec | total: 3177/11000 (28.88%) | elapsed: 906.07 seconds
+Aug 14 15:42:44 [50507] DEBUG: [Mining] Indexing block #7144 | ~0.97 blocks/sec | total: 3182/11000 (28.93%) | elapsed: 911.20 seconds
+Aug 14 15:42:50 [50507] DEBUG: [Mining] Indexing block #7149 | ~0.84 blocks/sec | total: 3187/11000 (28.97%) | elapsed: 917.18 seconds
+Aug 14 15:42:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:42:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:42:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:42:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:42:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:42:56 [50507] DEBUG: [Mining] Indexing block #7154 | ~0.97 blocks/sec | total: 3192/11000 (29.02%) | elapsed: 922.31 seconds
+Aug 14 15:43:01 [50507] DEBUG: [Mining] Indexing block #7158 | ~0.76 blocks/sec | total: 3196/11000 (29.05%) | elapsed: 927.56 seconds
+Aug 14 15:43:06 [50507] DEBUG: [Mining] Indexing block #7163 | ~0.91 blocks/sec | total: 3201/11000 (29.10%) | elapsed: 933.06 seconds
+Aug 14 15:43:11 [50507] DEBUG: [Mining] Indexing block #7168 | ~0.99 blocks/sec | total: 3206/11000 (29.15%) | elapsed: 938.13 seconds
+Aug 14 15:43:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:43:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:43:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:43:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:43:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:43:16 [50507] DEBUG: [Mining] Indexing block #7173 | ~0.99 blocks/sec | total: 3211/11000 (29.19%) | elapsed: 943.17 seconds
+Aug 14 15:43:20 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:43:20 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:43:22 [50507] DEBUG: [Mining] Indexing block #7178 | ~0.98 blocks/sec | total: 3216/11000 (29.24%) | elapsed: 948.28 seconds
+Aug 14 15:43:27 [50507] DEBUG: [Mining] Indexing block #7183 | ~0.98 blocks/sec | total: 3221/11000 (29.28%) | elapsed: 953.36 seconds
+Aug 14 15:43:32 [50507] DEBUG: [Mining] Indexing block #7188 | ~0.98 blocks/sec | total: 3226/11000 (29.33%) | elapsed: 958.46 seconds
+Aug 14 15:43:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:43:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:43:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:43:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:43:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:43:36 [50507] DEBUG: Running statistics
+Aug 14 15:43:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:43:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:43:37 [50507] DEBUG: [Mining] Indexing block #7193 | ~0.94 blocks/sec | total: 3231/11000 (29.37%) | elapsed: 963.80 seconds
+Aug 14 15:43:43 [50507] DEBUG: [Mining] Indexing block #7198 | ~0.87 blocks/sec | total: 3236/11000 (29.42%) | elapsed: 969.58 seconds
+Aug 14 15:43:48 [50507] DEBUG: [Mining] Indexing block #7203 | ~0.96 blocks/sec | total: 3241/11000 (29.46%) | elapsed: 974.81 seconds
+Aug 14 15:43:54 [50507] DEBUG: [Mining] Indexing block #7208 | ~0.92 blocks/sec | total: 3246/11000 (29.51%) | elapsed: 980.25 seconds
+Aug 14 15:43:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:43:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:43:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:43:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:43:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:43:59 [50507] DEBUG: [Mining] Indexing block #7213 | ~0.97 blocks/sec | total: 3251/11000 (29.55%) | elapsed: 985.42 seconds
+Aug 14 15:44:04 [50507] DEBUG: [Mining] Indexing block #7218 | ~0.97 blocks/sec | total: 3256/11000 (29.60%) | elapsed: 990.56 seconds
+Aug 14 15:44:09 [50507] DEBUG: [Mining] Indexing block #7223 | ~0.94 blocks/sec | total: 3261/11000 (29.65%) | elapsed: 995.87 seconds
+Aug 14 15:44:15 [50507] DEBUG: Updating mempool...
+Aug 14 15:44:15 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:44:15 [50507] DEBUG: [Mining] Indexing block #7228 | ~0.91 blocks/sec | total: 3266/11000 (29.69%) | elapsed: 1001.39 seconds
+Aug 14 15:44:15 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:44:15 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:44:15 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:44:20 [50507] DEBUG: Memory usage: 0.03 GB / 2.05 GB
+Aug 14 15:44:20 [50507] DEBUG: 1 open TCP sockets
+Aug 14 15:44:20 [50507] DEBUG: [Mining] Indexing block #7233 | ~0.97 blocks/sec | total: 3271/11000 (29.74%) | elapsed: 1006.52 seconds
+Aug 14 15:44:25 [50507] DEBUG: [Mining] Indexing block #7238 | ~0.99 blocks/sec | total: 3276/11000 (29.78%) | elapsed: 1011.58 seconds
+Aug 14 15:44:30 [50507] DEBUG: [Mining] Indexing block #7243 | ~0.98 blocks/sec | total: 3281/11000 (29.83%) | elapsed: 1016.70 seconds
+Aug 14 15:44:35 [50507] DEBUG: Updating mempool...
+Aug 14 15:44:35 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:44:35 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:44:35 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:44:35 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:44:35 [50507] DEBUG: [Mining] Indexing block #7248 | ~0.97 blocks/sec | total: 3286/11000 (29.87%) | elapsed: 1021.83 seconds
+Aug 14 15:44:36 [50507] DEBUG: Running statistics
+Aug 14 15:44:36 [50507] DEBUG: 1 websocket clients | 0 connected | 0 disconnected | (+0) | tracked txs: total=0, avg=0.00, max=0 | tracked addresses: total=0, avg=0.00, max=0 | ws-subscriptions: tx=0,txs=0,address=0,addresses=0,txs-tracked-avg=0.00,txs-tracked-max=0,addresses-tracked-avg=0.00,addresses-tracked-max=0,txs-updates-avg=0.00,txs-updates-max=0,addresses-updates-avg=0.00,addresses-updates-max=0
+Aug 14 15:44:36 [50507] DEBUG: websocket subscriptions: track-tx: 0, track-txs: 0, track-address: 0, track-addresses: 0, track-mempool-block: 1 track-rbf: 0
+Aug 14 15:44:40 [50507] DEBUG: [Mining] Indexing block #7253 | ~0.99 blocks/sec | total: 3291/11000 (29.92%) | elapsed: 1026.89 seconds
+Aug 14 15:44:47 [50507] DEBUG: [Mining] Indexing block #7257 | ~0.62 blocks/sec | total: 3295/11000 (29.95%) | elapsed: 1033.34 seconds
+Aug 14 15:44:52 [50507] DEBUG: [Mining] Indexing block #7262 | ~0.98 blocks/sec | total: 3300/11000 (30.00%) | elapsed: 1038.45 seconds
+Aug 14 15:44:55 [50507] DEBUG: Updating mempool...
+Aug 14 15:44:55 [50507] DEBUG: Mempool updated in 0 seconds. New size: 1 (0)
+Aug 14 15:44:55 [50507] WARN: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com (Attempt 1/1). Reason: Request failed with status code 401
+Aug 14 15:44:55 [50507] ERR: Could not connect to https://api.freecurrencyapi.com/v1/status?apikey=your-api-key-from-freecurrencyapi.com. All 1 attempts failed
+Aug 14 15:44:55 [50507] ERR: Cannot fetch conversions API credit, insertion of missing prices aborted. Reason: Cannot read properties of null (reading 'month')
+Aug 14 15:44:57 [50507] DEBUG: [Mining] Indexing block #7266 | ~0.78 blocks/sec | total: 3304/11000 (30.04%) | elapsed: 1043.57 seconds
+Aug 14 15:45:03 [50507] DEBUG: [Mining] Indexing block #7271 | ~0.83 blocks/sec | total: 3309/11000 (30.08%) | elapsed: 1049.62 seconds
+Aug 14 15:45:08 [50507] DEBUG: [Mining] Indexing block #7276 | ~0.98 blocks/sec | total: 3314/11000 (30.13%) | elapsed: 1054.72 seconds
+Aug 14 15:45:10 [50507] DEBUG: triggering exit for signal: SIGTERM
+Aug 14 15:45:10 [50507] DEBUG: 'exit' event triggered

@@ -48,7 +48,7 @@
   <ng-container *ngTemplateOutlet="feeRateRow"></ng-container>
   @if (showAcceleratorSavingsMsg) {
     <tr>
-      <td colspan="2" style="--bs-table-bg-type: var(--tertiary); white-space: normal; text-align: center;">Could have saved <app-fiat [blockConversion]="tx.price" [value]="acceleratorSavingsSats"></app-fiat> using <a href="https://mempool.space/enterprise#accelerator-pro" target="_blank" rel="noopener">Mempool Accelerator&reg; Pro</a></td>
+      <td colspan="2" style="--bs-table-bg-type: var(--tertiary); white-space: normal; text-align: center;">Could have saved <app-fiat [blockConversion]="tx.price" [value]="acceleratorSavingsSats"></app-fiat> using <a href="https://BitcoinGold/enterprise#accelerator-pro" target="_blank" rel="noopener">BitcoinGold Accelerator&reg; Pro</a></td>
     </tr>
   }
   @if (!isLoadingTx && !tx?.status?.confirmed && isAcceleration) {
@@ -133,9 +133,9 @@
               } @else if (auditStatus.expected) {
                 <span class="badge bg-success me-1" i18n-ngbTooltip="Expected in block tooltip" ngbTooltip="This transaction was projected to be included in the block" placement="bottom" i18n="tx-features.tag.expected|Expected in Block">Expected in Block</span>
               } @else if (auditStatus.seen) {
-                <span class="badge bg-success me-1" i18n-ngbTooltip="Seen in mempool tooltip" ngbTooltip="This transaction was seen in the mempool prior to mining" placement="bottom" i18n="tx-features.tag.seen|Seen in Mempool">Seen in Mempool</span>
+                <span class="badge bg-success me-1" i18n-ngbTooltip="Seen in mempool tooltip" ngbTooltip="This transaction was seen in the mempool prior to mining" placement="bottom" i18n="tx-features.tag.seen|Seen in BitcoinGold">Seen in BitcoinGold</span>
               } @else if (!auditStatus.conflict) {
-                <span class="badge bg-warning me-1" i18n-ngbTooltip="Not seen in mempool tooltip" ngbTooltip="This transaction was missing from our mempool prior to mining" placement="bottom" i18n="tx-features.tag.not-seen|Not seen in Mempool">Not seen in Mempool</span>
+                <span class="badge bg-warning me-1" i18n-ngbTooltip="Not seen in mempool tooltip" ngbTooltip="This transaction was missing from our mempool prior to mining" placement="bottom" i18n="tx-features.tag.not-seen|Not seen in BitcoinGold">Not seen in BitcoinGold</span>
               }
               @if (auditStatus.added) {
                 <span class="badge bg-warning me-1" i18n-ngbTooltip="Added transaction tooltip" ngbTooltip="This transaction may have been added out-of-band" placement="bottom" i18n="tx-features.tag.added|Added">Added</span>
@@ -166,7 +166,7 @@
             @if (network === 'liquid' || network === 'liquidtestnet') {
               <app-time kind="until" [time]="eta.time" [fastRender]="false" [fixedRender]="true"></app-time>
             } @else {
-              <span [class]="(!tx?.acceleration && acceleratorAvailable && accelerateCtaType === 'button' && !showAccelerationSummary && notAcceleratedOnLoad) ? 'etaDeepMempool d-flex justify-content-between' : ''">
+              <span [class]="(!tx?.acceleration && acceleratorAvailable && accelerateCtaType === 'button' && !showAccelerationSummary && notAcceleratedOnLoad) ? 'etaDeepBitcoinGold d-flex justify-content-between' : ''">
                 @if (eta.blocks >= 7) {
                   <span i18n="transaction.eta.not-any-time-soon|Transaction ETA mot any time soon">Not any time soon</span>
                 } @else {
@@ -174,8 +174,8 @@
                 }
                 @if (!tx?.acceleration && acceleratorAvailable && accelerateCtaType === 'button' && !showAccelerationSummary && notAcceleratedOnLoad) {
                   <div class="d-flex accelerate">
-                    <a class="btn btn-sm accelerateDeepMempool btn-small-height btn-purple" [class.disabled]="!eligibleForAcceleration" i18n="transaction.accelerate|Accelerate button label" (click)="onAccelerateClicked()">Accelerate</a>
-                    <a *ngIf="!eligibleForAcceleration" href="https://mempool.space/accelerator#why-cant-accelerate" target="_blank" class="info-badges ms-1" i18n-ngbTooltip="Mempool Accelerator&reg; tooltip" ngbTooltip="This transaction cannot be accelerated">
+                    <a class="btn btn-sm accelerateDeepBitcoinGold btn-small-height btn-purple" [class.disabled]="!eligibleForAcceleration" i18n="transaction.accelerate|Accelerate button label" (click)="onAccelerateClicked()">Accelerate</a>
+                    <a *ngIf="!eligibleForAcceleration" href="https://BitcoinGold/accelerator#why-cant-accelerate" target="_blank" class="info-badges ms-1" i18n-ngbTooltip="BitcoinGold Accelerator&reg; tooltip" ngbTooltip="This transaction cannot be accelerated">
                         <fa-icon [icon]="['fas', 'info-circle']" [fixedWidth]="true"></fa-icon>
                     </a>
                   </div>

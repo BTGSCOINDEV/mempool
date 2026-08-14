@@ -2,15 +2,15 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 import { StateService } from '@app/services/state.service';
 import { Observable, combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { MempoolInfo } from '@interfaces/websocket.interface';
+import { BitcoinGoldInfo } from '@interfaces/websocket.interface';
 
-interface MempoolBlocksData {
+interface BitcoinGoldBlocksData {
   blocks: number;
   size: number;
 }
 
-interface MempoolInfoData {
-  memPoolInfo: MempoolInfo;
+interface BitcoinGoldInfoData {
+  memPoolInfo: BitcoinGoldInfo;
   vBytesPerSecond: number;
   progressWidth: string;
   progressColor: string;
@@ -26,8 +26,8 @@ interface MempoolInfoData {
 export class FooterComponent implements OnInit {
   @Input() inline = false;
 
-  mempoolBlocksData$: Observable<MempoolBlocksData>;
-  mempoolInfoData$: Observable<MempoolInfoData>;
+  mempoolBlocksData$: Observable<BitcoinGoldBlocksData>;
+  mempoolInfoData$: Observable<BitcoinGoldInfoData>;
   vBytesPerSecondLimit = 1667;
   isLoadingWebSocket$: Observable<boolean>;
   mempoolLoadingStatus$: Observable<number>;

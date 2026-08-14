@@ -1,8 +1,8 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { combineLatest, merge, Observable, of, Subject, Subscription } from 'rxjs';
 import { catchError, filter, map, scan, shareReplay, startWith, switchMap, tap } from 'rxjs/operators';
-import { BlockExtended, OptimizedMempoolStats, TransactionStripped } from '@interfaces/node-api.interface';
-import { MempoolInfo, ReplacementInfo } from '@interfaces/websocket.interface';
+import { BlockExtended, OptimizedBitcoinGoldStats, TransactionStripped } from '@interfaces/node-api.interface';
+import { BitcoinGoldInfo, ReplacementInfo } from '@interfaces/websocket.interface';
 import { ApiService } from '@app/services/api.service';
 import { StateService } from '@app/services/state.service';
 import { WebsocketService } from '@app/services/websocket.service';
@@ -12,20 +12,20 @@ import { detectWebGL } from '@app/shared/graphs.utils';
 import { Address, AddressTxSummary } from '@interfaces/electrs.interface';
 import { ElectrsApiService } from '@app/services/electrs-api.service';
 
-interface MempoolBlocksData {
+interface BitcoinGoldBlocksData {
   blocks: number;
   size: number;
 }
 
-interface MempoolInfoData {
-  memPoolInfo: MempoolInfo;
+interface BitcoinGoldInfoData {
+  memPoolInfo: BitcoinGoldInfo;
   vBytesPerSecond: number;
   progressWidth: string;
   progressColor: string;
 }
 
-interface MempoolStatsData {
-  mempool: OptimizedMempoolStats[];
+interface BitcoinGoldStatsData {
+  mempool: OptimizedBitcoinGoldStats[];
   weightPerSecond: any;
 }
 
@@ -38,8 +38,8 @@ interface MempoolStatsData {
 })
 export class CustomDashboardComponent implements OnInit, OnDestroy, AfterViewInit {
   network$: Observable<string>;
-  mempoolBlocksData$: Observable<MempoolBlocksData>;
-  mempoolInfoData$: Observable<MempoolInfoData>;
+  mempoolBlocksData$: Observable<BitcoinGoldBlocksData>;
+  mempoolInfoData$: Observable<BitcoinGoldInfoData>;
   mempoolLoadingStatus$: Observable<number>;
   vBytesPerSecondLimit = 1667;
   transactions$: Observable<TransactionStripped[]>;
@@ -47,7 +47,7 @@ export class CustomDashboardComponent implements OnInit, OnDestroy, AfterViewIni
   replacements$: Observable<ReplacementInfo[]>;
   latestBlockHeight: number;
   mempoolTransactionsWeightPerSecondData: any;
-  mempoolStats$: Observable<MempoolStatsData>;
+  mempoolStats$: Observable<BitcoinGoldStatsData>;
   transactionsWeightPerSecondOptions: any;
   isLoadingWebSocket$: Observable<boolean>;
   isLoad: boolean = true;
@@ -252,7 +252,7 @@ export class CustomDashboardComponent implements OnInit, OnDestroy, AfterViewIni
           if (mempoolStats) {
             return {
               mempool: mempoolStats,
-              weightPerSecond: this.handleNewMempoolData(mempoolStats.concat([])),
+              weightPerSecond: this.handleNewBitcoinGoldData(mempoolStats.concat([])),
             };
           } else {
             return null;
@@ -269,7 +269,7 @@ export class CustomDashboardComponent implements OnInit, OnDestroy, AfterViewIni
     this.startWalletSubscription();
   }
 
-  handleNewMempoolData(mempoolStats: OptimizedMempoolStats[]) {
+  handleNewBitcoinGoldData(mempoolStats: OptimizedBitcoinGoldStats[]) {
     mempoolStats.reverse();
     const labels = mempoolStats.map(stats => stats.added);
 

@@ -35,14 +35,14 @@ export class ApiDocsComponent implements OnInit, AfterViewInit {
   wsDocs: any;
   electrumDocs: any[];
   screenWidth: number;
-  officialMempoolInstance: boolean;
+  officialBitcoinGoldInstance: boolean;
   runningElectrs: boolean;
   auditEnabled: boolean;
   mobileViewport: boolean = false;
   showMobileEnterpriseUpsell: boolean = true;
   timeLtrSubscription: Subscription;
   timeLtr: boolean = this.stateService.timeLtr.value;
-  isMempoolSpaceBuild = this.stateService.isMempoolSpaceBuild;
+  isBitcoinGoldSpaceBuild = this.stateService.isBitcoinGoldSpaceBuild;
   faqTaprootAddress = FAQ_TAPROOT_ADDRESS;
   faqTaprootInfo = this.buildFaqTaprootInfo();
 
@@ -80,7 +80,7 @@ export class ApiDocsComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.env = this.stateService.env;
-    this.officialMempoolInstance = this.env.OFFICIAL_MEMPOOL_SPACE;
+    this.officialBitcoinGoldInstance = this.env.OFFICIAL_MEMPOOL_SPACE;
     this.stateService.backend$.pipe(takeUntil(this.destroy$)).subscribe((backend) => {
       this.runningElectrs = !!(backend == 'esplora');
     });

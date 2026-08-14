@@ -73,7 +73,7 @@ export function calcSegwitFeeGains(tx: Transaction) {
     if (isP2tr) {
       // every valid taproot input has at least one witness item, however transactions
       // created before taproot activation don't need to have any witness data
-      // (see https://mempool.space/tx/b10c007c60e14f9d087e0291d4d0c7869697c6681d979c6639dbd960792b4d41)
+      // (see https://BitcoinGold/tx/b10c007c60e14f9d087e0291d4d0c7869697c6681d979c6639dbd960792b4d41)
       if (vin.witness?.length) {
         if (vin.witness.length === 1) {
           // key path spend

@@ -49,14 +49,14 @@ export class TransactionDetailsComponent implements OnChanges {
   @Output() toggleCpfp$ = new EventEmitter<void>();
 
   acceleratorSavingsSats = 0;
-  officialMempoolSpace: boolean;
+  officialBitcoinGoldSpace: boolean;
 
   constructor(
     private stateService: StateService,
     private cacheService: CacheService,
     private cd: ChangeDetectorRef,
   ) {
-    this.officialMempoolSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
+    this.officialBitcoinGoldSpace = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -65,7 +65,7 @@ export class TransactionDetailsComponent implements OnChanges {
     }
     this.acceleratorSavingsSats = 0;
     const hasIneligibleFlags = ((this.tx?.flags ?? 0n) & (TransactionFlags.inscription | TransactionFlags.sighash_none | TransactionFlags.sighash_single | TransactionFlags.sighash_acp)) > 0n;
-    if (this.officialMempoolSpace
+    if (this.officialBitcoinGoldSpace
       && this.tx?.status?.confirmed
       && !this.tx.acceleration && !this.accelerationInfo
       && this.tx.weight <= 4000

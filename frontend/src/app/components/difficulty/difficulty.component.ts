@@ -103,7 +103,7 @@ export class DifficultyComponent implements OnInit {
           colorPreviousAdjustments = 'var(--transparent-fg)';
         }
 
-        const blocksUntilHalving = 210000 - (maxHeight % 210000);
+        const blocksUntilHalving = 110000 - (maxHeight % 110000);
         const timeUntilHalving = new Date().getTime() + (blocksUntilHalving * 600000);
         const newEpochStart = Math.floor(this.stateService.latestBlockHeight / EPOCH_BLOCK_LENGTH) * EPOCH_BLOCK_LENGTH;
         const newExpectedHeight = Math.floor(newEpochStart + da.expectedBlocks);

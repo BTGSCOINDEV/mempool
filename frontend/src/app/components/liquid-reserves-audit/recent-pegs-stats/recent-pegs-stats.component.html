@@ -7,13 +7,13 @@
   <div class="fee-estimation-container">
     <div class="item">
       <div class="card-text">
-        <div class="fee-text credit">+{{ (+pegsVolume[0].volume) / 100000000 | number: '1.2-2' }} <span i18n="shared.btc|BTC">BTC</span></div>
+        <div class="fee-text credit">+{{ (+pegsVolume[0].volume) / 100000000 | number: '1.2-2' }} <span i18n="shared.btc|BTGS">BTGS</span></div>
         <div class="fiat">{{ (+pegsVolume[0].number) }} <span i18n="liquid.peg-ins">Peg-Ins</span></div>
       </div>
     </div>
     <div class="item">
       <div class="card-text">
-        <div class="fee-text debit">{{ (+pegsVolume[1].volume) / 100000000 | number: '1.2-2' }} <span i18n="shared.btc|BTC">BTC</span></div>
+        <div class="fee-text debit">{{ (+pegsVolume[1].volume) / 100000000 | number: '1.2-2' }} <span i18n="shared.btc|BTGS">BTGS</span></div>
         <div class="fiat">{{ (+pegsVolume[1].number) }} <span i18n="liquid.peg-outs">Peg-Outs</span></div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { Component, ViewChild, Input, Output, EventEmitter,
   OnInit, OnDestroy, OnChanges, ChangeDetectionStrategy, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import { StateService } from '@app/services/state.service';
-import { MempoolBlockDelta, isMempoolDelta } from '@interfaces/websocket.interface';
+import { BitcoinGoldBlockDelta, isBitcoinGoldDelta } from '@interfaces/websocket.interface';
 import { TransactionStripped } from '@interfaces/node-api.interface';
 import { BlockOverviewGraphComponent } from '@components/block-overview-graph/block-overview-graph.component';
 import { Subscription, BehaviorSubject } from 'rxjs';
@@ -18,7 +18,7 @@ import { FilterMode, GradientMode } from '@app/shared/filters.utils';
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: false,
 })
-export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
+export class BitcoinGoldBlockOverviewComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
   @Input() index: number;
   @Input() resolution = 86;
   @Input() showFilters: boolean = false;
@@ -60,7 +60,7 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
   ngAfterViewInit(): void {
     this.blockSub = this.stateService.mempoolBlockUpdate$.subscribe((update) => {
       // process update
-      if (isMempoolDelta(update)) {
+      if (isBitcoinGoldDelta(update)) {
         // delta
         this.updateBlock(update);
       } else {
@@ -112,7 +112,7 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
       if (this.blockGraph) {
         this.blockGraph.clear(changes.index.currentValue > changes.index.previousValue ? this.chainDirection : this.poolDirection);
       }
-      if (!this.websocketService.startTrackMempoolBlock(changes.index.currentValue) && this.stateService.mempoolBlockState && this.stateService.mempoolBlockState.block === changes.index.currentValue) {
+      if (!this.websocketService.startTrackBitcoinGoldBlock(changes.index.currentValue) && this.stateService.mempoolBlockState && this.stateService.mempoolBlockState.block === changes.index.currentValue) {
         this.resumeBlock(Object.values(this.stateService.mempoolBlockState.transactions));
       } else {
         this.isLoading$.next(true);
@@ -124,7 +124,7 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
     this.blockGraph?.destroy();
     this.blockSub.unsubscribe();
     this.timeLtrSubscription.unsubscribe();
-    this.websocketService.stopTrackMempoolBlock();
+    this.websocketService.stopTrackBitcoinGoldBlock();
   }
 
   replaceBlock(transactionsStripped: TransactionStripped[]): void {
@@ -141,7 +141,7 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
     this.isLoading$.next(false);
   }
 
-  updateBlock(delta: MempoolBlockDelta): void {
+  updateBlock(delta: BitcoinGoldBlockDelta): void {
     const blockMined = (this.stateService.latestBlockHeight > this.lastBlockHeight);
     if (this.blockIndex !== this.index) {
       const direction = (this.blockIndex == null || this.index < this.blockIndex) ? this.poolDirection : this.chainDirection;

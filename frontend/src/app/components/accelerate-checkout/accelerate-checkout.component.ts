@@ -8,7 +8,7 @@ import { AudioService } from '@app/services/audio.service';
 import { ETA, EtaService } from '@app/services/eta.service';
 import { Transaction } from '@interfaces/electrs.interface';
 import { MiningStats } from '@app/services/mining.service';
-import { IAuth, AuthServiceMempool } from '@app/services/auth.service';
+import { IAuth, AuthServiceBitcoinGold } from '@app/services/auth.service';
 import { PartnerCodeService } from '@app/services/partner-code.service';
 import { ApiService } from '@app/services/api.service';
 import { isDevMode } from '@angular/core';
@@ -145,7 +145,7 @@ export class AccelerateCheckout implements OnInit, OnDestroy {
     private etaService: EtaService,
     private audioService: AudioService,
     private cd: ChangeDetectorRef,
-    private authService: AuthServiceMempool,
+    private authService: AuthServiceBitcoinGold,
     private partnerCodeService: PartnerCodeService,
     private themeService: ThemeService,
   ) {
@@ -419,7 +419,7 @@ export class AccelerateCheckout implements OnInit, OnDestroy {
   /**
    * Account-based acceleration request
    */
-  accelerateWithMempoolAccount(): void {
+  accelerateWithBitcoinGoldAccount(): void {
     if (!this.canPay || this.calculating || this.processing) {
       return;
     }
